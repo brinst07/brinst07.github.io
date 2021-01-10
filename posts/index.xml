@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Posts on brinst Dev Blog</title>
-    <link>http://brinst07.github.io/posts/</link>
+    <link>https://brinst07.github.io/posts/</link>
     <description>Recent content in Posts on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
@@ -16,17 +16,17 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 10 Jan 2021 22:39:24 +0900</lastBuildDate>
     
-        <atom:link href="http://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Come Back!!!</title>
-        <link>http://brinst07.github.io/posts/test1/</link>
+        <link>https://brinst07.github.io/posts/test1/</link>
         <pubDate>Sun, 10 Jan 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Sun, 10 Jan 2021 22:39:24 +0900</atom:modified>
-        <guid>http://brinst07.github.io/posts/test1/</guid>
+        <guid>https://brinst07.github.io/posts/test1/</guid>
         <description>다시 살린 블로그 과거에 있던 블로그가 삭제되어서 새롭게 블로그를 다시 만들었다. 이 블로그에 다시 개발 관련 생각이나, 배운 지식들을 정리하고자 한다. 2021년</description>
         
         <dc:creator>brinst</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on brinst Dev Blog</title>
-    <link>http://brinst07.github.io/series/</link>
+    <link>https://brinst07.github.io/series/</link>
     <description>Recent content in Series on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
@@ -15,7 +15,7 @@
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="http://brinst07.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/series/index.xml" rel="self" type="application/rss+xml" />
     
 
       

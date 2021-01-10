@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on brinst Dev Blog</title>
-    <link>http://brinst07.github.io/gallery/</link>
+    <link>https://brinst07.github.io/gallery/</link>
     <description>Recent content in Galleries on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
@@ -16,17 +16,17 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 12 Oct 2018 10:20:16 +0900</lastBuildDate>
     
-        <atom:link href="http://brinst07.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/gallery/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Photo</title>
-        <link>http://brinst07.github.io/gallery/photo/</link>
+        <link>https://brinst07.github.io/gallery/photo/</link>
         <pubDate>Fri, 12 Oct 2018 10:20:16 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Fri, 12 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>http://brinst07.github.io/gallery/photo/</guid>
+        <guid>https://brinst07.github.io/gallery/photo/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>
@@ -40,11 +40,11 @@
       
       <item>
         <title>Cartoon</title>
-        <link>http://brinst07.github.io/gallery/cartoon/</link>
+        <link>https://brinst07.github.io/gallery/cartoon/</link>
         <pubDate>Thu, 11 Oct 2018 10:20:16 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 11 Oct 2018 10:20:16 +0900</atom:modified>
-        <guid>http://brinst07.github.io/gallery/cartoon/</guid>
+        <guid>https://brinst07.github.io/gallery/cartoon/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Hugo Zzo Theme</title>
-    <link>http://brinst07.github.io/en/tags/</link>
+    <link>https://brinst07.github.io/en/tags/</link>
     <description>Recent content in Tags on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     
-        <atom:link href="http://brinst07.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
 
       
