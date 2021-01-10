@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Hugo Zzo Theme</title>
+    <link>http://brinst07.github.io/ko/</link>
+    <description>Recent content on Hugo Zzo Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
+    <webMaster>brinst07@gmail.com (brinst)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 10 Jan 2021 22:39:24 +0900</lastBuildDate>
+    
+        <atom:link href="http://brinst07.github.io/ko/index.xml" rel="self" type="application/rss+xml" />
+    
+      
+      
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+
+      
+      <item>
+        <title>Come Back!!!</title>
+        <link>http://brinst07.github.io/ko/posts/test1/</link>
+        <pubDate>Sun, 10 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Sun, 10 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>http://brinst07.github.io/ko/posts/test1/</guid>
+        <description>다시 살린 블로그 과거에 있던 블로그가 삭제되어서 새롭게 블로그를 다시 만들었다. 이 블로그에 다시 개발 관련 생각이나, 배운 지식들을 정리하고자 한다.</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
