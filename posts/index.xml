@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Jan 2021 23:51:11 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -87,6 +87,24 @@
               <category>index</category>
             
           
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Come Back!!!</title>
+        <link>https://brinst07.github.io/posts/test1/</link>
+        <pubDate>Sun, 10 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Sun, 10 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/test1/</guid>
+        <description>다시 살린 블로그 과거에 있던 블로그가 삭제되어서 새롭게 블로그를 다시 만들었다. 이 블로그에 다시 개발 관련 생각이나, 배운 지식들을 정리하고자 한다. 2021년</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
         
         
         

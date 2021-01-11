@@ -20,6 +20,24 @@
     
 
       
+      <item>
+        <title>RecyclerView</title>
+        <link>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</link>
+        <pubDate>Mon, 11 Jan 2021 23:51:11 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Mon, 11 Jan 2021 23:51:11 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</guid>
+        <description>리사이클러뷰 리사이클러뷰는 스피너가 조금 더 확장된 형태이다. 리사이클러뷰도 스피너처럼 목록을 화면에 출력하는데, 레이아웃 매너지를 이용하면 간단한 코드만</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
 
     
   </channel>
