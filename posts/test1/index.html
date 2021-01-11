@@ -1323,7 +1323,7 @@
 
 
     
-<meta name="description" content="The Zzo theme for Hugo example site." />
+<meta name="description" content="brinst Dev Blog" />
 
 
 <meta name="created" content="2021-01-10T22:39:24&#43;0900">
@@ -1338,7 +1338,7 @@
 <meta property="og:title" content="Come Back!!!">
 <meta property="og:url" content="https://brinst07.github.io/posts/test1/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="The Zzo theme for Hugo example site.">
+<meta property="og:description" content="brinst Dev Blog">
 
 <meta name="generator" content="Hugo 0.80.0" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1405,6 +1405,8 @@
 
 
 
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     
 </head>
@@ -1667,7 +1669,7 @@
             
             
 
-<main class="single__main main-main">
+<main class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -1718,7 +1720,7 @@
   &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
   
   <span class="single__info">
-    
+     &middot; 👀<span id="busuanzi_value_page_pv">...</span> 조회수
   </span>
 </div>
 
@@ -2455,37 +2457,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">목차</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="true" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#다시-살린-블로그">다시 살린 블로그</a></li>
-    <li><a href="#2021년도의-계획">2021년도의 계획</a></li>
-    <li><a href="#스프링부트-스터디">스프링부트 스터디</a></li>
-    <li><a href="#안드로이드-스터디">안드로이드 스터디</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2493,7 +2464,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -2625,7 +2596,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
     
-    var enableBusuanzi = JSON.parse("false");
+    var enableBusuanzi = JSON.parse("true");
     var busuanziPagePV = JSON.parse("true");
     
     if (enableBusuanzi && busuanziPagePV) {
@@ -3222,6 +3193,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
     <div class="footer__poweredby">
         
+  <div class="busuanzi">
+    
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          총 방문자 수
+        </span>
+        <span id="busuanzi_value_site_uv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          총 조회수
+        </span>
+        <span id="busuanzi_value_site_pv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+  </div>
+
                 
             <p class="caption">
                 
@@ -3245,6 +3238,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">목차</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#다시-살린-블로그">다시 살린 블로그</a></li>
+    <li><a href="#2021년도의-계획">2021년도의 계획</a></li>
+    <li><a href="#스프링부트-스터디">스프링부트 스터디</a></li>
+    <li><a href="#안드로이드-스터디">안드로이드 스터디</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 
