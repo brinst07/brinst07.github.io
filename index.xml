@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 11 Jan 2021 23:51:11 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 12 Jan 2021 22:41:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>JPA 정리</title>
+        <link>https://brinst07.github.io/posts/javaspringboot/jpa/</link>
+        <pubDate>Tue, 12 Jan 2021 22:41:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Tue, 12 Jan 2021 22:41:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/javaspringboot/jpa/</guid>
+        <description>JPA란?? Java 언어를 통해서 데이터베이스와 같은 영속 계층을 처리하고자 하는 스펙 ORM과 JPA ORM 객체지향과 관련이 있음 &amp;lsquo;객체지향 패러다임을 관계</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>RecyclerView</title>
