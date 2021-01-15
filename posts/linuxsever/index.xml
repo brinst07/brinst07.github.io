@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Tags on brinst Dev Blog</title>
-    <link>https://brinst07.github.io/tags/</link>
-    <description>Recent content in Tags on brinst Dev Blog</description>
+    <title>LINUX&amp;Server on brinst Dev Blog</title>
+    <link>https://brinst07.github.io/posts/linuxsever/</link>
+    <description>Recent content in LINUX&amp;Server on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
@@ -16,18 +16,18 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 14 Jan 2021 22:39:24 +0900</lastBuildDate>
     
-        <atom:link href="https://brinst07.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/posts/linuxsever/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>index</title>
-        <link>https://brinst07.github.io/tags/index/</link>
+        <title>cron 과 shellscript</title>
+        <link>https://brinst07.github.io/posts/linuxsever/cronshellscript/</link>
         <pubDate>Thu, 14 Jan 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
-        
-        <guid>https://brinst07.github.io/tags/index/</guid>
-        <description></description>
+        <atom:modified>Thu, 14 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/linuxsever/cronshellscript/</guid>
+        <description>cron이란? 특정한 시간, 특정 시간 마다 어떤 작업을 수행하게 해줘야 할때 사용하는 명령어이다. 스케줄러 같은 개념이라고 생각하면 된다. 임시파일이나, log 파</description>
         
         <dc:creator>brinst</dc:creator>
         
