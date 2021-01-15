@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>LINUX&amp;Server on brinst Dev Blog</title>
+    <title>Linux&amp;Server on brinst Dev Blog</title>
     <link>https://brinst07.github.io/posts/linuxsever/</link>
-    <description>Recent content in LINUX&amp;Server on brinst Dev Blog</description>
+    <description>Recent content in Linux&amp;Server on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
