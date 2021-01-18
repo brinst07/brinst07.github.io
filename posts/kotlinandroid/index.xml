@@ -21,6 +21,42 @@
 
       
       <item>
+        <title>tabLayout</title>
+        <link>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</link>
+        <pubDate>Sun, 17 Jan 2021 23:51:11 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Sun, 17 Jan 2021 23:51:11 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</guid>
+        <description>TabLyaout tablayout이란 상단에 탭을 클릭하면 화면이 전환되는 것을 말한다. 상단의 탭을 클릭해도 하단의 fragment가 전환되어야하고 fragment</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>viewpage</title>
+        <link>https://brinst07.github.io/posts/kotlinandroid/viewpager/</link>
+        <pubDate>Sun, 17 Jan 2021 23:51:11 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Sun, 17 Jan 2021 23:51:11 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/kotlinandroid/viewpager/</guid>
+        <description>viewPager란? 배달의 민족이나 어플들을 사용하면 상단의 그림들이 스와이프 하면 넘어가거나 한것을 볼수 있었을 것이다. 그것을 구현하기 위한 것이 바로 v</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>RecyclerView</title>
         <link>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</link>
         <pubDate>Mon, 11 Jan 2021 23:51:11 +0900</pubDate>

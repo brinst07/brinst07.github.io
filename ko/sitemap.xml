@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://brinst07.github.io/</loc>
-    <lastmod>2021-01-14T22:39:24+09:00</lastmod>
+    <lastmod>2021-01-18T22:39:24+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,17 +38,32 @@
   </url>
   
   <url>
+    <loc>https://brinst07.github.io/posts/javaspringboot/n1/</loc>
+    <lastmod>2021-01-18T22:39:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/</loc>
+    <lastmod>2021-01-18T22:39:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</loc>
+    <lastmod>2021-01-17T23:51:11+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/kotlinandroid/viewpager/</loc>
+    <lastmod>2021-01-17T23:51:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://brinst07.github.io/posts/linuxsever/cronshellscript/</loc>
     <lastmod>2021-01-14T22:39:24+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://brinst07.github.io/tags/index/</loc>
-    <lastmod>2021-01-14T22:39:24+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brinst07.github.io/posts/</loc>
     <lastmod>2021-01-14T22:39:24+09:00</lastmod>
   </url>
   

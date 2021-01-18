@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>JPA N:1(다대일) 연관관계</title>
+        <link>https://brinst07.github.io/posts/javaspringboot/n1/</link>
+        <pubDate>Mon, 18 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Mon, 18 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/javaspringboot/n1/</guid>
+        <description>연관관계와 관계형 데이터 베이스 설계 관계형 데이터베이스에서는 개체 간의 관계라는 것에 대해 고민하게 된다. 관계형 데이터베이스에서는 일대일(1:1), 일대</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>JPA 정리</title>
         <link>https://brinst07.github.io/posts/javaspringboot/jpa/</link>
         <pubDate>Tue, 12 Jan 2021 22:41:24 +0900</pubDate>
