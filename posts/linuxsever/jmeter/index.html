@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JPA N:1(다대일) 연관관계 – brinst Dev Blog</title>
+    <title>JMeter – brinst Dev Blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://brinst07.github.io/\"");
     
-    var permalink = JSON.parse("\"https://brinst07.github.io/posts/javaspringboot/n1/\"");
+    var permalink = JSON.parse("\"https://brinst07.github.io/posts/linuxsever/jmeter/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1326,17 +1326,17 @@
 <meta name="description" content="brinst Dev Blog" />
 
 
-<meta name="created" content="2021-01-18T22:39:24&#43;0900">
-<meta name="modified" content="2021-01-18T22:39:24&#43;0900">
-<meta property="article:published_time" content="2021-01-18T22:39:24&#43;0900">
+<meta name="created" content="2021-01-22T22:39:24&#43;0900">
+<meta name="modified" content="2021-01-22T22:39:24&#43;0900">
+<meta property="article:published_time" content="2021-01-22T22:39:24&#43;0900">
 
 <meta name="author" content="brinst">
-<meta property="article:author" content="https://brinst07.github.io/posts/javaspringboot/n1/@brinst">
+<meta property="article:author" content="https://brinst07.github.io/posts/linuxsever/jmeter/@brinst">
 
 
 <meta property="og:site_name" content="brinst Dev Blog">
-<meta property="og:title" content="JPA N:1(다대일) 연관관계">
-<meta property="og:url" content="https://brinst07.github.io/posts/javaspringboot/n1/">
+<meta property="og:title" content="JMeter">
+<meta property="og:url" content="https://brinst07.github.io/posts/linuxsever/jmeter/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
@@ -1349,7 +1349,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://brinst07.github.io/posts/javaspringboot/n1/">
+<link rel="canonical" href="https://brinst07.github.io/posts/linuxsever/jmeter/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1375,11 +1375,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "JPA N:1(다대일) 연관관계",
-    "datePublished": "2021-01-18T22:39:24+09:00",
-    "dateModified": "2021-01-18T22:39:24+09:00",
-    "url" : "https://brinst07.github.io/posts/javaspringboot/n1/",
-    "description": "연관관계와 관계형 데이터 베이스 설계 관계형 데이터베이스에서는 개체 간의 관계라는 것에 대해 고민하게 된다. 관계형 데이터베이스에서는 일대일(1:1), 일대",
+    "headline": "JMeter",
+    "datePublished": "2021-01-22T22:39:24+09:00",
+    "dateModified": "2021-01-22T22:39:24+09:00",
+    "url" : "https://brinst07.github.io/posts/linuxsever/jmeter/",
+    "description": "JMeter란?? Apach JMeter는 웨 애플리케이션에 중점을 둔 다양한 서비스의 성능을 분석하고 측정하기 위한 로드 테스트 도구로 사용 할 수 있는 Apache 프로젝트이다",
     "author": {
       "@type": "Person",
       "name": "brinst"
@@ -1698,14 +1698,14 @@
   
   <li >
     
-      <a href="https://brinst07.github.io/posts/javaspringboot/" class="capitalize">Java &amp; SpringBoot</a>
+      <a href="https://brinst07.github.io/posts/linuxsever/" class="capitalize">Linux&amp;Server</a>
     
   </li>
   
   
   <li  class="is-active" >
     
-      <span>JPA N:1(다대일) 연관관계</span>
+      <span>JMeter</span>
     
   </li>
   
@@ -1717,12 +1717,12 @@
   <div class="single ">
     <div class="single__nojs">자바스크립트를 활성화 해주세요</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">JPA N:1(다대일) 연관관계</h2>
+    <h2 class="single__title" data-ani="true">JMeter</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="작성일">📅&nbsp;2021년 01월 18일 </time>
+  <time class="single__info" title="작성일">📅&nbsp;2021년 01월 22일 </time>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;4&nbsp;min read </span>
   
@@ -1742,134 +1742,75 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="연관관계와-관계형-데이터-베이스-설계">연관관계와 관계형 데이터 베이스 설계</h2>
-<p>관계형 데이터베이스에서는 개체 간의 <code>관계</code>라는 것에 대해 고민하게 된다.<br />
-관계형 데이터베이스에서는 일대일(1:1), 일대다(1:N), 다대다(M:N)의 관계를 이용해서 데이터가 서로 간에 어떻게 구성되었는지를 표현한다.</p>
-<p>위 관계를 가장 쉽게 확인할 수 있는 방법은 직접 가상의 데이터를 만들어 보는 것이다.</p>
-<p>데이터베이스에서 관계를 해석할 때는 항상 PK쪽에서 해석한다.</p>
-<h3 id="jpa에서-연관관계-해석하기">JPA에서 연관관계 해석하기</h3>
-<p>JPA를 이용해서 연관관계를 해석할 때는 PK를 기준으로 잡고, 데이터베이스를 모델링하는 방식으로 구성한다.</p>
-<h3 id="엔티티-생성하기">엔티티 생성하기</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="nd">@Entity</span>
-<span class="nd">@Builder</span>
-<span class="nd">@AllArgsConstructor</span>
-<span class="nd">@NoArgsConstructor</span>
-<span class="nd">@Getter</span>
-<span class="nd">@ToString</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span> <span class="kd">extends</span> <span class="n">BaseEntity</span><span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">email</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">password</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-<span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>Member 클래스 이메일 주소를 PK로 이용한다. 데이터베이스 설게에서도 member 테이블은 PK만을 가지고 있고, FK를 사용하지 않으므로 별도의 참조가 필요하지 않는다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="nd">@Entity</span>
-<span class="nd">@Builder</span>
-<span class="nd">@AllArgConstructor</span>
-<span class="nd">@NoArgsConstructor</span>
-<span class="nd">@Getter</span>
-<span class="nd">@ToString</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="nc">Board</span> <span class="kd">extends</span> <span class="n">BaseEntity</span><span class="o">{</span>
-    <span class="nd">@Id</span>
-    <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GeneationType</span><span class="o">.</span><span class="na">IDENTITY</span><span class="o">)</span>
-    <span class="kd">private</span> <span class="n">Long</span> <span class="n">bno</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">title</span><span class="o">;</span>
-
-    <span class="kd">private</span> <span class="n">String</span> <span class="n">content</span><span class="o">;</span>
-
-    <span class="nd">@ManyToOne</span>
-    <span class="kd">private</span> <span class="n">Member</span> <span class="n">writer</span><span class="o">;</span> <span class="c1">// 연관관계 지정
-</span><span class="c1"></span><span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="manytoone-어노테이션">@ManyToOne 어노테이션</h4>
-<p>JPA에서 가장 많이 사용하고, 꼭 알아야하는 다중성이다.</p>
-<p>(OneToMany는 JPA에서 지원하긴 하지만 권장하지 않는 방식이다.)</p>
-<p>데이터베이스 구조로 보면 board 테이블과 member 테이블에는 FK를 이용한 참조가 걸려 있게 된다.</p>
-<p>JPA에서 관계를 고민할 때는 FK 쪽을 먼저 해석해보면 편리하다.</p>
-<p>board와 member의 관게는 N:1(다대일)의 관계가 되므로 JPA에서는 이를 의미하는 @ManyToOne을 적용해야 한다.</p>
-<p><code>@ManyToOne은 데이터베이스상에서 외래키의 관계로 연결된 엔티티 클래스에 설정한다.</code></p>
-<p>일대 다에서 다 쪽에 외래키가 있어야한다.</p>
-<h4 id="manytoone과-eagerlazy-loading">@ManyToOne과 Eager/Lazy Loading</h4>
-<p>두개 이상의 엔티티 간의 연관관계를 맺고 나면 데이터베이스 입장에서는 연관관계를 맺고 있기 때문에 조인이 필요하다고 생각한다.</p>
-<p>실제로 @ManyToOne의 경우에는 FK 쪽의 엔티티를 가져오때 PK 쪽의 엔티티도 같이 가져온다.</p>
-<p>따라서 연관관계에 있는 값을 가져오려면 자동적으로 조인이 된다.</p>
-<p>조인이 필요없을 때도 조인이 발생하기 때문에 시스템의 비효율을 야기할 수 있다.</p>
-<p>그래서 <code>fetch는 Lay loading을 권장한다.</code><br />
-위 처럼 쿼리 실행결과와 같이 특정한 엔티티를 조회할때 연관관계를 가진 모든 엔티티를 같이 로딩하는 것을 <code>Eager loading</code>이라고 한다. 이는 <code>즉시 로딩</code>이라는 말로도 표현하기도 한다.</p>
-<p>JPA에서 연관관계를 데이터를 어떻게 가져올 것인가를 <code>fetch(패치)</code>라고 하는데 연관관계의 어노테이션의 속성으로 fetch 모드를 지정한다.</p>
-<p>즉시 로딩은 불필요한 조인까지 처리해야 하는 경우가 많기 때문에 간으하면 사용하지 않고, 그와 반대되는 개념으로 <code>Lazy loading</code>으로 처리한다. 이는 <code>지연 로딩</code>이라고 부르기도 한다.</p>
-<p>지연로딩을 사용하게 되면 즉시로딩보다는 확실히 효율적으로 값을 가져올 순 있지만, 단점 또한 존재한다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="n">Board</span> <span class="n">board</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="na">get</span><span class="o">();</span>
-
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">);</span>
-<span class="n">xxxx</span> <span class="n">오류</span> <span class="n">발생</span> <span class="n">xxxx</span>
-<span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">board</span><span class="o">.</span><span class="na">getWriter</span><span class="o">());</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>위 코드를 지연로딩을 사용해서 수행하면 오류가 발생한다.<br />
-board.getWriter는 member 테이블을 로딩해야 하는데 이미 데이터베이스와의 연결이 끝났기 때문에 에러가 발생한다.</p>
-<p>이러한 상황으로 보아 지연로딩은 단순하게 하나의 테이블을 이용하는 경우에는 빠른 속도의 처리가 가능하다는 장점이 있지만, 연관관계가 복잡한 경우에는 여러 번의 쿼리가 실행된다는 단점이 있다.</p>
-<p>따라서 보편적인 코딩 가이드는 <code>지연로딩을 기본으로 사용하고, 상황에 맞게 필요한 방법을 찾는다</code> 이다.</p>
-<p>이때 @Transactional을 사용하면 에러를 해결할 수 있다.</p>
-<p><code>@Transactional은 해당 메서드를 하나의 트랜잭션으로 처리하라는 의미이다.</code></p>
-<h4 id="연관관계에서는-tostring을-조심">연관관계에서는 @ToString()을 조심</h4>
-<p>@ToString()을 사용하게 되면 해당 클래스의 모든 멤버변수를 출력하게 된다. 예를 들어 Board객체의 TosString을 하려면 Member도 호출해야하는 것이다.</p>
-<p>따라서 연관관계가 있는 엔티티 클래스의 경우 @ToString()을 할 때는 습관적으로 <code>exclude</code> 속성을 사용하는 것이 좋다.</p>
+      <h2 id="jmeter란">JMeter란??</h2>
+<blockquote>
+<p>Apach JMeter는 웨 애플리케이션에 중점을 둔 다양한 서비스의 성능을 분석하고 측정하기 위한 로드 테스트 도구로 사용 할 수 있는 Apache 프로젝트이다(Wikipedia 참조)</p>
+</blockquote>
+<p>JMeter를 이용하면 웹 어플리케이션의 부하를 걸어 성능 테스트를 할 수 있다.<br />
+마침 회사에서 JMeter에 대한 세미나가 열려 참석 후 이에 대한 간단한 포스팅을 해보려고 한다.</p>
+<h3 id="jmeter-설치">JMeter 설치</h3>
+<p>JMeter를 사용하기 위해선 일단 먼저 다운로드를 해야한다.</p>
+<blockquote>
+<p><a href="https://jmeter.apache.org/download_jmeter.cgi">JMeter 홈페이지</a></p>
+</blockquote>
+<p>위 페이지에 접속하게 되면 Binaries에 두가지 버전이 존재하는 것을 알 수 있는데,<br />
+zip은 윈도우에서 tgz는 리눅스 환경에서 사용하면 된다.</p>
+<p>이 포스팅은 zip버전을 기준으로 설명하고자 한다.</p>
+<p>압축을 해제하고 bin 폴더에 들어가보면 ApachJMeter Jar 파일을 볼수 있다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105463231-154aa380-5cd3-11eb-8877-1ec9a6e9a344.png" alt="image" /></p>
+<p>위 파일을 실행하면 JMeter 프로그램이 실행된다.</p>
+<p><img src="https://user-images.githubusercontent.com/60083557/105463385-55aa2180-5cd3-11eb-80f6-d30d3e453da8.png" alt="image" /></p>
+<p>위 화면이 출력되었다면 설치하는데 성공한 것이다</p>
+<h3 id="jmeter-사용해서-테스트-준비하기">JMeter 사용해서 테스트 준비하기</h3>
+<p>이제 JMeter를 설치했으니 테스트를 진행한다.<br />
+좌측 상단에 보면 테스트 계획에 하위 항목들을 추가하여 테스트를 진행하는 방식으로 진행된다.</p>
+<h4 id="thread-group">Thread Group</h4>
+<p>Thread Group이란, JMeter에서 다양한 하위 Element 항목들을 제어하기 위한 시작점이다. Thread Group을 생성하면 부하 테스트 수행 시 원하는 항목들도 변경하기 위한 설정 항목들이 나온다.</p>
+<p>테스트 계획에 쓰레드 그룹을 추가해보자<br />
+<img src="https://user-images.githubusercontent.com/60083557/105463699-cbae8880-5cd3-11eb-8d4f-69fb0d44a4c1.png" alt="image" /></p>
+<p>쓰레드 그룹을 추가하면 다음과 같은 화면을 볼 수 있다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105463902-1203e780-5cd4-11eb-8dff-2f928991001b.png" alt="image" /></p>
+<p>다른 항목들은 한글로 해석되어 있기에 ramp up 시간만 간단하게 설명하자면 쓰레드들을 실행시키기 위한 시간을 의미한다고 한다.<br />
+만약 쓰레드를 30개 주고 ramp-up을 120초를 준다고 하면, 각 1초에 4개꼴로 테스트를 진행할 수 있다.</p>
+<h4 id="loop-count">Loop Count</h4>
+<p>한 Thread 당 sampler로 있는 테스트 시나리오를 몇 번 돌릴지를 설정</p>
+<p>다음 작업으로 넘어기가전에 먼저 테스트하길 원하는 페이지를 실행하고, Proxy설정을 진행한다.</p>
+<h4 id="proxy란">Proxy란?</h4>
+<p>Proxy란 <code>'대리'</code>라는 의미로, 네트워크 기술에서는 프로토콜에 있어서 대리 응답 등에서 친숙한 개념이다.<br />
+보안 분야에서는 주로 보안 상의 이유로 직접 통신할 수 없는 두 점 사이에서 통신을 할 경우 그 사이에 있어서 중게기로서 대리로 통신을 수행하는 기능을 가리켜 <code>'프록시'</code>, 그 중계 기능을 하는 것을 <code>'프록시 서버'</code>라고 부른다.</p>
+<p>우리는 프록시 설정을 진행함으로써 JMeter를 중계기로 두고 테스트를 진행하게 되는 것이다.</p>
+<p>윈도우 사용자를 기준으로 검색창에 프록시를 입력하면 프록시 설정 변경 메뉴가 출력된다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105465223-fef21700-5cd5-11eb-9267-1bbcd320f9ea.png" alt="image" /></p>
+<p>설정 메뉴로 진입하면 다음과 같은 메뉴가 출력된다.</p>
+<p>하단처럼 주소에는 테스트 하고 싶은 주소 포트에는 원하는 포트를 입력해준다.</p>
+<p>나는 로컬서버로 진행하고 있기 때문에 localhost를 입력해줬다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105465380-2ba62e80-5cd6-11eb-81c7-5cce66e035a1.png" alt="image" /></p>
+<p>설정을 완료하고 저장버튼을 눌러준다. 이렇게 프록시 설정이 완료 되었다.</p>
+<h4 id="https-test-script-recorder">HTTP(S) Test Script Recorder</h4>
+<p>Proxy를 설정하여 요청 URL을 수집하여 sampler를 자동으로 생성하기 위한 작업이다.<br />
+Recorder를 키고 내가 하고 싶은 테스트를 웹상에서 진행하게 되면 이 행동들이 녹화되어 똑같이 테스트된다고 이해하면 편하다.</p>
+<p><img src="https://user-images.githubusercontent.com/60083557/105464287-a79f7700-5cd4-11eb-80c5-20b86792a2a8.png" alt="image" /></p>
+<p>테스트 계획에 정상적으로 추가하면 다음과 같은 화면이 출력되는 것을 확인할 수 있다.</p>
+<p><img src="https://user-images.githubusercontent.com/60083557/105464679-4af08c00-5cd5-11eb-9ba3-e476c2174aa5.png" alt="image" /></p>
+<p>이어서 프록시 설정시 진행한 포트 번호와 일치하는지 확인해주고<br />
+타겟컨트롤러에서 테스트 계획생성 탭에서 테스트계획 &gt; 쓰레드 그룹으로 설정해준다.</p>
+<p>또한 하단의 Redirect들을 따라가기를 해제해준다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105466017-0534c300-5cd7-11eb-82f2-ef436972fd3c.png" alt="image" /></p>
+<p>설정이 완료되었다면 시작버튼을 누르고 테스트 원하는 작업을 녹화한다.</p>
+<p><img src="https://user-images.githubusercontent.com/60083557/105466444-93a94480-5cd7-11eb-8d49-044a62a1cb46.png" alt="image" /></p>
+<p>작업이 완료되었다면 중지버튼을 누르고 쓰레드 그룹을 열어보자<br />
+다음과 같이 많은 항목들이 생겼을 것이다.<br />
+이 sampler를 가지고 테스트를 수행하게 되는 것이다.</p>
+<p><img src="https://user-images.githubusercontent.com/60083557/105466681-f26ebe00-5cd7-11eb-8a11-886edbc23500.png" alt="image" /></p>
+<p>이제 테스트계획을 저장해보자<br />
+테스트 계획을 선택하고 저장버튼을 누르면 jmx파일로 저장되는 것을 확인 할 수 있다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/105466824-29dd6a80-5cd8-11eb-93e3-7d5fd0296193.png" alt="image" /></p>
+<h3 id="jmeter로-테스트-해보기">JMeter로 테스트 해보기</h3>
+<p>위에서 jmx파일도 준비했고 설치도 완료했으니 이제 본격적으로 테스트를 진행해보도록 하자.<br />
+기본적으로 하나의 서버를 실행하면 다음 명령어를 사용하여 테스트하면 된다.</p>
+<pre><code>$(위치)jmeter.sh -n -t (jmx파일위치) -j (output위치)/output/run.log -l (output위치)/output/result.jtl -e -o (output위치)/output/html 
+</code></pre><p>이 명령어를 수행하게 되면 jmeter.sh로 jmx을 실행하여 output파일들을 생성하게 됩니다.</p>
+<p>result 파일들을 보며 테스트 결과를 확인할 수 있다.</p>
 
     </article>
     
@@ -2069,13 +2010,13 @@ board.getWriter는 member 테이블을 로딩해야 하는데 이미 데이터�
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2fjavaspringboot%2fn1%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2flinuxsever%2fjmeter%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=JPA%20N%3a1%28%eb%8b%a4%eb%8c%80%ec%9d%bc%29%20%ec%97%b0%ea%b4%80%ea%b4%80%ea%b3%84&url=https%3a%2f%2fbrinst07.github.io%2fposts%2fjavaspringboot%2fn1%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=JMeter&url=https%3a%2f%2fbrinst07.github.io%2fposts%2flinuxsever%2fjmeter%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2218,11 +2159,11 @@ board.getWriter는 member 테이블을 로딩해야 하는데 이미 데이터�
 <nav class="pagination-single">
   
     
-      <a href="https://brinst07.github.io/posts/javaspringboot/jpa/" class="pagination-single__left">
+      <a href="https://brinst07.github.io/posts/linuxsever/cronshellscript/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">JPA 정리</div>      
+        <div class="pagination-single__left-title">cron 과 shellscript</div>      
       </a>
     
     <div class="grow"></div>
@@ -3162,7 +3103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="https://brinst07.github.io/posts/javaspringboot/n1/" data-lang="ko" class="dropdown-item is-active">한국어</a>
+              <a href="https://brinst07.github.io/posts/linuxsever/jmeter/" data-lang="ko" class="dropdown-item is-active">한국어</a>
             
           
         
@@ -3361,16 +3302,18 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#연관관계와-관계형-데이터-베이스-설계">연관관계와 관계형 데이터 베이스 설계</a>
+    <li><a href="#jmeter란">JMeter란??</a>
       <ul>
-        <li><a href="#jpa에서-연관관계-해석하기">JPA에서 연관관계 해석하기</a></li>
-        <li><a href="#엔티티-생성하기">엔티티 생성하기</a>
+        <li><a href="#jmeter-설치">JMeter 설치</a></li>
+        <li><a href="#jmeter-사용해서-테스트-준비하기">JMeter 사용해서 테스트 준비하기</a>
           <ul>
-            <li><a href="#manytoone-어노테이션">@ManyToOne 어노테이션</a></li>
-            <li><a href="#manytoone과-eagerlazy-loading">@ManyToOne과 Eager/Lazy Loading</a></li>
-            <li><a href="#연관관계에서는-tostring을-조심">연관관계에서는 @ToString()을 조심</a></li>
+            <li><a href="#thread-group">Thread Group</a></li>
+            <li><a href="#loop-count">Loop Count</a></li>
+            <li><a href="#proxy란">Proxy란?</a></li>
+            <li><a href="#https-test-script-recorder">HTTP(S) Test Script Recorder</a></li>
           </ul>
         </li>
+        <li><a href="#jmeter로-테스트-해보기">JMeter로 테스트 해보기</a></li>
       </ul>
     </li>
   </ul>

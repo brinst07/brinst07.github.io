@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 18 Jan 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 22 Jan 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>JMeter</title>
+        <link>https://brinst07.github.io/posts/linuxsever/jmeter/</link>
+        <pubDate>Fri, 22 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 22 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/linuxsever/jmeter/</guid>
+        <description>JMeter란?? Apach JMeter는 웨 애플리케이션에 중점을 둔 다양한 서비스의 성능을 분석하고 측정하기 위한 로드 테스트 도구로 사용 할 수 있는 Apache 프로젝트이다</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>JPA N:1(다대일) 연관관계</title>
