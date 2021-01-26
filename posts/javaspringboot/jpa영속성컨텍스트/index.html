@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1379,7 +1379,7 @@
     "datePublished": "2021-01-11T22:39:24+09:00",
     "dateModified": "2021-01-11T22:39:24+09:00",
     "url" : "https://brinst07.github.io/posts/javaspringboot/jpa%EC%98%81%EC%86%8D%EC%84%B1%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/",
-    "description": "영속성 관리 JPA에서 가장 중요한 2가지 객체와 관계형 DB 매핑하기 - 설계 관련 영속성 컨텍스트 - JPA 내부동작 엔티티 매니저 팩토리와 엔티티 매니저 JPA는 스레드",
+    "description": "영속성 관리 JPA에서 가장 중요한 2가지 객체와 관계형 DB 매핑하기 - 설계 관련 영속성 컨텍스트 - JPA 내부동작 엔티티 매니저 팩토리와 엔티티 매니저 EntityManagerFactory JPA는 스레",
     "author": {
       "@type": "Person",
       "name": "brinst"
@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="작성일">📅&nbsp;2021년 01월 11일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;6&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;7&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
   
@@ -1752,9 +1752,24 @@
 </li>
 </ul>
 <h2 id="엔티티-매니저-팩토리와-엔티티-매니저">엔티티 매니저 팩토리와 엔티티 매니저</h2>
+<h3 id="entitymanagerfactory">EntityManagerFactory</h3>
 <ul>
 <li>JPA는 스레드가 하나 생성될 때 마다 EntityManagerFactory에서 EntityManager를 생성한다.</li>
+<li>엔티티 매니저 팩토리는 하나만 생성해서 애플리케이션 전체에서 공유해야한다.</li>
+<li>persistence.xml에서 만든 속성을 가져오는 작업을 한다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">   <span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="entitymanger">EntityManger</h3>
+<ul>
 <li>EntityManager는 내부적으로 DB 커넥션 풀을 사용해서 DB에 붙인다.</li>
+<li>엔티티 매니저는 쓰레드간에 공유하면 안된다.(사용하고 버리는 개념)</li>
 </ul>
 <h2 id="영속성-컨텍스트">영속성 컨텍스트</h2>
 <ul>
@@ -1767,7 +1782,66 @@
 </ul>
 </li>
 </ul>
-<h2 id="엔티티의-생명주기">엔티티의 생명주기</h2>
+<h3 id="정석-로직">정석 로직</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">
+        <span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">);</span>
+
+        <span class="n">EntityManager</span> <span class="n">em</span> <span class="o">=</span> <span class="n">emf</span><span class="o">.</span><span class="na">createEntityManager</span><span class="o">();</span>
+
+        <span class="c1">//JPA의 모든 활동은 트랜잭션 안에서 이루어져야 하기때문에 먼저 트랜잭션을 얻는다.
+</span><span class="c1"></span>        <span class="n">EntityTransaction</span> <span class="n">tx</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">getTransaction</span><span class="o">();</span>
+        <span class="n">tx</span><span class="o">.</span><span class="na">begin</span><span class="o">();</span>
+        <span class="k">try</span> <span class="o">{</span>
+            <span class="n">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Member</span><span class="o">();</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setId</span><span class="o">(</span><span class="n">100L</span><span class="o">);</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;안녕하세요&#34;</span><span class="o">);</span>
+
+            <span class="c1">//persist -&gt; 영구 저장하다.
+</span><span class="c1"></span>            <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+
+            <span class="n">tx</span><span class="o">.</span><span class="na">commit</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">catch</span> <span class="o">(</span><span class="n">Exception</span> <span class="n">e</span><span class="o">)</span> <span class="o">{</span>
+            <span class="n">tx</span><span class="o">.</span><span class="na">rollback</span><span class="o">();</span>
+        <span class="o">}</span> <span class="k">finally</span> <span class="o">{</span>
+            <span class="c1">//엔티티 매니저는 쓰고 난 후에 꼭 닫아야한다.
+</span><span class="c1"></span>            <span class="n">em</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+        <span class="o">}</span>
+
+        <span class="n">emf</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
+    <span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="엔티티의-생명주기">엔티티의 생명주기</h2>
 <ul>
 <li>비영속
 <ul>
@@ -3534,8 +3608,17 @@ document.addEventListener('DOMContentLoaded', function () {
           <nav id="TableOfContents">
   <ul>
     <li><a href="#영속성-관리">영속성 관리</a></li>
-    <li><a href="#엔티티-매니저-팩토리와-엔티티-매니저">엔티티 매니저 팩토리와 엔티티 매니저</a></li>
-    <li><a href="#영속성-컨텍스트">영속성 컨텍스트</a></li>
+    <li><a href="#엔티티-매니저-팩토리와-엔티티-매니저">엔티티 매니저 팩토리와 엔티티 매니저</a>
+      <ul>
+        <li><a href="#entitymanagerfactory">EntityManagerFactory</a></li>
+        <li><a href="#entitymanger">EntityManger</a></li>
+      </ul>
+    </li>
+    <li><a href="#영속성-컨텍스트">영속성 컨텍스트</a>
+      <ul>
+        <li><a href="#정석-로직">정석 로직</a></li>
+      </ul>
+    </li>
     <li><a href="#엔티티의-생명주기">엔티티의 생명주기</a></li>
     <li><a href="#영속성-컨텍스트의-이점">영속성 컨텍스트의 이점</a>
       <ul>

@@ -1339,7 +1339,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1745,7 +1745,7 @@
 <li>&lsquo;객체지향 패러다임을 관계형 패러다임으로 매핑해주는 개념&rsquo;</li>
 <li>관계형 데이터베이스의 테이블을 설계하여 데이터를 보관하는 틀을 만든다는 의미에서 클래스와 상당히 유사함<br />
 
-<div id="a2b3ccb3baa0201e" class="codetab">
+<div id="60340c9be0e6527c" class="codetab">
   <div class="codetab__links">
     
       <button class="codetab__link" aria-label="Tab link">java</button>
@@ -1755,7 +1755,7 @@
   </div>
   
   
-<div id="d3c65748741be561" class="codetab__content">
+<div id="2de3aa38f30a61b1" class="codetab__content">
   <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1776,7 +1776,7 @@
 </div>
 
   
-<div id="301277ce6069978c" class="codetab__content">
+<div id="942eba25e6f96842" class="codetab__content">
   <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1799,7 +1799,7 @@
 <script>
   'use strict';
 
-  var containerId = JSON.parse("\"a2b3ccb3baa0201e\"");
+  var containerId = JSON.parse("\"60340c9be0e6527c\"");
   var containerElem = document.getElementById(containerId);
   var codetabLinks = null;
   var codetabContents = null;
@@ -1978,6 +1978,18 @@
 <li>save -&gt; JPA의 구현체가 메모리상에서 객체를 비교하고 없다면 insert, 존재한다면 update를 동작시키는 방식으로 동작</li>
 </ul>
 </li>
+</ul>
+<h4 id="데이터베이스-방언dialect">데이터베이스 방언(dialect)</h4>
+<ul>
+<li>JPA는 특정 데이터베이스에 종속적이지 않은 기술</li>
+<li>각각의 데이터베이스가 제공하는 SQL 문법과 함수는 조금씩 다르디
+<ul>
+<li>가변 문자 : MySQL은 VARCHAR, ORACLE은 VARCHAR2</li>
+<li>문자열을 자르는 함수 : SQL표준은 SUBSTRING(), ORACLE은 SUBSTR()</li>
+<li>페이징 : MySQL은 LIMIT, ORACLE은 ROWNUM</li>
+</ul>
+</li>
+<li>방언 : SQL 표준을 지키지 않거나 특정 데이터베이스만의 고유한 기능</li>
 </ul>
 
     </article>
@@ -3487,7 +3499,11 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#엔티티-클래스와-jparepository">엔티티 클래스와 JpaRepository</a>
       <ul>
         <li><a href="#엔티티-클래스">엔티티 클래스</a></li>
-        <li><a href="#jparepository-인터페이스">JpaRepository 인터페이스</a></li>
+        <li><a href="#jparepository-인터페이스">JpaRepository 인터페이스</a>
+          <ul>
+            <li><a href="#데이터베이스-방언dialect">데이터베이스 방언(dialect)</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>

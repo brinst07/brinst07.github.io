@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>JPA 기본기 다지기(3)</title>
+        <link>https://brinst07.github.io/posts/javaspringboot/jpa3/</link>
+        <pubDate>Tue, 26 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Tue, 26 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/javaspringboot/jpa3/</guid>
+        <description>데이터베이스 스키마 자동 생성하기 DDL을 애플리케이션 실행 시점에 자동 생성 테이블 중심 -&amp;gt; 객체중심 데이터베이스 방언을 활용해서 데이터베이스에 맞는 적절한 DDL</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>JPA N:1(다대일) 연관관계</title>
         <link>https://brinst07.github.io/posts/javaspringboot/n1/</link>
         <pubDate>Mon, 18 Jan 2021 22:39:24 +0900</pubDate>
@@ -63,7 +81,7 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Mon, 11 Jan 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/javaspringboot/jpa%EC%98%81%EC%86%8D%EC%84%B1%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</guid>
-        <description>영속성 관리 JPA에서 가장 중요한 2가지 객체와 관계형 DB 매핑하기 - 설계 관련 영속성 컨텍스트 - JPA 내부동작 엔티티 매니저 팩토리와 엔티티 매니저 JPA는 스레드</description>
+        <description>영속성 관리 JPA에서 가장 중요한 2가지 객체와 관계형 DB 매핑하기 - 설계 관련 영속성 컨텍스트 - JPA 내부동작 엔티티 매니저 팩토리와 엔티티 매니저 EntityManagerFactory JPA는 스레</description>
         
         <dc:creator>brinst</dc:creator>
         
