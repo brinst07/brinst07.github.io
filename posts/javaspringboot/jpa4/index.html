@@ -1379,7 +1379,7 @@
     "datePublished": "2021-01-27T22:39:24+09:00",
     "dateModified": "2021-01-27T22:39:24+09:00",
     "url" : "https://brinst07.github.io/posts/javaspringboot/jpa4/",
-    "description": "연관관계 매핑",
+    "description": "연관관계 매핑 객체를 테이블에 맞추어 모델링 식별자로 다시 조회, 객체지향적인 방법은 아니다. 연관관계가 없기 때문에, 직접 하나하나 다 조회해야 한다. 1 2 3 4",
     "author": {
       "@type": "Person",
       "name": "brinst"
@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="작성일">📅&nbsp;2021년 01월 27일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;2&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
   
@@ -1743,6 +1743,214 @@
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
       <h2 id="연관관계-매핑">연관관계 매핑</h2>
+<h3 id="객체를-테이블에-맞추어-모델링">객체를 테이블에 맞추어 모델링</h3>
+<blockquote>
+<p>식별자로 다시 조회, 객체지향적인 방법은 아니다.<br />
+연관관계가 없기 때문에, 직접 하나하나 다 조회해야 한다.</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">            <span class="n">Team</span> <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Team</span><span class="o">();</span>
+            <span class="n">team</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;teamA&#34;</span><span class="o">);</span>
+            <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">team</span><span class="o">);</span>
+
+            <span class="n">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Member</span><span class="o">();</span>
+<span class="c1">//            member.setId(100L);
+</span><span class="c1"></span>            <span class="n">member</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;안녕하세요&#34;</span><span class="o">);</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setMemberType</span><span class="o">(</span><span class="n">MemberType</span><span class="o">.</span><span class="na">USER</span><span class="o">);</span>
+            <span class="n">member</span><span class="o">.</span><span class="na">setTeamId</span><span class="o">(</span><span class="n">team</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+            <span class="c1">//persist -&gt; 영구 저장하다.
+</span><span class="c1"></span>            <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">member</span><span class="o">);</span>
+
+
+            <span class="c1">//조회
+</span><span class="c1"></span>            <span class="n">Member</span> <span class="n">findeMember</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Member</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">member</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+
+            <span class="c1">//연관관꼐가 없음
+</span><span class="c1"></span>            <span class="n">Team</span> <span class="n">findTeam</span> <span class="o">=</span> <span class="n">em</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Team</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">team</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+
+</code></pre></td></tr></table>
+</div>
+</div><p><img src="https://user-images.githubusercontent.com/60083557/106375783-9b04d800-63d2-11eb-8149-585000d73775.png" alt="image" /></p>
+<h4 id="객체를-테이블에-맞추어-데이터-중심으로-모델링하면-협력관계를-만들-수-없다">객체를 테이블에 맞추어 데이터 중심으로 모델링하면, 협력관계를 만들 수 없다.</h4>
+<ul>
+<li>테이블은 외래키로 조인을 사용해서 연관된 테이블을 찾는다.</li>
+<li>객체는 참조를 사용해서 연관된 객체를 찾는다.</li>
+<li>테이블과 객체 사이에는 이런 큰 간격이 있다.</li>
+<li>이런방식은 객체를 객체 답게 사용하는게 아니라, DB에 끼워 맞춘 방식이다.</li>
+</ul>
+<h3 id="단방향-매핑">단방향 매핑</h3>
+<blockquote>
+<p>객체의 참조와 테이블의 외래 키를 매핑</p>
+</blockquote>
+<p><img src="https://user-images.githubusercontent.com/60083557/106375939-f97e8600-63d3-11eb-974c-5bc5cccc8792.png" alt="image" /></p>
+<p>다음과 같이 연관관계를 지정하는 것이 단방향 매핑이다.<br />
+Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져오지 못한다.</p>
+<ul>
+<li>
+<p>객체 생성</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
+<span class="o">....</span>
+<span class="nd">@ManyToOne</span>
+    <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;TEAM_ID&#34;</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="n">Team</span> <span class="n">team</span><span class="o">;</span>
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>다음과 같이 컬럼을 생성해준다.</li>
+<li>ManyToOne은 Member입장에서 N:1이기 때문에 붙여준다.</li>
+<li>JoinColumn은 어느 컬럼으로 조인할 것인지 정해주는 것인데, 생략하면 Default 값으로 들어가게 된다. 왠만하면 작성해준다.</li>
+</ul>
+</li>
+<li>
+<p>개선된 조회 방식</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java">    <span class="c1">//조회
+</span><span class="c1"></span>    <span class="n">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Member</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">member</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
+
+    <span class="c1">//참조를 사용한 연관관계 조회
+</span><span class="c1"></span>    <span class="n">Team</span> <span class="n">findTeam</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="na">getTeam</span><span class="o">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>위와 같이 여러번 조회하는 방식이 아닌 연관관계를 사용하여 한번에 객체를 가져오는 것이 가능해진다.</p>
+</li>
+</ul>
+<h3 id="지연로딩">지연로딩</h3>
+<blockquote>
+<p>현업에서는 지연로딩을 권장한다.</p>
+</blockquote>
+<p>위에서 실습을 진행하면 아래처럼 한방쿼리가 작성되어 실행되게 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql">  <span class="k">select</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">age</span> <span class="k">as</span> <span class="n">age2_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span> <span class="k">as</span> <span class="n">memberty3_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span> <span class="k">as</span> <span class="n">username4_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span> <span class="k">as</span> <span class="n">regdate5_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span> <span class="k">as</span> <span class="n">team_id6_0_0_</span><span class="p">,</span>
+        <span class="n">team1_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_1_1_</span><span class="p">,</span>
+        <span class="n">team1_</span><span class="p">.</span><span class="n">name</span> <span class="k">as</span> <span class="n">name2_1_1_</span>
+    <span class="k">from</span>
+        <span class="n">Member</span> <span class="n">member0_</span>
+    <span class="k">left</span> <span class="k">outer</span> <span class="k">join</span>
+        <span class="n">Team</span> <span class="n">team1_</span>
+            <span class="k">on</span> <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span><span class="o">=</span><span class="n">team1_</span><span class="p">.</span><span class="n">id</span>
+    <span class="k">where</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이게 싫다면 지연로딩을 사용하면 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
+    <span class="o">...</span>
+    <span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="n">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span>
+    <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;TEAM_ID&#34;</span><span class="o">)</span>
+    <span class="kd">private</span> <span class="n">Team</span> <span class="n">team</span><span class="o">;</span>
+
+<span class="o">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>지연로딩을 사용하는 방법은 간단하다. ManyToOne 어노테이션에 Lazy라고 선언해주면 된다.</p>
+<p>이렇게 하고 다시 실행하면 다음과 같은 쿼리가 실행되게 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql">    <span class="k">select</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">age</span> <span class="k">as</span> <span class="n">age2_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span> <span class="k">as</span> <span class="n">memberty3_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span> <span class="k">as</span> <span class="n">username4_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span> <span class="k">as</span> <span class="n">regdate5_0_0_</span><span class="p">,</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span> <span class="k">as</span> <span class="n">team_id6_0_0_</span>
+    <span class="k">from</span>
+        <span class="n">Member</span> <span class="n">member0_</span>
+    <span class="k">where</span>
+        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>이때 team을 가져오지 않고 member만 가져온것을 볼수가있는데, 지연로딩은 객체를 직접적으로 사용할때 값을 가져온다.<br />
+<img src="https://user-images.githubusercontent.com/60083557/106376312-79f2b600-63d7-11eb-98f7-54b457b1c2b4.png" alt="image" /></p>
 
     </article>
     
@@ -2091,11 +2299,11 @@
 <nav class="pagination-single">
   
     
-      <a href="https://brinst07.github.io/posts/javaspringboot/jpa3/" class="pagination-single__left">
+      <a href="https://brinst07.github.io/posts/javaspringboot/jpa5/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">JPA 기본기 다지기(3)</div>      
+        <div class="pagination-single__left-title">JPA 기본기 다지기(5)</div>      
       </a>
     
     <div class="grow"></div>
@@ -3234,7 +3442,17 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#연관관계-매핑">연관관계 매핑</a></li>
+    <li><a href="#연관관계-매핑">연관관계 매핑</a>
+      <ul>
+        <li><a href="#객체를-테이블에-맞추어-모델링">객체를 테이블에 맞추어 모델링</a>
+          <ul>
+            <li><a href="#객체를-테이블에-맞추어-데이터-중심으로-모델링하면-협력관계를-만들-수-없다">객체를 테이블에 맞추어 데이터 중심으로 모델링하면, 협력관계를 만들 수 없다.</a></li>
+          </ul>
+        </li>
+        <li><a href="#단방향-매핑">단방향 매핑</a></li>
+        <li><a href="#지연로딩">지연로딩</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>

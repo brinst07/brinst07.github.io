@@ -48,7 +48,43 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Wed, 27 Jan 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/javaspringboot/jpa4/</guid>
-        <description>연관관계 매핑</description>
+        <description>연관관계 매핑 객체를 테이블에 맞추어 모델링 식별자로 다시 조회, 객체지향적인 방법은 아니다. 연관관계가 없기 때문에, 직접 하나하나 다 조회해야 한다. 1 2 3 4</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>JPA 기본기 다지기(5)</title>
+        <link>https://brinst07.github.io/posts/javaspringboot/jpa5/</link>
+        <pubDate>Wed, 27 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 27 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/javaspringboot/jpa5/</guid>
+        <description>양방향 매핑 객체와 테이블이 관계를 맺는 차이 객체 연관관계 회원 -&amp;gt; 팀 연관관계 1개(단방향) 팀 -&amp;gt; 회원 연관관계 1개(단방향) 테이블 연관관계 회원 &amp;lt;-&amp;gt; 팀의 연관관</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>JPA 기본기 다지기(6)</title>
+        <link>https://brinst07.github.io/posts/javaspringboot/jpa6/</link>
+        <pubDate>Wed, 27 Jan 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 27 Jan 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/javaspringboot/jpa6/</guid>
+        <description></description>
         
         <dc:creator>brinst</dc:creator>
         
