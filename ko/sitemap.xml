@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/</loc>
+    <loc>https://brinst07.github.io/posts/db/</loc>
     <lastmod>2021-01-10T22:39:24+09:00</lastmod>
   </url>
   
@@ -24,7 +24,7 @@
   
   <url>
     <loc>https://brinst07.github.io/</loc>
-    <lastmod>2021-01-27T22:39:24+09:00</lastmod>
+    <lastmod>2021-02-01T22:41:24+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,27 +38,32 @@
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa4/</loc>
-    <lastmod>2021-01-27T22:39:24+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa5/</loc>
-    <lastmod>2021-01-27T22:39:24+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa6/</loc>
-    <lastmod>2021-01-27T22:39:24+09:00</lastmod>
+    <loc>https://brinst07.github.io/posts/db/oopquery/</loc>
+    <lastmod>2021-02-01T22:41:24+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://brinst07.github.io/posts/</loc>
+    <lastmod>2021-02-01T22:41:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/db/jpa6/</loc>
+    <lastmod>2021-02-01T22:39:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/db/jpa4/</loc>
     <lastmod>2021-01-27T22:39:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa3/</loc>
+    <loc>https://brinst07.github.io/posts/db/jpa5/</loc>
+    <lastmod>2021-01-27T22:39:24+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/db/jpa3/</loc>
     <lastmod>2021-01-26T22:39:24+09:00</lastmod>
   </url>
   
@@ -68,7 +73,7 @@
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/n1/</loc>
+    <loc>https://brinst07.github.io/posts/db/n1/</loc>
     <lastmod>2021-01-18T22:39:24+09:00</lastmod>
   </url>
   
@@ -108,7 +113,7 @@
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa/</loc>
+    <loc>https://brinst07.github.io/posts/db/jpa/</loc>
     <lastmod>2021-01-12T22:41:24+09:00</lastmod>
   </url>
   
@@ -118,7 +123,7 @@
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/javaspringboot/jpa%EC%98%81%EC%86%8D%EC%84%B1%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</loc>
+    <loc>https://brinst07.github.io/posts/db/jpa%EC%98%81%EC%86%8D%EC%84%B1%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2021-01-11T22:39:24+09:00</lastmod>
   </url>
   
