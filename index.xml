@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 01 Feb 2021 22:41:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Feb 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>개발자에게 중요한 팁들</title>
+        <link>https://brinst07.github.io/posts/etc/develop_design/</link>
+        <pubDate>Fri, 05 Feb 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 05 Feb 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/etc/develop_design/</guid>
+        <description>세미나 주제 금일 갑자기 세미나가 잡히게 되어, 듣고왔다. 팀 과장님께서 신입들을 대상으로 교육을 진행하셨는데, 나를 포함한 신입분들이 개발할때 어떤 부분을 놓치</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>OOPQuery</title>
