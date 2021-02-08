@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>리눅스 파일시스템과 권한</title>
+        <link>https://brinst07.github.io/posts/linuxsever/linux_file/</link>
+        <pubDate>Mon, 08 Feb 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Mon, 08 Feb 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/linuxsever/linux_file/</guid>
+        <description>세미나 이유 당사의 패키지를 실행할때 실행해야 하는 서버는 총 4개로 이루어져있다. 이 서버를 실행할때 평소 root로 실행하기 때문에 문제가 생기지 않지만, 고객</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>JMeter</title>
         <link>https://brinst07.github.io/posts/linuxsever/jmeter/</link>
         <pubDate>Fri, 22 Jan 2021 22:39:24 +0900</pubDate>
