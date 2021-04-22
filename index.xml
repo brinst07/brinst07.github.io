@@ -48,7 +48,7 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 22 Apr 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/react-node.js/react/</guid>
-        <description>##React란??? 페이스북에서 만듬&amp;hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 J</description>
+        <description>React란??? 페이스북에서 만듬&amp;hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 JSX</description>
         
         <dc:creator>brinst</dc:creator>
         
