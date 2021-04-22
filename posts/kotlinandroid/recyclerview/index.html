@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.79.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1724,7 +1724,7 @@
 <div class="single__infos">
   <time class="single__info" title="작성일">📅&nbsp;2021년 01월 11일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;4&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
   
@@ -1754,40 +1754,195 @@
 <p>원하는 액티비티에 리사이클러뷰 만들기</p>
 </li>
 <li>
+<p>리사이클러뷰에 들어갈 item layout만들기</p>
+</li>
+<li>
 <p>리사이클러에 뿌릴 Model(dto) 만들기</p>
 </li>
 <li>
 <p>어댑터 정의하기</p>
 <ul>
-<li>
-<p>리사이클러뷰는 리사이클러 어댑터라는 메서드 어댑터를 사용해서 데이터를 연결한다.</p>
-</li>
-<li>
-<p>리사이클러뷰 어댑터는 개별 데이터에 대응하는 뷰홀더 클래스를 사용한다.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">    <span class="k">class</span> <span class="nc">customAdapter</span> <span class="p">:</span> <span class="n">RecyclerView</span><span class="p">.</span><span class="n">Adapter</span><span class="p">&lt;</span><span class="n">ViewHolder</span><span class="p">&gt;{</span>
-        <span class="k">override</span> <span class="k">fun</span> <span class="nf">onBindViewHolder</span><span class="p">(</span><span class="n">viewholder</span><span class="p">,</span> <span class="n">item</span><span class="p">){</span>
-
-        <span class="p">}</span>
-    <span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>뷰홀더는 현재 홤녀에 보여지는 개수만큼만 생성되고 목록이 위쪽으로 스크롤 될 경우 가장 위의 뷰홀더를 아래에서 재사용한 후 데이터만 바꿔주기 때문에 앱의 효율이 향상됨.</p>
-</li>
+<li>리사이클러뷰는 리사이클러 어댑터라는 메서드 어댑터를 사용해서 데이터를 연결한다.</li>
+<li>리사이클러뷰 어댑터는 개별 데이터에 대응하는 뷰홀더 클래스를 사용한다.</li>
+<li>리사이클러뷰처럼 목록을 표시하는 컨테이너들은 표시될 데이터와 아이템 레이아웃을 어댑터에서 연결해주므로, 어댑터에서 어떤 아이템 레이아웃을 사용하느냐에 따라 표시되는 모양을 다르게 만들수 있다.</li>
 </ul>
 </li>
 </ol>
+<h3 id="리사이클러-뷰-만들기">리사이클러 뷰 만들기</h3>
+<p>리사이클러뷰를 만들어준다. xml의 좌측 컨테이너를 클릭하면 RecyclerView를 확인 할 수 있는데, 이를 클릭하면 쉽게 리사이클러뷰를 추가할수 있다. 나는 ConstraintLayout 안에 RecylcerView를 넣었다.</p>
+<h3 id="itemlayout만들기">Itemlayout만들기</h3>
+<p>스피너와 마찬가지로 리사이클러뷰안에 들어가는 Item을 정의해줘야한다. 이때 디자인이나 형태를 정할 수 있다.<br />
+[app]-[res]-[layout] 디렉토리로 들어가 Layout resource file을 만들어준다.<br />
+만들떄 Root element를 LinearLayout으로 설정해준다.<br />
+그 후 본인이 원하는 방식으로 item을 만들어준다.</p>
+<h3 id="model-만들기">Model 만들기</h3>
+<p>Item Layout을 만들었다면, item에 들어갈 Model을 만들어줘야한다.<br />
+data class를 사용하여 만들었다.</p>
+<h4 id="data-class">data class</h4>
+<p>코틀린은 간단한 값의 저장용도로 데이터 클래스를 제공한다.<br />
+data 예약어를 class 앞에 붙여서 만들고 클래스명 다음에 생성자처럼 파라미터를 정의할 수 있는데, 생성자와 다르게 파라미터 앞에 var 또는 val을 명시해서 변수인지 상수인지를 구분해야한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin"><span class="k">data</span> <span class="k">class</span> <span class="err">클래스명 (</span><span class="nc">val</span> <span class="err">파라미터</span><span class="m">1</span> <span class="p">:</span> <span class="err">타입</span><span class="p">,</span> <span class="k">var</span> <span class="err">파라미터2 : 타입)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>또한 data class는 특별한 기능이 존재하는데, 일반 클래스에서 toString() 메서드를 호출하면 인스턴스의 주소값을 반환하지만,<br />
+data class는 값을 반환하기 대문에 실제값을 모니터링 할 떄 좋다.<br />
+copy() 메소드를 지원하기 때문에 간단하게 값을 복사하기에도 좋다.</p>
+<p>위처럼 다양한 장점이 있는 data class로 Model을 만들었다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">  <span class="k">data</span> <span class="k">class</span> <span class="nc">Board</span> <span class="p">(</span><span class="k">var</span> <span class="py">no</span><span class="p">:</span><span class="n">Int</span><span class="p">,</span> <span class="k">var</span> <span class="py">title</span><span class="p">:</span><span class="n">String</span><span class="p">,</span><span class="k">var</span> <span class="py">timestamp</span><span class="p">:</span> <span class="n">Long</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="customadapter-만들기">CustomAdapter 만들기</h3>
+<p>스피너는 이미 만들어진 Adapter를 사용했지만, RecyclerView는 직접 CustomAdapter를 만들어줘야한다.<br />
+리사이클러뷰 어댑터는 개별 데이터에 대응하는 뷰홀더 클래스를 사용한다.<br />
+상속하는 리사이클러뷰 어댑터에 뷰홀더 클래스를 제너릭으로 지정해야 하므로 뷰홀더 클래스를 먼저 만들고 나서, 어댑터 클래스를 생성하는 것이 더 편하다.</p>
+<p>뷰홀더는 현재 화면에 보여지는 개수만큼 생성되고 목록이 위쪽으로 스크롤될 경우 가장 위 뷰홀더를 아래에서 재사용한 후 데이터만 바꿔주기 때문에 앱의 효율이 향상된다.(그래서 리사이클러&hellip; 재사용&hellip;.)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">  <span class="c1">//리사이클러 뷰가 동작하려면 아래의 3가지 메소드를 반드시 구현해야한다.
+</span><span class="c1"></span>  <span class="k">class</span> <span class="nc">CustomAdapter</span><span class="p">{</span>
 
+    <span class="k">var</span> <span class="py">listData</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">&lt;</span><span class="n">Board</span><span class="p">&gt;()</span>
+
+    <span class="c1">//아이템 레이아웃을 생성하는 메소드
+</span><span class="c1"></span>    <span class="c1">//프로그램을 실행하면 한화면에 보이는 개수만큼 안드로이드가 호출한다.
+</span><span class="c1"></span>    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreateViewHolder</span><span class="p">(</span><span class="n">parent</span><span class="p">:</span> <span class="n">ViewGroup</span><span class="p">,</span> <span class="n">viewType</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">Holder</span> <span class="p">{</span>
+        <span class="c1">//viewbinding을 사용하기 위한 코드
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">binding</span> <span class="p">=</span> <span class="n">ItemRecyclerBinding</span><span class="p">.</span><span class="n">inflate</span><span class="p">(</span><span class="n">LayoutInflater</span><span class="p">.</span><span class="n">from</span><span class="p">(</span><span class="n">parent</span><span class="p">.</span><span class="n">context</span><span class="p">),</span><span class="n">parent</span><span class="p">,</span><span class="k">false</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">Holder</span><span class="p">(</span><span class="n">binding</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="c1">//스크롤이 될때마다 실제 화면에 데이터와 레이아웃을 연결하는 메서드
+</span><span class="c1"></span>    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onBindViewHolder</span><span class="p">(</span><span class="n">holder</span><span class="p">:</span> <span class="n">Holder</span><span class="p">,</span> <span class="n">position</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">val</span> <span class="py">board</span> <span class="p">=</span> <span class="n">listData</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">position</span><span class="p">)</span>
+        <span class="n">holder</span><span class="p">.</span><span class="n">setBoard</span><span class="p">(</span><span class="n">board</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">getItemCount</span><span class="p">():</span> <span class="n">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">listData</span><span class="p">.</span><span class="n">size</span>
+    <span class="p">}</span>
+
+  <span class="p">}</span>
+
+<span class="c1">//어댑터에서 넘겨주는 아이템 레이아웃을 Holder의 클래스의 생성자에게서 받아 viewHolder의 생성자에게로 넘겨주는 구조
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">Holder</span><span class="p">(</span><span class="k">val</span> <span class="py">binding</span><span class="p">:</span> <span class="n">ItemRecyclerBinding</span><span class="p">)</span> <span class="p">:</span> <span class="n">RecyclerView</span><span class="p">.</span><span class="n">ViewHolder</span><span class="p">(</span><span class="n">binding</span><span class="p">.</span><span class="n">root</span><span class="p">){</span>
+    <span class="k">fun</span> <span class="nf">setBoard</span><span class="p">(</span><span class="n">board</span> <span class="p">:</span><span class="n">Board</span><span class="p">){</span>
+        <span class="n">binding</span><span class="p">.</span><span class="n">textNo</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s2">&#34;</span><span class="si">${board.no}</span><span class="s2">&#34;</span>
+        <span class="n">binding</span><span class="p">.</span><span class="n">textTitle</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="s2">&#34;</span><span class="si">${board.title}</span><span class="s2">&#34;</span>
+        <span class="k">var</span> <span class="py">sdf</span> <span class="p">=</span> <span class="n">SimpleDateFormat</span><span class="p">(</span><span class="s2">&#34;yyyy/MM/dd&#34;</span><span class="p">)</span>
+        <span class="k">var</span> <span class="py">formattedDate</span> <span class="p">=</span> <span class="n">sdf</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">board</span><span class="p">.</span><span class="n">timestamp</span><span class="p">)</span>
+        <span class="n">binding</span><span class="p">.</span><span class="n">textDate</span><span class="p">.</span><span class="n">text</span> <span class="p">=</span> <span class="n">formattedDate</span>
+
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="어댑터-사용해서-연결하기">어댑터 사용해서 연결하기</h3>
+<p>여태까지 만든 어댑터를 layout과 연결해주면 끝이다&hellip;.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-Kotlin" data-lang="Kotlin">  <span class="k">class</span> <span class="nc">MainPage</span> <span class="p">:</span> <span class="n">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="k">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle</span><span class="p">?)</span> <span class="p">{</span>
+
+        <span class="k">var</span> <span class="py">binding</span> <span class="p">=</span> <span class="n">ActivityMainPageBinding</span><span class="p">.</span><span class="n">inflate</span><span class="p">(</span><span class="n">layoutInflater</span><span class="p">)</span>
+
+        <span class="k">super</span><span class="p">.</span><span class="n">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+        <span class="n">setContentView</span><span class="p">(</span><span class="n">binding</span><span class="p">.</span><span class="n">root</span><span class="p">)</span>
+
+        <span class="c1">//loadData()는 설명하지 않았지만 더미데이터를 생성하는 코드이다.
+</span><span class="c1"></span>        <span class="k">val</span> <span class="py">data</span><span class="p">:</span><span class="n">MutableList</span><span class="p">&lt;</span><span class="n">Board</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">lodaData</span><span class="p">()</span>
+
+        <span class="k">var</span> <span class="py">adapter</span> <span class="p">=</span> <span class="n">CustomAdapter</span><span class="p">()</span>
+        <span class="c1">//어댑터안에서 사용하는 MutableList에 data를 넣는다.
+</span><span class="c1"></span>        <span class="n">adapter</span><span class="p">.</span><span class="n">listData</span> <span class="p">=</span> <span class="k">data</span>
+
+        <span class="c1">//어댑터를 연결해준다.
+</span><span class="c1"></span>        <span class="n">binding</span><span class="p">.</span><span class="n">recycler</span><span class="p">.</span><span class="n">adapter</span> <span class="p">=</span> <span class="n">adapter</span>
+        <span class="c1">//리사이클러뷰를 화면에 보여주는 형태를 결정하는 레이아웃매니저를 연결한다.
+</span><span class="c1"></span>        <span class="n">binding</span><span class="p">.</span><span class="n">recycler</span><span class="p">.</span><span class="n">layoutManager</span> <span class="p">=</span> <span class="n">LinearLayoutManager</span><span class="p">(</span><span class="k">this</span><span class="p">)</span>
+
+
+
+
+    <span class="p">}</span>
+
+</code></pre></td></tr></table>
+</div>
+</div>
     </article>
     
     
@@ -3281,6 +3436,15 @@ document.addEventListener('DOMContentLoaded', function () {
     <li><a href="#리사이클러뷰">리사이클러뷰</a>
       <ul>
         <li><a href="#매커니즘">매커니즘</a></li>
+        <li><a href="#리사이클러-뷰-만들기">리사이클러 뷰 만들기</a></li>
+        <li><a href="#itemlayout만들기">Itemlayout만들기</a></li>
+        <li><a href="#model-만들기">Model 만들기</a>
+          <ul>
+            <li><a href="#data-class">data class</a></li>
+          </ul>
+        </li>
+        <li><a href="#customadapter-만들기">CustomAdapter 만들기</a></li>
+        <li><a href="#어댑터-사용해서-연결하기">어댑터 사용해서 연결하기</a></li>
       </ul>
     </li>
   </ul>

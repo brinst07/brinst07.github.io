@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Mon, 08 Feb 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 22 Apr 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -75,6 +75,30 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 14 Jan 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/linuxsever/</guid>
+        <description></description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>index</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>React &amp; Node.js</title>
+        <link>https://brinst07.github.io/posts/react-node.js/</link>
+        <pubDate>Thu, 22 Apr 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        
+        <guid>https://brinst07.github.io/posts/react-node.js/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>
