@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JPA 기본기 다지기(3) – brinst Dev Blog</title>
+    <title>Node JS 와 Express JS – brinst Dev Blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://brinst07.github.io/\"");
     
-    var permalink = JSON.parse("\"https://brinst07.github.io/posts/db/jpa3/\"");
+    var permalink = JSON.parse("\"https://brinst07.github.io/posts/reactnode/test1/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1326,17 +1326,17 @@
 <meta name="description" content="brinst Dev Blog" />
 
 
-<meta name="created" content="2021-01-26T22:39:24&#43;0900">
-<meta name="modified" content="2021-01-26T22:39:24&#43;0900">
-<meta property="article:published_time" content="2021-01-26T22:39:24&#43;0900">
+<meta name="created" content="0001-01-01T00:00:00&#43;0000">
+<meta name="modified" content="0001-01-01T00:00:00&#43;0000">
+<meta property="article:published_time" content="0001-01-01T00:00:00&#43;0000">
 
 <meta name="author" content="brinst">
-<meta property="article:author" content="https://brinst07.github.io/posts/db/jpa3/@brinst">
+<meta property="article:author" content="https://brinst07.github.io/posts/reactnode/test1/@brinst">
 
 
 <meta property="og:site_name" content="brinst Dev Blog">
-<meta property="og:title" content="JPA 기본기 다지기(3)">
-<meta property="og:url" content="https://brinst07.github.io/posts/db/jpa3/">
+<meta property="og:title" content="Node JS 와 Express JS">
+<meta property="og:url" content="https://brinst07.github.io/posts/reactnode/test1/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
@@ -1349,7 +1349,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://brinst07.github.io/posts/db/jpa3/">
+<link rel="canonical" href="https://brinst07.github.io/posts/reactnode/test1/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1375,11 +1375,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "JPA 기본기 다지기(3)",
-    "datePublished": "2021-01-26T22:39:24+09:00",
-    "dateModified": "2021-01-26T22:39:24+09:00",
-    "url" : "https://brinst07.github.io/posts/db/jpa3/",
-    "description": "데이터베이스 스키마 자동 생성하기 DDL을 애플리케이션 실행 시점에 자동 생성 테이블 중심 -\u0026gt; 객체중심 데이터베이스 방언을 활용해서 데이터베이스에 맞는 적절한 DDL",
+    "headline": "Node JS 와 Express JS",
+    "datePublished": "0001-01-01T00:00:00Z",
+    "dateModified": "0001-01-01T00:00:00Z",
+    "url" : "https://brinst07.github.io/posts/reactnode/test1/",
+    "description": "Node Js란? Node Js가 나오기 전에는 우리는 항상 앞단에서만 JS를 가지고 작업을 하였다. 하지만 Node JS가 나오고 나서부터는 서버사이드에도 JS를 사용할수 있게 되",
     "author": {
       "@type": "Person",
       "name": "brinst"
@@ -1698,14 +1698,14 @@
   
   <li >
     
-      <a href="https://brinst07.github.io/posts/db/" class="capitalize">DB</a>
+      <a href="https://brinst07.github.io/posts/reactnode/" class="capitalize">React &amp; Node.js</a>
     
   </li>
   
   
   <li  class="is-active" >
     
-      <span>JPA 기본기 다지기(3)</span>
+      <span>Node JS 와 Express JS</span>
     
   </li>
   
@@ -1717,12 +1717,12 @@
   <div class="single ">
     <div class="single__nojs">자바스크립트를 활성화 해주세요</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">JPA 기본기 다지기(3)</h2>
+    <h2 class="single__title" data-ani="true">Node JS 와 Express JS</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="작성일">📅&nbsp;2021년 01월 26일 </time>
+  <time class="single__info" title="작성일">📅&nbsp;0001년 01월 01일 </time>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;3&nbsp;min read </span>
   
@@ -1742,86 +1742,27 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="데이터베이스-스키마-자동-생성하기">데이터베이스 스키마 자동 생성하기</h2>
-<ul>
-<li>DDL을 애플리케이션 실행 시점에 자동 생성</li>
-<li>테이블 중심 -&gt; 객체중심</li>
-<li>데이터베이스 방언을 활용해서 데이터베이스에 맞는 적절한 DDL 생성</li>
-<li>이렇게 생성된 <b>DDL은 개발 장비에서만 사용</b></li>
-<li>생성된 DDL은 운영서버에서는 사용하지 않거나, 적절히 다듬은 후 사용</li>
-<li>hibernate.hbm2ddl.auto
-<ul>
-<li>create : 기존 테이블 삭제 후 다시생성(DROP + CREATE)</li>
-<li>create-drop : create와 같으나 종료시점에 테이블 DROP</li>
-<li>update : 변경분만 반영(운영DB에는 사용하면 안됨)
-<ul>
-<li>보통 DB에는 수천 수만건이 있는에 여기에 alter문을 때리게 되면 보통 DB에 락이 걸리게 되고 그것은 곧 지옥&hellip;..</li>
-</ul>
-</li>
-<li>validate : 엔티티와 테이블이 정상 매핑되었는지만 확인</li>
-<li>none : 사용하지 않음</li>
-</ul>
-</li>
-</ul>
-<h2 id="데이터베이스-스키마-자동-생성하기-주의">데이터베이스 스키마 자동 생성하기 주의!!!</h2>
-<ul>
-<li>운영장비에는 절대 create, create-drop, update 사용하면 안된다.</li>
-<li>개발 초기 단게는 create 또는 update</li>
-<li>테스트 서버는 update 또는 validate</li>
-<li>스테이징과 운영 서버는 validate 또는 none</li>
-</ul>
-<h2 id="매핑-어노테이션철저하게-db-와-매핑">매핑 어노테이션(철저하게 DB 와 매핑)</h2>
-<ul>
-<li>@Column
-<ul>
-<li>자바 객체는 name이지만 DB 컬럼 이름은 USERNAME이라고 하고 싶을때 사용한다.
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Column</span><span class="o">(</span><span class="n">name</span><span class="o">=</span><span class="s">&#34;USERNANE&#34;</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">String</span> <span class="n">name</span><span class="o">;</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>가장 많이 사용됨</li>
-<li>name : 필드와 매핑할 테이블의 컬럼 이름</li>
-<li>insertable, updateable : 읽기 전용</li>
-<li>nullable : null 허용여부 결정, DDL 생성시 사용</li>
-<li>unique : 유니크 제약 조건, DDL 생성시 사용</li>
-<li>columnDefinition, length, precision, scale (DDL)</li>
-</ul>
-</li>
-<li>@Enumerated()
-<ul>
-<li>열거형 매핑</li>
-<li>EnumType.ORDINAL : 순서를 저장(기본값)</li>
-<li>EnumType.STRING : 열거형 이름을 그대로 저장, 가급적 이것을 사용해야한다.</li>
-<li>Original을 사용하게 되면 Enum 클래스 안의 순서대로 숫자가 매핑 되는데 만약 중간에 다른 값이 삽입될 경우 마구잡이로 꼬이게 된다.</li>
-<li>String으로 하게 될 경우는 값 그대로가 insert 되게 된다.
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Enumerated</span><span class="o">(</span><span class="n">EnumType</span><span class="o">.</span><span class="na">STRING</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">MemberType</span> <span class="n">memberType</span><span class="o">;</span>
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li><a href="https://woowabros.github.io/tools/2017/07/10/java-enum-uses.html">우아한 형제들 기술블로그 enum</a></li>
-</ul>
-</li>
-</ul>
-<ul>
-<li>
-<p>@Temporal</p>
-<ul>
-<li>
-<p>날짜 타입 매핑</p>
+      <h2 id="node-js란">Node Js란?</h2>
+<p>Node Js가 나오기 전에는 우리는 항상 앞단에서만 JS를 가지고 작업을 하였다.<br />
+하지만 Node JS가 나오고 나서부터는 서버사이드에도 JS를 사용할수 있게 되었다.</p>
+<h2 id="express-js">Express JS</h2>
+<p>Express JS는 Node JS를 더 잘 활용할 수 있게 도와주는 Framework라고 할 수 있다.</p>
+<h3 id="nodejs-설치하기">NodeJS 설치하기</h3>
+<p>Node.JS를 설치하는 방법은 여러가지가 있다.<br />
+아래의 링크를 방문하여 LTS 버전을 사용하면된다.<br />
+<a href="https://nodejs.org/ko/">https://nodejs.org/ko/</a></p>
+<h3 id="npm-package-만들기">npm package 만들기</h3>
+<p>폴더를 만들고 terminal을 켜 npm init 명령어를 입력한다.<br />
+그러면 콘솔창에 정보들을 입력하는 칸이 나올텐데 본인이 원하는 정보를 입력하면 package가 구성되게 된다.<br />
+해당과정을 완료하면 package.json이라는 json파일이 만들어진다.</p>
+<h3 id="expressjs-설치하기">express.js 설치하기</h3>
+<p>본인이 사용하고 싶은 IDE를 켜고(나는 WebStorm을 사용한다.) terminal을 켜서<br />
+npm install express &ndash;save<br />
+위 명령어를 입력한다.<br />
+정상적으로 완료되면 package.json의 dependencies에 express가 추가된것을 확인할수 있을것이다.<br />
+또한 node_modules폴더도 생겼을 것이다.</p>
+<h3 id="서버켜보기">서버켜보기</h3>
+<p>프로젝트 폴더에 index.js를 만들어준다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1831,36 +1772,42 @@
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Temporal</span><span class="o">(</span><span class="n">TemporalType</span><span class="o">.</span><span class="na">DATE</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">Date</span> <span class="n">date</span><span class="o">;</span> <span class="c1">//날짜
-</span><span class="c1"></span>
-<span class="nd">@Temporal</span><span class="o">(</span><span class="n">TemporalType</span><span class="o">.</span><span class="na">TIME</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">Date</span> <span class="n">time</span><span class="o">;</span> <span class="c1">//시간
-</span><span class="c1"></span>
-<span class="nd">@Temporal</span><span class="o">(</span><span class="n">TemporalType</span><span class="o">.</span><span class="na">TIMESTAMP</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">Date</span> <span class="n">timestamp</span><span class="o">;</span> <span class="c1">//날짜와 시간
-</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-JS" data-lang="JS"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>
+<span class="kr">const</span> <span class="nx">port</span> <span class="o">=</span> <span class="mi">5000</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">,(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">))</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">port</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Example app Listeming on port </span><span class="si">${</span><span class="nx">port</span><span class="si">}</span><span class="sb">!`</span><span class="p">))</span>
+</code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p>package.json으로 가서 scripts안에<br />
+&ldquo;start&rdquo; : &ldquo;node index.js&quot;를 입력해준다.<br />
+이렇게 입력하고 terminal에서 npm run start를 입력해주면 끝!!</p>
+<h3 id="mongodb-연결">MongoDB 연결</h3>
+<h4 id="사전작업">사전작업</h4>
+<ol>
+<li>MongoDB 계정 생성</li>
+<li>organization 생성</li>
+<li>Cluster 생성(무조건 무료로 선택하기!!)</li>
+<li>connection method 탭에서 주소 긁어오기</li>
+</ol>
+<p>난 과거에 Azure api를 쓸때 40만원 정도의 cost가 발생한 적이 있었다&hellip;.<br />
+처음이라 뭔지도 몰랐었고, 내가 git에 올린 api key를 다른 사람이 사용할 수도 있다는 생각 조차 하지 못했었다.<br />
+이러한 불상사를 발생하기 위해서 안전장치를 만들어보자</p>
+<h4 id="uri키-감추기">URI키 감추기</h4>
+<ol>
+<li>config 폴더를 만든다</li>
+<li>config 폴더안에 dev.js, key.js, prod.js 세가지 파일을 만든다.
+<ul>
+<li>dev.js -&gt; 내가 개발용으로 사용할 uri를 적는다.</li>
+<li>key.js -&gt; 분기처리를 통해 dev.js를 사용할지 prod.js를 사용할지 처리한다.</li>
+<li>prod.js -&gt; heroku나 배포 서비스를 사용할때 처리하는 부분이다.</li>
 </ul>
 </li>
-<li>
-<p>@Lob</p>
-<ul>
-<li>
-<p>컨텐츠 길이가 너무 길때 Binary 파일로 바로 밀어 넣을 때 사용한다.</p>
-</li>
-<li>
-<p>CLOB, BLOB 매핑</p>
-</li>
-<li>
-<p>CLOB : String, char[], java, sql.CLOB</p>
-</li>
-<li>
-<p>BLOB : byte[], java.sql.BLOB</p>
+<li>key.js
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1868,84 +1815,153 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Lob</span>
-<span class="kd">private</span> <span class="n">String</span> <span class="n">lobString</span><span class="o">;</span>
-
-<span class="nd">@Lob</span>
-<span class="kd">private</span> <span class="kt">byte</span><span class="o">[]</span> <span class="n">lobByte</span><span class="o">;</span>
+<pre class="chroma"><code class="language-JS" data-lang="JS">   <span class="c1">//이 부분에서 개발용인지 배포용인지 분기처리가 된다.
+</span><span class="c1"></span>   <span class="k">if</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">NODE_ENV</span> <span class="o">===</span> <span class="s1">&#39;production&#39;</span><span class="p">){</span>
+      <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./prod&#39;</span><span class="p">)</span>
+   <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+      <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./dev&#39;</span><span class="p">)</span>
+   <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
-</ul>
-</li>
-<li>
-<p>@Transient</p>
-<ul>
-<li>이 필드는 매핑하지 않는다.</li>
-<li>DB와 관계없이 객체에서만 다루기 위한 필드</li>
-<li>애플리케이션에서 DB에 저장하지 않는 필드</li>
-</ul>
-</li>
-</ul>
-<h2 id="식별자-매핑-방법">식별자 매핑 방법</h2>
-<ul>
-<li>식별자 매핑 어노테이션
-<ul>
-<li>@Id</li>
-<li>@GeneratedValue
+<li>dev.js
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="nd">@Id</span> <span class="nd">@GeneratedValue</span><span class="o">(</span><span class="n">strategy</span> <span class="o">=</span> <span class="n">GeneratioinType</span><span class="o">.</span><span class="na">AUTO</span><span class="o">)</span>
-<span class="kd">private</span> <span class="n">Long</span> <span class="n">id</span><span class="o">;</span>
+<pre class="chroma"><code class="language-JS" data-lang="JS">   <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span><span class="p">{</span>
+      <span class="nx">mongoURI</span> <span class="o">:</span> <span class="s1">&#39;uri~&#39;</span>
+   <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li>IDENTITY : 데이터베이스에 위임, MYSQL</li>
-<li>SEQUENCE : 데이터베이스 시퀀스 오브젝트 사용, ORACLE
-<ul>
-<li>@SequenceGenerator 필요</li>
-</ul>
-</li>
-<li>TABLE : 키 생성용 테이블 사용, 모든 DB에서 사용
-<ul>
-<li>@TableGenerator 필요</li>
-</ul>
-</li>
-<li>AUTO : 방언에 따라 자동 지정, 기본값</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="권장하는-식별자-전략">권장하는 식별자 전략</h3>
-<ul>
-<li>기본 키 제약 조건 : null아님, 유일, 변하면 안된다.</li>
-<li>미래까지 이 조건을 만족하는 자연키는 찾기 어렵다. 대리키(대체키)를 사용하자.</li>
-<li>예를 들어 주민등록번호도 기본 키로 적절하지 않다.
-<ul>
-<li>이유 과거에는 주민등록번호를 보관하고 할수 있었지만 이제는 그렇게 할 수 없음&hellip;.</li>
-</ul>
-</li>
-<li>권장사항
-<ol>
-<li>DB에서 제공해주는 AutoIncreament, Sequence 등을 사용</li>
+</div></li>
+<li>prod.js
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JS" data-lang="JS">   <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">mongoURI</span> <span class="o">:</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">MONGO_URI</span>
+   <span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>URI 적용하기<br />
+위처럼 파일을 만들어서 적용하고 index.js에서 mongoDB와 연결시킨다.
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JS" data-lang="JS">   <span class="kr">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">)</span>
+   <span class="kr">const</span> <span class="nx">config</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./config/key&#39;</span><span class="p">)</span>
+   <span class="nx">mongoose</span><span class="p">.</span><span class="nx">connect</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">mongoURI</span><span class="p">,</span> <span class="p">{</span>
+      <span class="nx">useNewUrlParser</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">useUnifiedTopology</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">useCreateIndex</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nx">useFindAndModify</span><span class="o">:</span> <span class="kc">false</span>
+   <span class="p">}).</span><span class="nx">then</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Mongo DB Connect....&#39;</span><span class="p">))</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="p">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div></li>
 </ol>
+<h3 id="model--schema-만들기">Model &amp; Schema 만들기</h3>
 <ul>
-<li>사용시 int 타입을 사용하면 억단위에서 끝남 -&gt; 따라서 Long 타입을 사용해야한다.</li>
-</ul>
-<ol start="2">
-<li>Long + 대체키 + 키 생성전략 사용</li>
-<li>UUID(성능이슈 있을 수 있음)</li>
-</ol>
+<li>
+<p>Model이란?<br />
+Model이란 Schema를 감싸주는 역할을 말한다.</p>
 </li>
-</ul>
+<li>
+<p>Schema란?<br />
+document의 구조 등을 의미하며, 또한 데이터베이스를 creating하고 querying하고, updating, deleting 하는 interface를 제공한다.</p>
+</li>
+<li>
+<p>Model &amp; Schema 만들기</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JS" data-lang="JS">   <span class="kr">const</span> <span class="nx">mongoose</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;mongoose&#39;</span><span class="p">)</span>
+   <span class="kr">const</span> <span class="nx">Schema</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span>
 
+   <span class="kr">const</span> <span class="nx">userSchema</span> <span class="o">=</span> <span class="nx">mongoose</span><span class="p">.</span><span class="nx">Schema</span><span class="p">({</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="p">{</span>
+         <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+         <span class="nx">maxlength</span><span class="o">:</span> <span class="mi">50</span>
+      <span class="p">},</span>
+      <span class="nx">email</span><span class="o">:</span> <span class="p">{</span>
+         <span class="nx">type</span><span class="o">:</span> <span class="nb">String</span><span class="p">,</span>
+         <span class="nx">trim</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+         <span class="nx">unique</span><span class="o">:</span> <span class="mi">1</span>
+      <span class="p">}......</span>
+   <span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>다음과 같이 제작하면 된다.</p>
+</li>
+</ul>
+<h3 id="client와-server-통신시키기">client와 server 통신시키기</h3>
+<p>만약 앞단이 존재한다면 그걸 눌러보면서 테스트 할 수 있지만, rest api 방식의 로직을 가지고는 테스트 할 수 있는 방법이 존재하지 않는다.<br />
+그래서 POSTMAN이라는 프로그램을 사용해서 테스트를 진행할 것이다.</p>
+<p>먼저 npm install body-parser &ndash;save 명령어로 설치해준다.</p>
+<p>백단의 로직을 짠후 , POSTMAN으로 테스트해본다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-JS" data-lang="JS"><span class="nx">app</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/users/register&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//회원가입할때 필요한 정보들을 client에서 가져오면
+</span><span class="c1"></span>    <span class="c1">//그것들을 데이터 베이스에 넣어준다.
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">user</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">User</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
+    <span class="nx">user</span><span class="p">.</span><span class="nx">save</span><span class="p">((</span><span class="nx">err</span><span class="p">,</span> <span class="nx">userInfo</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">json</span><span class="p">({</span><span class="nx">success</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">err</span><span class="p">})</span>
+        <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span>
+            <span class="nx">success</span><span class="o">:</span> <span class="kc">true</span>
+        <span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div>
     </article>
     
     
@@ -2144,13 +2160,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2fdb%2fjpa3%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2ftest1%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=JPA%20%ea%b8%b0%eb%b3%b8%ea%b8%b0%20%eb%8b%a4%ec%a7%80%ea%b8%b0%283%29&url=https%3a%2f%2fbrinst07.github.io%2fposts%2fdb%2fjpa3%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Node%20JS%20%ec%99%80%20Express%20JS&url=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2ftest1%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2293,17 +2309,10 @@
 <nav class="pagination-single">
   
     
-      <a href="https://brinst07.github.io/posts/db/n1/" class="pagination-single__left">
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
-        </div>
-        <div class="pagination-single__left-title">JPA N:1(다대일) 연관관계</div>      
-      </a>
-    
     <div class="grow"></div>
     
-      <a href="https://brinst07.github.io/posts/db/jpa5/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">JPA 기본기 다지기(5)</div>
+      <a href="https://brinst07.github.io/posts/reactnode/react/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">React와 webpack babel</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -3244,7 +3253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="https://brinst07.github.io/posts/db/jpa3/" data-lang="ko" class="dropdown-item is-active">한국어</a>
+              <a href="https://brinst07.github.io/posts/reactnode/test1/" data-lang="ko" class="dropdown-item is-active">한국어</a>
             
           
         
@@ -3443,12 +3452,21 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#데이터베이스-스키마-자동-생성하기">데이터베이스 스키마 자동 생성하기</a></li>
-    <li><a href="#데이터베이스-스키마-자동-생성하기-주의">데이터베이스 스키마 자동 생성하기 주의!!!</a></li>
-    <li><a href="#매핑-어노테이션철저하게-db-와-매핑">매핑 어노테이션(철저하게 DB 와 매핑)</a></li>
-    <li><a href="#식별자-매핑-방법">식별자 매핑 방법</a>
+    <li><a href="#node-js란">Node Js란?</a></li>
+    <li><a href="#express-js">Express JS</a>
       <ul>
-        <li><a href="#권장하는-식별자-전략">권장하는 식별자 전략</a></li>
+        <li><a href="#nodejs-설치하기">NodeJS 설치하기</a></li>
+        <li><a href="#npm-package-만들기">npm package 만들기</a></li>
+        <li><a href="#expressjs-설치하기">express.js 설치하기</a></li>
+        <li><a href="#서버켜보기">서버켜보기</a></li>
+        <li><a href="#mongodb-연결">MongoDB 연결</a>
+          <ul>
+            <li><a href="#사전작업">사전작업</a></li>
+            <li><a href="#uri키-감추기">URI키 감추기</a></li>
+          </ul>
+        </li>
+        <li><a href="#model--schema-만들기">Model &amp; Schema 만들기</a></li>
+        <li><a href="#client와-server-통신시키기">client와 server 통신시키기</a></li>
       </ul>
     </li>
   </ul>

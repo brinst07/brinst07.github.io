@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 22 Apr 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 28 Apr 2021 10:05:20 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,12 +42,30 @@
 
       
       <item>
+        <title>MongoDB</title>
+        <link>https://brinst07.github.io/posts/db/mongodb/</link>
+        <pubDate>Wed, 28 Apr 2021 10:05:20 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 28 Apr 2021 10:05:20 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/db/mongodb/</guid>
+        <description>인프런에서 Node.js React.js강의를 듣고있는데 그 강의에서 MongoDB를 사용하여 개인적으로 공부할겸 포스팅을 진행하게 되었다. 이전에 내가 사용하던 mysql,</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>React와 webpack babel</title>
-        <link>https://brinst07.github.io/posts/react-node.js/react/</link>
+        <link>https://brinst07.github.io/posts/reactnode/react/</link>
         <pubDate>Thu, 22 Apr 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 22 Apr 2021 22:39:24 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/react-node.js/react/</guid>
+        <guid>https://brinst07.github.io/posts/reactnode/react/</guid>
         <description>React란??? 페이스북에서 만듬&amp;hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 JSX</description>
         
         <dc:creator>brinst</dc:creator>
@@ -349,11 +367,11 @@
       
       <item>
         <title>Node JS 와 Express JS</title>
-        <link>https://brinst07.github.io/posts/react-node.js/test1/</link>
+        <link>https://brinst07.github.io/posts/reactnode/test1/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         
-        <guid>https://brinst07.github.io/posts/react-node.js/test1/</guid>
+        <guid>https://brinst07.github.io/posts/reactnode/test1/</guid>
         <description>Node Js란? Node Js가 나오기 전에는 우리는 항상 앞단에서만 JS를 가지고 작업을 하였다. 하지만 Node JS가 나오고 나서부터는 서버사이드에도 JS를 사용할수 있게 되</description>
         
         <dc:creator>brinst</dc:creator>

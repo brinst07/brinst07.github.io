@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>MongoDB</title>
+        <link>https://brinst07.github.io/posts/db/mongodb/</link>
+        <pubDate>Wed, 28 Apr 2021 10:05:20 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 28 Apr 2021 10:05:20 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/db/mongodb/</guid>
+        <description>인프런에서 Node.js React.js강의를 듣고있는데 그 강의에서 MongoDB를 사용하여 개인적으로 공부할겸 포스팅을 진행하게 되었다. 이전에 내가 사용하던 mysql,</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>OOPQuery</title>
         <link>https://brinst07.github.io/posts/db/oopquery/</link>
         <pubDate>Mon, 01 Feb 2021 22:41:24 +0900</pubDate>
