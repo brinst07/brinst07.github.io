@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://brinst07.github.io/posts/reactnode/</loc>
-    <lastmod>2021-04-22T22:39:24+09:00</lastmod>
+    <lastmod>2021-04-29T09:22:01+09:00</lastmod>
   </url>
   
   <url>
@@ -29,7 +29,7 @@
   
   <url>
     <loc>https://brinst07.github.io/</loc>
-    <lastmod>2021-04-28T10:05:20+09:00</lastmod>
+    <lastmod>2021-04-29T09:22:01+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -43,12 +43,17 @@
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/db/mongodb/</loc>
-    <lastmod>2021-04-28T10:05:20+09:00</lastmod>
+    <loc>https://brinst07.github.io/posts/</loc>
+    <lastmod>2021-04-29T09:22:01+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://brinst07.github.io/posts/</loc>
+    <loc>https://brinst07.github.io/posts/reactnode/redux/</loc>
+    <lastmod>2021-04-29T09:22:01+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://brinst07.github.io/posts/db/mongodb/</loc>
     <lastmod>2021-04-28T10:05:20+09:00</lastmod>
   </url>
   

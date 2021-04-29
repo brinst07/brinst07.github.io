@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 28 Apr 2021 10:05:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Apr 2021 09:22:01 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -95,7 +95,7 @@
       <item>
         <title>React &amp; Node.js</title>
         <link>https://brinst07.github.io/posts/reactnode/</link>
-        <pubDate>Thu, 22 Apr 2021 22:39:24 +0900</pubDate>
+        <pubDate>Thu, 29 Apr 2021 09:22:01 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         
         <guid>https://brinst07.github.io/posts/reactnode/</guid>

@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>React와 webpack babel – brinst Dev Blog</title>
+    <title>Redux – brinst Dev Blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://brinst07.github.io/\"");
     
-    var permalink = JSON.parse("\"https://brinst07.github.io/posts/reactnode/react/\"");
+    var permalink = JSON.parse("\"https://brinst07.github.io/posts/reactnode/redux/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1326,17 +1326,16 @@
 <meta name="description" content="brinst Dev Blog" />
 
 
-<meta name="created" content="2021-04-22T22:39:24&#43;0900">
-<meta name="modified" content="2021-04-22T22:39:24&#43;0900">
-<meta property="article:published_time" content="2021-04-22T22:39:24&#43;0900">
+<meta name="created" content="2021-04-29T09:22:01&#43;0900">
+<meta name="modified" content="2021-04-29T09:22:01&#43;0900">
+<meta property="article:published_time" content="2021-04-29T09:22:01&#43;0900">
 
 <meta name="author" content="brinst">
-<meta property="article:author" content="https://brinst07.github.io/posts/reactnode/react/@brinst">
 
 
 <meta property="og:site_name" content="brinst Dev Blog">
-<meta property="og:title" content="React와 webpack babel">
-<meta property="og:url" content="https://brinst07.github.io/posts/reactnode/react/">
+<meta property="og:title" content="Redux">
+<meta property="og:url" content="https://brinst07.github.io/posts/reactnode/redux/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
@@ -1349,7 +1348,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://brinst07.github.io/posts/reactnode/react/">
+<link rel="canonical" href="https://brinst07.github.io/posts/reactnode/redux/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1375,15 +1374,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "React와 webpack babel",
-    "datePublished": "2021-04-22T22:39:24+09:00",
-    "dateModified": "2021-04-22T22:39:24+09:00",
-    "url" : "https://brinst07.github.io/posts/reactnode/react/",
-    "description": "React란??? 페이스북에서 만듬\u0026hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 JSX",
-    "author": {
-      "@type": "Person",
-      "name": "brinst"
-    },
+    "headline": "Redux",
+    "datePublished": "2021-04-29T09:22:01+09:00",
+    "dateModified": "2021-04-29T09:22:01+09:00",
+    "url" : "https://brinst07.github.io/posts/reactnode/redux/",
+    "description": "Redux란? 간단하게 말하자면 Redux는 state를 관리하는 Tool이다. 그렇다면 state는 무엇일까?? State 자신이 들고 있는 값을 말한다. 읽기",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://brinst07.github.io/"
@@ -1705,7 +1700,7 @@
   
   <li  class="is-active" >
     
-      <span>React와 webpack babel</span>
+      <span>Redux</span>
     
   </li>
   
@@ -1717,16 +1712,14 @@
   <div class="single ">
     <div class="single__nojs">자바스크립트를 활성화 해주세요</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">React와 webpack babel</h2>
+    <h2 class="single__title" data-ani="true">Redux</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="작성일">📅&nbsp;2021년 04월 22일 </time>
+  <time class="single__info" title="작성일">📅&nbsp;2021년 04월 29일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;2&nbsp;min read </span>
-  
-  &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;6&nbsp;min read </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 조회수
@@ -1742,32 +1735,659 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="react란">React란???</h2>
+      <h2 id="redux란">Redux란?</h2>
+<p>간단하게 말하자면 Redux는 state를 관리하는 Tool이다.<br />
+그렇다면 state는 무엇일까??</p>
+<h3 id="state">State</h3>
 <ul>
-<li>페이스북에서 만듬&hellip;</li>
-<li>virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함</li>
+<li>
+<p>자신이 들고 있는 값을 말한다.</p>
+</li>
+<li>
+<p>읽기전용인 props와 비교해보자면, 쓰기전용이라고 볼수 있다.</p>
+</li>
+<li>
+<p>부모컴포넌트에서 자식컴포넌트로 data를 보내는 것이 아닌 component안에서 데이터를 전달하려면 state를 사용해야한다.</p>
+<p>ex) 검색 창에 글을 입력할 때 글이 변하는 것은 state를 바꿈</p>
+</li>
+<li>
+<p>State는 props와 다르게 mutable하다.</p>
+</li>
+<li>
+<p>State가 변하면 re-render된다.</p>
+</li>
 </ul>
-<h2 id="리액트-변경-과정">리액트 변경 과정</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="nx">message</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+	<span class="nx">attachFile</span> <span class="o">:</span> <span class="kc">undefined</span><span class="p">,</span>
+	<span class="nx">openMenu</span> <span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="props">Props</h3>
+<ul>
+<li>properties의 줄임말</li>
+<li>부모 컴포넌트가 자식 컴포넌트한테 전달하는 데이터로, (자식 입장에서) 읽기 전용이다.</li>
+<li>flow가 부모 컴포넌트에서 자식컴포넌트에 전달하는 flow임(반대 불가)</li>
+<li>부모에서 자식에게 1이라는 값을 던져주면 이 1는 immutable임</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="c1">//자식 컴포넌트
+</span><span class="c1"></span><span class="o">&lt;</span><span class="nx">ChatMessages</span>
+	<span class="nx">messages</span><span class="o">=</span><span class="p">{</span><span class="nx">messages</span><span class="p">}</span>
+	<span class="nx">currentMember</span><span class="o">=</span><span class="p">{</span><span class="nx">member</span><span class="p">}</span>
+<span class="err">/&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="redux를-사용하는-이유">Redux를 사용하는 이유&hellip;</h3>
+<p><img src="https://user-images.githubusercontent.com/60083557/116488524-8353c780-a8cd-11eb-85b6-e1f4426e2f80.png" alt="image" /><br />
+A component에서 사용하는 comment라는 정보를 B컴포넌트에서 사용하고자 한다면 component를 타고 타고 해서 정보를 받아야한다.<br />
+하지만 리덕스를 사용하게 되면 <strong>store</strong>에 저장하고 필요한 곳에서 꺼내 쓰면 되는 것이다.</p>
+<h3 id="redux-data-flow">Redux Data Flow</h3>
+<p><img src="https://user-images.githubusercontent.com/60083557/116488735-10971c00-a8ce-11eb-83a1-87f7288a93f8.png" alt="image" /><br />
+Redux는 위와 같은 flow로 동작한다.<br />
+특징은 <strong>단방향</strong>으로 data flow가 진행된다는 것이다.</p>
+<h3 id="redux-세팅하기">Redux 세팅하기</h3>
+<p>Client 폴더로 이동하여 다음 dependency를 설치한다.</p>
+<div class="box">
+npm install redux react-redux redux-promise redux-thunk --save
+</div>
+<h4 id="redux-promise-redux-thunk">Redux-promise, Redux-thunk</h4>
+<ul>
+<li>Redux를 잘 쓸수 있게 도와주는 middleware이다.</li>
+<li>기본적인 Redux Store는 반드시 객체 형식으로 된 action만을 받을 수 있다.</li>
+<li>하지만 항상 plain object 형태로 오는 것이 아니다.(Promise형태로 올수 도 있고, Function 형태로 올 수도 있음)</li>
+<li>따라서 위 두 dependency는 위 두가지 형태를 받을수 있게 해주는 것
+<ul>
+<li>Redux-promise ⇒ promise</li>
+<li>Redux-thunk ⇒ function</li>
+</ul>
+</li>
+</ul>
+<h4 id="redux-연결하기">Redux 연결하기</h4>
+<p>위에서 Redux를 설치해줬다면, Redux를 연결하는 작업 또한 필요하다.<br />
+client의 index.js로 이동하여 다음과 같이 작성한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="nx">React</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">ReactDOM</span> <span class="nx">from</span> <span class="s1">&#39;react-dom&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;./index.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s1">&#39;./App&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">reportWebVitals</span> <span class="nx">from</span> <span class="s1">&#39;./reportWebVitals&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;antd/dist/antd.css&#39;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">Provider</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">applyMiddleware</span><span class="p">,</span> <span class="nx">createStore</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">promiseMiddleware</span> <span class="nx">from</span> <span class="s1">&#39;redux-promise&#39;</span>
+<span class="kr">import</span> <span class="nx">ReduxThunk</span> <span class="nx">from</span> <span class="s1">&#39;redux-thunk&#39;</span>
+<span class="kr">import</span> <span class="nx">Reducer</span> <span class="nx">from</span> <span class="s1">&#39;./_reducers/index&#39;</span>
+
+<span class="c1">//middleware가 빠진다면 createStore만 넣으면 되지만, Promise와 Function까지 Store에서 허용해줘야하기때문에 아래와 같이 설정해준다.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">createStoreWithMiddleware</span> <span class="o">=</span> <span class="nx">applyMiddleware</span><span class="p">(</span><span class="nx">promiseMiddleware</span><span class="p">,</span> <span class="nx">ReduxThunk</span><span class="p">)(</span><span class="nx">createStore</span><span class="p">)</span>
+
+<span class="nx">ReactDOM</span><span class="p">.</span><span class="nx">render</span><span class="p">(</span>
+<span class="c1">//Provider로 App을 감싸면 연결해주는 작업이 끝난다.
+</span><span class="c1">//반드시 Store를 설정해줘야하는데 위에서 만든 createStoreWithMiddleware안에 Reducer와 extension을 넣어준다.
+</span><span class="c1"></span>    <span class="o">&lt;</span><span class="nx">Provider</span>
+        <span class="nx">store</span><span class="o">=</span><span class="p">{</span><span class="nx">createStoreWithMiddleware</span><span class="p">(</span><span class="nx">Reducer</span><span class="p">,</span>
+            <span class="nb">window</span><span class="p">.</span><span class="nx">__REDUX_DEVTOOLS_EXTENSION__</span> <span class="o">&amp;&amp;</span> <span class="nb">window</span><span class="p">.</span><span class="nx">__REDUX_DEVTOOLS_EXTENSION__</span><span class="p">()</span>
+        <span class="p">)}</span>
+    <span class="o">&gt;</span>
+        <span class="o">&lt;</span><span class="nx">App</span><span class="o">/&gt;</span>
+    <span class="o">&lt;</span><span class="err">/Provider&gt;,</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;root&#39;</span><span class="p">)</span>
+<span class="p">);</span>
+
+<span class="c1">// If you want to start measuring performance in your app, pass a function
+</span><span class="c1">// to log results (for example: reportWebVitals(console.log))
+</span><span class="c1">// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+</span><span class="c1"></span><span class="nx">reportWebVitals</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="combinereducer-설정">combineReducer 설정</h4>
+<p>reducer를 만들게 되면 여러개가 생길 것이고 이 만들어진 reducer를 관리해줘야한다.<br />
+이때 combineReducer를 사용하여 관리한다.<br />
+reducer 파일을 import해서 넣어주면 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span><span class="nx">combineReducers</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="nx">user</span> <span class="nx">from</span> <span class="s1">&#39;./user_reducer&#39;</span>
+
+<span class="kr">const</span> <span class="nx">rootReducer</span> <span class="o">=</span> <span class="nx">combineReducers</span><span class="p">({</span>
+    <span class="nx">user</span>
+<span class="p">})</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">rootReducer</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="action">Action</h4>
+<ul>
+<li>무엇이 일어났는지 설명하는 객체</li>
+<li>상태를 알려준다&hellip;.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
+  <span class="nx">type</span> <span class="o">:</span> <span class="s1">&#39;액션의 종류를 한번에 식별할 수 있는 문자열 혹은 심볼&#39;</span><span class="p">,</span>
+  <span class="nx">payload</span> <span class="o">:</span> <span class="s1">&#39;액션의 실행에 필요한 임의의 데이터&#39;</span>
+<span class="p">}</span>
+
+<span class="c1">//42번 게시물에 좋아요 버튼을 눌렀다..
+</span><span class="c1"></span><span class="p">{</span><span class="nx">type</span> <span class="o">:</span> <span class="s1">&#39;LIKE_ARTICLE&#39;</span><span class="p">,</span> <span class="nx">articleId</span> <span class="o">:</span> <span class="mi">42</span><span class="p">}</span>
+<span class="c1">//3번 id, 이름이 Mary인 사람이 Fetch_user_success 했다.
+</span><span class="c1"></span><span class="p">{</span><span class="nx">type</span> <span class="o">:</span> <span class="s1">&#39;FETCH_USER_SUCCESS&#39;</span><span class="p">,</span> <span class="nx">response</span> <span class="o">:</span> <span class="p">{</span><span class="nx">id</span> <span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">name</span> <span class="o">:</span> <span class="s1">&#39;Mary&#39;</span><span class="p">}}</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Store에 있는 State는 리액트 컴포넌트가 접근할 수 없다. 반드시 <strong>Action</strong>을 통해서 접근해야함
 <ol>
-<li>JSX을 렌더링한다. → Virtual dom이 업데이트가 됨</li>
-<li>Virtual Dom이 이전 Virtual Dom에서 찍어둔 Snapshot과 비교를 해서 바뀐부분을 찾는다.</li>
-<li>Virtual Dom이 이전 virtualDOM 에서 찍어둔 Snapshot과 비교를해서 바뀐부분을 찾는다.<br />
-이 과정을 diffing이라고 부름</li>
-<li>그 바뀐부분만 Realdom 에서 ㅕㄴ경함</li>
+<li>Store에 뭔가 하고 싶은 경우 Action을 발행</li>
+<li>Store에 문지기가 Action의 발생을 감지하면, State가 갱신된다.</li>
 </ol>
-<h1 id="creat-react-app">creat-react-app</h1>
-<p>리액트를 사용하기 위해서는 원래 웹팩과 바벨설정을 진행해줘야한다.</p>
-<p>예를 들어 react에서는 JSX를 사용하는데, 만약 바벨이 없다면, 이 문법을 해석할 수 없을 것이다.</p>
-<p>그렇다면 이 바벨와 웹팩을 설정해줘야하는과정을 거쳐야한다.</p>
-<p>당장 웹팩과 바벨을 모르더라도 사용은 가능하다.</p>
-<p>바로 create-react-app이 있기 때문이다.</p>
-<h2 id="웹팩이란">웹팩이란?</h2>
-<p><strong>웹팩은 자바스크립트로 만든 프로그램을 배포하기 좋은 형태로 묶어주는 툴이다.</strong></p>
-<p>현재 많은 웹사이트들이 SPA로 전환되면서 하나의 웹페이지를 구현하려면 여러개의 자바스크립트 파일이 필요하게되었다.</p>
-<p>웹팩은 이 여러개의 자바스크립트 파일을 하나로 만들어주는 역할을 한다.</p>
-<h2 id="바벨이란">바벨이란?</h2>
-<p><strong>바벨은 자바스크립트 코드를 변화해주는 트랜스 컴파일러를 의미한다.</strong></p>
-<p>바벨은 레거시한 프로젝트에서도 최신 문법의 자바스크립트 코드를 읽게 해줄수 있는 모듈을 의미한다.</p>
+</li>
+</ul>
+<h4 id="reducer">Reducer</h4>
+<ul>
+<li>state가 어떻게 변할지 묘사하는 function이다.</li>
+<li>이전 상태와 action을 합쳐 새로운 state를 만드는 조작이다.</li>
+<li>이전 state와 action object를 받은 후 next state를 return한다.</li>
+</ul>
+<div class="box">
+  (previousState, action) => nextState
+</div>
+<h4 id="store">Store</h4>
+<ul>
+<li>여러가지 State를 감싸고 있는 역할을 한다.</li>
+<li>State는 기본적으로 여기서 집중관리 된다. 커다란 JSON의 결정체 정도의 이미지이다.</li>
+<li>다음은 STORE의 예제이다.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="p">{</span>
+    <span class="c1">// 세션과 관련된 것
+</span><span class="c1"></span>    <span class="nx">session</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">loggedIn</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">user</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">id</span><span class="o">:</span> <span class="s2">&#34;114514&#34;</span><span class="p">,</span>
+            <span class="nx">screenName</span><span class="o">:</span> <span class="s2">&#34;@mpyw&#34;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+
+    <span class="c1">// 표시중인 타임라인에 관련된 것
+</span><span class="c1"></span>    <span class="nx">timeline</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="s2">&#34;home&#34;</span><span class="p">,</span>
+        <span class="nx">statuses</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">screenName</span><span class="o">:</span> <span class="s2">&#34;@mpyw&#34;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;hello&#34;</span><span class="p">},</span>
+            <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">screenName</span><span class="o">:</span> <span class="s2">&#34;@mpyw&#34;</span><span class="p">,</span> <span class="nx">text</span><span class="o">:</span> <span class="s2">&#34;bye&#34;</span><span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">},</span>
+
+    <span class="c1">// 알림과 관련된 것
+</span><span class="c1"></span>    <span class="nx">notification</span><span class="o">:</span> <span class="p">[],</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="store에-있는-값-활용하기">Store에 있는 값 활용하기</h4>
+<p>Store에 저장되어 있는 값을 가져오려면 Hook을 사용해야 한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react-redux&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="p">{</span> <span class="nx">id</span><span class="p">,</span> <span class="nx">text</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="o">:</span> <span class="nx">RootState</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">reducer1</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>참고자료 : <a href="https://react-redux.js.org/api/hooks">https://react-redux.js.org/api/hooks</a></p>
+<h3 id="redux-활용예제">Redux 활용예제</h3>
+
+<div id="48b6984f4672d365" class="tab">
+  <div class="tab__links">
+    
+      <button class="tab__link" aria-label="Tab link">Dispatch</button>
+    
+      <button class="tab__link" aria-label="Tab link">Action</button>
+    
+      <button class="tab__link" aria-label="Tab link">Node</button>
+    
+      <button class="tab__link" aria-label="Tab link">Reducer</button>
+    
+  </div>
+  
+
+<div id="892e48ea889aac27" class="tab__content">
+  <h4 id="dispatchaction">Dispatch(action)</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span><span class="nx">useState</span><span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;react&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">Button</span><span class="p">,</span> <span class="nx">Descriptions</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;antd&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">useDispatch</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">addToCart</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;../../../../_actions/user_actions&#34;</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nx">ProductInfo</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
+<span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
+
+<span class="kr">const</span> <span class="nx">clickHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="c1">//필요한 정보를 Cart 필드에다가 넣어준다.
+</span><span class="c1"></span>  <span class="nx">dispatch</span><span class="p">(</span><span class="nx">addToCart</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">_id</span><span class="p">))</span>
+<span class="p">}</span>
+
+<span class="k">return</span> <span class="p">(</span>
+        <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+          <span class="o">&lt;</span><span class="nx">Descriptions</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&#34;Product Info&#34;</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;Price&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">price</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;Sold&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">sold</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;View&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">views</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;Description&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">description</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
+          <span class="o">&lt;</span><span class="err">/Descriptions&gt;</span>
+
+          <span class="o">&lt;</span><span class="nx">br</span><span class="o">/&gt;</span>
+          <span class="o">&lt;</span><span class="nx">br</span><span class="o">/&gt;</span>
+
+          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span> <span class="nx">justifyContent</span><span class="o">:</span> <span class="s2">&#34;center&#34;</span><span class="p">}}</span><span class="o">&gt;</span>
+            <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">size</span><span class="o">=</span><span class="s2">&#34;large&#34;</span> <span class="nx">shape</span><span class="o">=</span><span class="s1">&#39;round&#39;</span> <span class="nx">type</span><span class="o">=</span><span class="s1">&#39;danger&#39;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">clickHandler</span><span class="p">}</span><span class="o">&gt;</span>
+              <span class="nx">Add</span> <span class="nx">to</span> <span class="nx">Cart</span>
+            <span class="o">&lt;</span><span class="err">/Button&gt;</span>
+          <span class="o">&lt;</span><span class="err">/div&gt;</span>
+        <span class="o">&lt;</span><span class="err">/div&gt;</span>
+<span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">ProductInfo</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+<div id="5ec94393cc1141fd" class="tab__content">
+  <h4 id="action">Action</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">export</span> <span class="kd">function</span> <span class="nx">addToCart</span><span class="p">(</span><span class="nx">id</span><span class="p">){</span>
+    <span class="kd">let</span> <span class="nx">body</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="nx">productId</span> <span class="o">:</span> <span class="nx">id</span>
+    <span class="p">}</span>
+
+    <span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">USER_SERVER</span><span class="si">}</span><span class="sb">/addToCart`</span><span class="p">,</span><span class="nx">body</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="nx">type</span><span class="o">:</span> <span class="nx">ADD_TO_CART</span><span class="p">,</span>
+        <span class="nx">payload</span><span class="o">:</span> <span class="nx">request</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+<div id="402d6295ef1cc6e7" class="tab__content">
+  <h4 id="nodejs백단">Node.js(백단)</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="nx">router</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s2">&#34;/addToCart&#34;</span><span class="p">,</span> <span class="nx">auth</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//먼저 User Collection에 해당 유저의 정보를 가져오기
+</span><span class="c1"></span>    <span class="c1">//auth 때문에 req.user._id를 가져올수 있다.
+</span><span class="c1"></span>    <span class="nx">User</span><span class="p">.</span><span class="nx">findOne</span><span class="p">({</span><span class="nx">_id</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">_id</span><span class="p">},</span>
+        <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">userInfo</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+            <span class="c1">//가져온 정보에서 카트에다 넣으려 하는 상품이 이미 들어 있는지 확인
+</span><span class="c1"></span>            <span class="kd">let</span> <span class="nx">duplicate</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="nx">userInfo</span><span class="p">.</span><span class="nx">cart</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">item</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="nx">item</span><span class="p">.</span><span class="nx">id</span> <span class="o">===</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">productId</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="nx">duplicate</span> <span class="o">=</span> <span class="kc">true</span>
+                <span class="p">}</span>
+            <span class="p">})</span>
+
+            <span class="k">if</span> <span class="p">(</span><span class="nx">duplicate</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">//상품이 이미 있을때
+</span><span class="c1"></span>                <span class="c1">//내부 객체를 사용할때는 다음과 같이 &#39;&#39;로 사용하여 문자로 만들어줘야한다.
+</span><span class="c1"></span>                <span class="c1">//{new: true} 는 update된 결과값을 받기위해 설정해주는 옵션이다.
+</span><span class="c1"></span>                <span class="nx">User</span><span class="p">.</span><span class="nx">findOneAndUpdate</span><span class="p">({</span><span class="nx">_id</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">_id</span><span class="p">,</span> <span class="s1">&#39;cart.id&#39;</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">productId</span><span class="p">},</span>
+                    <span class="p">{</span><span class="nx">$inc</span><span class="o">:</span> <span class="p">{</span><span class="s1">&#39;cart.$.quantity&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">}},</span>
+                    <span class="p">{</span><span class="k">new</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
+                    <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">userInfo</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">400</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">success</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">err</span><span class="p">})</span>
+                        <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">cart</span><span class="p">)</span>
+                    <span class="p">})</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="c1">//상품이 이미 있지 않을때때
+</span><span class="c1"></span>                <span class="nx">User</span><span class="p">.</span><span class="nx">findOneAndUpdate</span><span class="p">({</span><span class="nx">_id</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">user</span><span class="p">.</span><span class="nx">_id</span><span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="nx">$push</span><span class="o">:</span> <span class="p">{</span>
+                            <span class="nx">cart</span><span class="o">:</span> <span class="p">{</span>
+                                <span class="nx">id</span><span class="o">:</span> <span class="nx">req</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">productId</span><span class="p">,</span>
+                                <span class="nx">quantity</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+                                <span class="nx">date</span><span class="o">:</span> <span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span>
+                            <span class="p">}</span>
+                        <span class="p">}</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span><span class="k">new</span><span class="o">:</span> <span class="kc">true</span><span class="p">},</span>
+                    <span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">userInfo</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">400</span><span class="p">).</span><span class="nx">json</span><span class="p">({</span><span class="nx">success</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span> <span class="nx">err</span><span class="p">})</span>
+                        <span class="k">return</span> <span class="nx">res</span><span class="p">.</span><span class="nx">status</span><span class="p">(</span><span class="mi">200</span><span class="p">).</span><span class="nx">send</span><span class="p">(</span><span class="nx">userInfo</span><span class="p">.</span><span class="nx">cart</span><span class="p">)</span>
+                    <span class="p">}</span>
+                <span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">})</span>
+
+
+<span class="p">});</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+<div id="75414ad39adffab6" class="tab__content">
+  <h4 id="reducer">Reducer</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-js" data-lang="js"><span class="kr">import</span> <span class="p">{</span>
+    <span class="nx">LOGIN_USER</span><span class="p">,</span>
+    <span class="nx">REGISTER_USER</span><span class="p">,</span>
+    <span class="nx">AUTH_USER</span><span class="p">,</span>
+    <span class="nx">LOGOUT_USER</span><span class="p">,</span> <span class="nx">ADD_TO_CART</span><span class="p">,</span>
+<span class="p">}</span> <span class="nx">from</span> <span class="s1">&#39;../_actions/types&#39;</span><span class="p">;</span>
+
+
+<span class="kr">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{},</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="nx">REGISTER_USER</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">{...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">register</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">}</span>
+        <span class="k">case</span> <span class="nx">LOGIN_USER</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">{...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">loginSucces</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">}</span>
+        <span class="k">case</span> <span class="nx">AUTH_USER</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">{...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">userData</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span><span class="p">}</span>
+        <span class="k">case</span> <span class="nx">LOGOUT_USER</span><span class="o">:</span>
+            <span class="k">return</span> <span class="p">{...</span><span class="nx">state</span><span class="p">}</span>
+        <span class="k">case</span> <span class="nx">ADD_TO_CART</span><span class="o">:</span>
+						<span class="c1">//이렇게 해주는 이유는 redux 기존 정보에 cart 정보를 추가해주기 위해서이다.
+</span><span class="c1"></span>            <span class="k">return</span> <span class="p">{</span>
+                <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">userData</span><span class="o">:</span> <span class="p">{</span>
+                    <span class="p">...</span><span class="nx">state</span><span class="p">.</span><span class="nx">userData</span><span class="p">,</span>
+										<span class="c1">//위쪽 즉 action -&gt; 백단 리턴값이 action.payload이다.
+</span><span class="c1"></span>                    <span class="nx">cart</span><span class="o">:</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="k">default</span><span class="o">:</span>
+            <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+  'use strict';
+
+  var containerId = JSON.parse("\"48b6984f4672d365\"");
+  var containerElem = document.getElementById(containerId);
+  var tabLinks = null;
+  var tabContents = null;
+  var ids = [];
+
+  if (containerElem) {
+    tabLinks = containerElem.querySelectorAll('.tab__link');
+    tabContents = containerElem.querySelectorAll('.tab__content');
+  }
+
+  for (var i = 0; i < tabContents.length; i++) {
+    ids = ids.concat(tabContents[i].getAttribute('id'));
+    tabContents[i].style.display = 'none';
+
+    if (0 === parseInt(i, 10) && !tabContents[i].classList.contains('active')) {
+      tabContents[i].classList.add('active');
+    }
+  }
+
+  for (var i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].setAttribute('id', ids[i]);
+
+    if (0 === parseInt(i, 10) && !tabLinks[i].classList.contains('active')) {
+      tabLinks[i].classList.add('active');
+    } else {
+      tabLinks[i].classList.remove('active');
+    }
+  }
+
+  if (tabContents.length > 0) {
+    tabContents[0].style.display = 'block';
+  }
+</script>
 
     </article>
     
@@ -1967,13 +2587,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2freact%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2fredux%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=React%ec%99%80%20webpack%20babel&url=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2freact%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=Redux&url=https%3a%2f%2fbrinst07.github.io%2fposts%2freactnode%2fredux%2f&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2116,21 +2736,14 @@
 <nav class="pagination-single">
   
     
-      <a href="https://brinst07.github.io/posts/reactnode/test1/" class="pagination-single__left">
+      <a href="https://brinst07.github.io/posts/reactnode/react/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Node JS 와 Express JS</div>      
+        <div class="pagination-single__left-title">React와 webpack babel</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://brinst07.github.io/posts/reactnode/redux/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Redux</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -3067,7 +3680,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="https://brinst07.github.io/posts/reactnode/react/" data-lang="ko" class="dropdown-item is-active">한국어</a>
+              <a href="https://brinst07.github.io/posts/reactnode/redux/" data-lang="ko" class="dropdown-item is-active">한국어</a>
             
           
         
@@ -3266,13 +3879,26 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#react란">React란???</a></li>
-    <li><a href="#리액트-변경-과정">리액트 변경 과정</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#웹팩이란">웹팩이란?</a></li>
-    <li><a href="#바벨이란">바벨이란?</a></li>
+    <li><a href="#redux란">Redux란?</a>
+      <ul>
+        <li><a href="#state">State</a></li>
+        <li><a href="#props">Props</a></li>
+        <li><a href="#redux를-사용하는-이유">Redux를 사용하는 이유&hellip;</a></li>
+        <li><a href="#redux-data-flow">Redux Data Flow</a></li>
+        <li><a href="#redux-세팅하기">Redux 세팅하기</a>
+          <ul>
+            <li><a href="#redux-promise-redux-thunk">Redux-promise, Redux-thunk</a></li>
+            <li><a href="#redux-연결하기">Redux 연결하기</a></li>
+            <li><a href="#combinereducer-설정">combineReducer 설정</a></li>
+            <li><a href="#action">Action</a></li>
+            <li><a href="#reducer">Reducer</a></li>
+            <li><a href="#store">Store</a></li>
+            <li><a href="#store에-있는-값-활용하기">Store에 있는 값 활용하기</a></li>
+          </ul>
+        </li>
+        <li><a href="#redux-활용예제">Redux 활용예제</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>

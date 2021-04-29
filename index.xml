@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 28 Apr 2021 10:05:20 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 29 Apr 2021 09:22:01 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>Redux</title>
+        <link>https://brinst07.github.io/posts/reactnode/redux/</link>
+        <pubDate>Thu, 29 Apr 2021 09:22:01 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Thu, 29 Apr 2021 09:22:01 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/reactnode/redux/</guid>
+        <description>Redux란? 간단하게 말하자면 Redux는 state를 관리하는 Tool이다. 그렇다면 state는 무엇일까?? State 자신이 들고 있는 값을 말한다. 읽기</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>MongoDB</title>
