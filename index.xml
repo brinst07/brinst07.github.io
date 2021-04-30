@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 29 Apr 2021 09:22:01 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 30 Apr 2021 16:29:31 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,24 @@
         
       
 
+      
+      <item>
+        <title>Whereif</title>
+        <link>https://brinst07.github.io/posts/db/whereif/</link>
+        <pubDate>Fri, 30 Apr 2021 16:29:31 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 30 Apr 2021 16:29:31 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/db/whereif/</guid>
+        <description>where절에 if문 사용하기 업무를 보던 중 출력된 리스트에서 해당 조건일 때 다르게 처리해야 하는 쿼리가 필요했다. 예를 들어, 쿼리를 짜서 다음과 같은 결과물이</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>Redux</title>
