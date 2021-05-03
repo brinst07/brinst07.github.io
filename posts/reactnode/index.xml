@@ -59,9 +59,9 @@
       <item>
         <title>Node JS 와 Express JS</title>
         <link>https://brinst07.github.io/posts/reactnode/test1/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 21 Mar 2021 09:22:01 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
-        
+        <atom:modified>Sun, 21 Mar 2021 09:22:01 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/reactnode/test1/</guid>
         <description>Node Js란? Node Js가 나오기 전에는 우리는 항상 앞단에서만 JS를 가지고 작업을 하였다. 하지만 Node JS가 나오고 나서부터는 서버사이드에도 JS를 사용할수 있게 되</description>
         
