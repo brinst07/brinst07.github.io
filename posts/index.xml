@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Fri, 30 Apr 2021 16:29:31 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 May 2021 09:06:17 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -135,6 +135,24 @@
               <category>index</category>
             
           
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>SpreadOperator</title>
+        <link>https://brinst07.github.io/posts/js/spreadoperator/</link>
+        <pubDate>Tue, 04 May 2021 09:06:17 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Tue, 04 May 2021 09:06:17 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/js/spreadoperator/</guid>
+        <description>전개연산자란? 전개 연산자는 나열되는 자료를 추출하거나, 연결할 때 사용한다. ES6 이전에는 배열의 일부 요소나 객체의 일부분을 연결하려면 각 내장 함수를 이용해야</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
         
         
         
