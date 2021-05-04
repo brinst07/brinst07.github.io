@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 14 Jan 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 May 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
@@ -118,6 +118,30 @@
       
       <item>
         <title>ETC</title>
+        <link>https://brinst07.github.io/posts/js/</link>
+        <pubDate>Tue, 04 May 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Tue, 04 May 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/js/</guid>
+        <description>a</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>index</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>ETC</title>
         <link>https://brinst07.github.io/posts/etc/</link>
         <pubDate>Sun, 10 Jan 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
@@ -143,7 +167,7 @@
       <item>
         <title>Posts</title>
         <link>https://brinst07.github.io/posts/</link>
-        <pubDate>Tue, 04 May 2021 09:06:17 +0900</pubDate>
+        <pubDate>Tue, 04 May 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         
         <guid>https://brinst07.github.io/posts/</guid>

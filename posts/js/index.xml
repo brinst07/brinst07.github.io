@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Tags on brinst Dev Blog</title>
-    <link>https://brinst07.github.io/tags/</link>
-    <description>Recent content in Tags on brinst Dev Blog</description>
+    <title>ETC on brinst Dev Blog</title>
+    <link>https://brinst07.github.io/posts/js/</link>
+    <description>Recent content in ETC on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
@@ -16,18 +16,18 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 04 May 2021 22:39:24 +0900</lastBuildDate>
     
-        <atom:link href="https://brinst07.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://brinst07.github.io/posts/js/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
-        <title>index</title>
-        <link>https://brinst07.github.io/tags/index/</link>
-        <pubDate>Tue, 04 May 2021 22:39:24 +0900</pubDate>
+        <title>SpreadOperator</title>
+        <link>https://brinst07.github.io/posts/js/spreadoperator/</link>
+        <pubDate>Tue, 04 May 2021 09:06:17 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
-        
-        <guid>https://brinst07.github.io/tags/index/</guid>
-        <description></description>
+        <atom:modified>Tue, 04 May 2021 09:06:17 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/js/spreadoperator/</guid>
+        <description>전개연산자란? 전개 연산자는 나열되는 자료를 추출하거나, 연결할 때 사용한다. ES6 이전에는 배열의 일부 요소나 객체의 일부분을 연결하려면 각 내장 함수를 이용해야</description>
         
         <dc:creator>brinst</dc:creator>
         
