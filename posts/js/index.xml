@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>ETC on brinst Dev Blog</title>
+    <title>JavaScript on brinst Dev Blog</title>
     <link>https://brinst07.github.io/posts/js/</link>
-    <description>Recent content in ETC on brinst Dev Blog</description>
+    <description>Recent content in JavaScript on brinst Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
