@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.89.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1750,7 +1750,7 @@
 </blockquote>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1771,7 +1771,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">            <span class="n">Team</span> <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Team</span><span class="o">();</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">            <span class="n">Team</span> <span class="n">team</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Team</span><span class="o">();</span>
             <span class="n">team</span><span class="o">.</span><span class="na">setName</span><span class="o">(</span><span class="s">&#34;teamA&#34;</span><span class="o">);</span>
             <span class="n">em</span><span class="o">.</span><span class="na">persist</span><span class="o">(</span><span class="n">team</span><span class="o">);</span>
 
@@ -1812,7 +1812,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 <p>객체 생성</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1820,7 +1820,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
 <span class="o">....</span>
 <span class="nd">@ManyToOne</span>
     <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;TEAM_ID&#34;</span><span class="o">)</span>
@@ -1838,14 +1838,14 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 <p>개선된 조회 방식</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java">    <span class="c1">//조회
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java">    <span class="c1">//조회
 </span><span class="c1"></span>    <span class="n">Member</span> <span class="n">member</span> <span class="o">=</span> <span class="n">e</span><span class="o">.</span><span class="na">find</span><span class="o">(</span><span class="n">Member</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">member</span><span class="o">.</span><span class="na">getId</span><span class="o">());</span>
 
     <span class="c1">//참조를 사용한 연관관계 조회
@@ -1862,7 +1862,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 <p>위에서 실습을 진행하면 아래처럼 한방쿼리가 작성되어 실행되게 된다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1880,28 +1880,28 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql">  <span class="k">select</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">age</span> <span class="k">as</span> <span class="n">age2_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span> <span class="k">as</span> <span class="n">memberty3_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span> <span class="k">as</span> <span class="n">username4_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span> <span class="k">as</span> <span class="n">regdate5_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span> <span class="k">as</span> <span class="n">team_id6_0_0_</span><span class="p">,</span>
-        <span class="n">team1_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_1_1_</span><span class="p">,</span>
-        <span class="n">team1_</span><span class="p">.</span><span class="n">name</span> <span class="k">as</span> <span class="n">name2_1_1_</span>
-    <span class="k">from</span>
-        <span class="n">Member</span> <span class="n">member0_</span>
-    <span class="k">left</span> <span class="k">outer</span> <span class="k">join</span>
-        <span class="n">Team</span> <span class="n">team1_</span>
-            <span class="k">on</span> <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span><span class="o">=</span><span class="n">team1_</span><span class="p">.</span><span class="n">id</span>
-    <span class="k">where</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="w">  </span><span class="k">select</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">id1_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">age2_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">memberty3_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">username4_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">regdate5_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">team_id6_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">team1_</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">id1_1_1_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">team1_</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">name2_1_1_</span><span class="w">
+</span><span class="w">    </span><span class="k">from</span><span class="w">
+</span><span class="w">        </span><span class="n">Member</span><span class="w"> </span><span class="n">member0_</span><span class="w">
+</span><span class="w">    </span><span class="k">left</span><span class="w"> </span><span class="k">outer</span><span class="w"> </span><span class="k">join</span><span class="w">
+</span><span class="w">        </span><span class="n">Team</span><span class="w"> </span><span class="n">team1_</span><span class="w">
+</span><span class="w">            </span><span class="k">on</span><span class="w"> </span><span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span><span class="o">=</span><span class="n">team1_</span><span class="p">.</span><span class="n">id</span><span class="w">
+</span><span class="w">    </span><span class="k">where</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span><span class="w">
+</span></code></pre></td></tr></table>
 </div>
 </div><p>이게 싫다면 지연로딩을 사용하면 된다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1910,7 +1910,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-Java" data-lang="Java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Member</span><span class="o">{</span>
     <span class="o">...</span>
     <span class="nd">@ManyToOne</span><span class="o">(</span><span class="n">fetch</span> <span class="o">=</span> <span class="n">FetchType</span><span class="o">.</span><span class="na">LAZY</span><span class="o">)</span>
     <span class="nd">@JoinColumn</span><span class="o">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&#34;TEAM_ID&#34;</span><span class="o">)</span>
@@ -1923,7 +1923,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 <p>이렇게 하고 다시 실행하면 다음과 같은 쿼리가 실행되게 된다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1936,18 +1936,18 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sql" data-lang="sql">    <span class="k">select</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span> <span class="k">as</span> <span class="n">id1_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">age</span> <span class="k">as</span> <span class="n">age2_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span> <span class="k">as</span> <span class="n">memberty3_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span> <span class="k">as</span> <span class="n">username4_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span> <span class="k">as</span> <span class="n">regdate5_0_0_</span><span class="p">,</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span> <span class="k">as</span> <span class="n">team_id6_0_0_</span>
-    <span class="k">from</span>
-        <span class="n">Member</span> <span class="n">member0_</span>
-    <span class="k">where</span>
-        <span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="w">    </span><span class="k">select</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">id1_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">age</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">age2_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">memberType</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">memberty3_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">USERNAME</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">username4_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">regDate</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">regdate5_0_0_</span><span class="p">,</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">TEAM_ID</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">team_id6_0_0_</span><span class="w">
+</span><span class="w">    </span><span class="k">from</span><span class="w">
+</span><span class="w">        </span><span class="n">Member</span><span class="w"> </span><span class="n">member0_</span><span class="w">
+</span><span class="w">    </span><span class="k">where</span><span class="w">
+</span><span class="w">        </span><span class="n">member0_</span><span class="p">.</span><span class="n">id</span><span class="o">=?</span><span class="w">
+</span></code></pre></td></tr></table>
 </div>
 </div><p>이때 team을 가져오지 않고 member만 가져온것을 볼수가있는데, 지연로딩은 객체를 직접적으로 사용할때 값을 가져온다.<br />
 <img src="https://user-images.githubusercontent.com/60083557/106376312-79f2b600-63d7-11eb-98f7-54b457b1c2b4.png" alt="image" /></p>
@@ -1955,7 +1955,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2189,7 +2189,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
     </div>
     <div class="whoami__desc">
       
-        Web Developer &amp;&amp; App Developer
+        Backend Developer
       
     </div>
     <div class="whoami__social">
@@ -2367,7 +2367,7 @@ Member에서는 Team을 가져올수 있지만, Team에서는 Member를 가져�
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

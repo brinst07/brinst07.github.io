@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.89.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1760,10 +1760,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">   <span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">);</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">   <span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="entitymanger">EntityManger</h3>
@@ -1785,7 +1785,7 @@
 <h3 id="정석-로직">정석 로직</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1813,7 +1813,7 @@
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">
         <span class="n">EntityManagerFactory</span> <span class="n">emf</span> <span class="o">=</span> <span class="n">Persistence</span><span class="o">.</span><span class="na">createEntityManagerFactory</span><span class="o">(</span><span class="s">&#34;hello&#34;</span><span class="o">);</span>
 
         <span class="n">EntityManager</span> <span class="n">em</span> <span class="o">=</span> <span class="n">emf</span><span class="o">.</span><span class="na">createEntityManager</span><span class="o">();</span>
@@ -1848,7 +1848,7 @@
 <ul>
 <li>영속성 컨텍스트와 전혀 관계가 없는 상태</li>
 </ul>
-<pre><code>    //객체를 생성한 상태 (비영속)
+<pre tabindex="0"><code>    //객체를 생성한 상태 (비영속)
     Member member = new Member();
     member.setId(&quot;member1);
     member.setUsername(&quot;회원1&quot;)
@@ -1861,7 +1861,7 @@
 <li>이때 DB에 저장 되지 않는다. 영속 상태가 된다고 DB에 쿼리가 날아가지 않는다.</li>
 <li>트랜잭션의 커밋 시점에 영속성 컨텍스트에 있는 정보들이 DB에 쿼리로 날아간다.</li>
 </ul>
-<pre><code>  // 객체를 생성한 상태 (비영속)
+<pre tabindex="0"><code>  // 객체를 생성한 상태 (비영속)
     Member member = new Member();
     member.setId(&quot;member1&quot;);
     member.setUsername(&quot;회원1&quot;);
@@ -1899,7 +1899,7 @@
 </ul>
 </li>
 </ul>
-<pre><code>    //회원 엔티티를 영속성 컨텍스트에서 분리, 준영속 상태
+<pre tabindex="0"><code>    //회원 엔티티를 영속성 컨텍스트에서 분리, 준영속 상태
     entityManger.detach(member);
 </code></pre></li>
 <li>
@@ -1907,7 +1907,7 @@
 <ul>
 <li>삭제된 상태. DB에서도 날린다.</li>
 </ul>
-<pre><code>    //객체를 삭제한 상태
+<pre tabindex="0"><code>    //객체를 삭제한 상태
     entityManager.remove(member);
 </code></pre></li>
 </ul>
@@ -1933,7 +1933,7 @@
 <li>key : @Id로 선언한 필드값 (DB pk)</li>
 <li>value : 해당 객체</li>
 </ul>
-<pre><code>    Member member = new Member();
+<pre tabindex="0"><code>    Member member = new Member();
     member.setId(&quot;brinst&quot;);
     member.setUsername(&quot;brinst1&quot;)
     // 영속상태 (Persistence Context에 의해 Entity가 관리되는 상태)
@@ -1968,7 +1968,7 @@
 </li>
 </ul>
 <h3 id="2-동일성-보장identity">2. 동일성 보장(Identity)</h3>
-<pre><code>Member a = entityManager.find(Member.class, &quot;member1&quot;);
+<pre tabindex="0"><code>Member a = entityManager.find(Member.class, &quot;member1&quot;);
 Member b = entityManager.find(Member.class, &quot;member1&quot;);
 a == b -&gt; true
 </code></pre><ul>
@@ -1981,7 +1981,7 @@ a == b -&gt; true
 </li>
 </ul>
 <h3 id="3-엔티티-등록-시-트랜잭션을-지원하는-쓰기-지연transactional-write-behind">3. 엔티티 &ldquo;등록&rdquo; 시 트랜잭션을 지원하는 쓰기 지연(Transactional Write-Behind)</h3>
-<pre><code>EntityManager entityManager = emf.createEntityManager();
+<pre tabindex="0"><code>EntityManager entityManager = emf.createEntityManager();
 EntityTransaction transaction = entityManager.getTransaction();
 // EntityManager는 데이터 변경 시 트랜잭션을 시작해야 한다.
 transaction.begin(); // Transaction 시작
@@ -2024,7 +2024,7 @@ transaction.commit();
 </li>
 </ul>
 <h3 id="4-엔티티-수정시-변경-감지dirty-checking">4. 엔티티 &ldquo;수정&quot;시 변경 감지(Dirty Checking)</h3>
-<pre><code>EntityManager em = emf.createEntityManaer();
+<pre tabindex="0"><code>EntityManager em = emf.createEntityManaer();
 EntityTransaction transaction = em.getTransaction();
 transaction.begin(); //트랜잭션 시작
 
@@ -2063,7 +2063,7 @@ transaction.commit();
 </li>
 </ul>
 <h3 id="5-엔티티-삭제">5. 엔티티 삭제</h3>
-<pre><code>    Member memberA = em.find(Member.class,&quot;memberA&quot;);
+<pre tabindex="0"><code>    Member memberA = em.find(Member.class,&quot;memberA&quot;);
 
     em.remove(memberA); //엔티티 삭제
 </code></pre><ul>
@@ -2098,7 +2098,7 @@ transaction.commit();
 </ol>
 <h4 id="영속성-컨텍스트를-플러시-하는-방법">영속성 컨텍스트를 플러시 하는 방법</h4>
 <h5 id="1-emflush을-통한-직접-호출">1. em.flush()을 통한 직접 호출</h5>
-<pre><code>// 영속 상태(Persistence Context에 의해 Entity가 관리되는 상태)
+<pre tabindex="0"><code>// 영속 상태(Persistence Context에 의해 Entity가 관리되는 상태)
 Member member = new Member(200L,&quot;A&quot;);
 entityManager.persist(member);
 
@@ -2115,7 +2115,7 @@ tx.commit(); //DB에 insert query가 날아가는 시점(Transaction commit)
 </ul>
 <h5 id="2-트랜잭션-커밋-시-플러시-자동-호출">2. 트랜잭션 커밋 시 플러시 자동 호출</h5>
 <h5 id="3-jpql-쿼리-실행-시-플러시-자동-호출">3. JPQL 쿼리 실행 시 플러시 자동 호출</h5>
-<pre><code>em.persist(memberA);
+<pre tabindex="0"><code>em.persist(memberA);
 em.persist(memberB);
 em.persist(memberC);
 
@@ -2144,7 +2144,7 @@ List&lt;Member&gt; members = query.getResultList();
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2378,7 +2378,7 @@ List&lt;Member&gt; members = query.getResultList();
     </div>
     <div class="whoami__desc">
       
-        Web Developer &amp;&amp; App Developer
+        Backend Developer
       
     </div>
     <div class="whoami__social">
@@ -2549,7 +2549,7 @@ List&lt;Member&gt; members = query.getResultList();
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

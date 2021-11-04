@@ -10,17 +10,17 @@
 
 
   
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+  <script defer src="/js/fuse.min.32195737929df2c8096e855a5789cbb3f1331224d9169e8705493e7008f47df8.js"></script>
 
 
 
-<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+<script src="/js/enquire.min.dfb99dee1e029d51d6cfb672d847929890b1585402de17f5ed092edd72a688b4.js"></script>
 
-<script defer src="/js/lazysizes.min.498676c34eb225e85357ab0ce19c3c1244f3bd0bf595e5684d1b9d50ea4fbc42.js"></script>
+<script defer src="/js/lazysizes.min.fb649fcae62177dfe63e67081ddceb830b5ce1f05a4184e9bbb7d87ac4b8f4e5.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.efa35f4c090622130b3f4cfae6971448b5ffb61c5f0a8f21cdfd157fa712abc4.js"></script>
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.80.0" />
+<meta name="generator" content="Hugo 0.89.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1861,7 +1861,7 @@ cron 데몬은 시스템 스케줄러 정보뿐만 아니라 각각 사용자가
 </ul>
 <h2 id="cron-예시">Cron 예시</h2>
 <p><img src="https://t1.daumcdn.net/cfile/tistory/25FB583359776C5710" alt="캡처" /></p>
-<pre><code>01  *  *  *  * root run-parts /etc/cron.hourly 
+<pre tabindex="0"><code>01  *  *  *  * root run-parts /etc/cron.hourly 
 #매일 매시 1분에 root 권한으로 /etc/cron.hourly 내 모든 스크립트를 실행한다.
 
 02  4  *  *  * root run-parts /etc/cron.daily  
@@ -1893,18 +1893,18 @@ cron 데몬은 시스템 스케줄러 정보뿐만 아니라 각각 사용자가
 <h3 id="작성방법">작성방법</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 하단에 스크립트를 작성한다.
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="쉘-스크립트-실행방법">쉘 스크립트 실행방법</h3>
-<pre><code>./shell_test.sh
+<pre tabindex="0"><code>./shell_test.sh
 
 sh shell_test.sh
 </code></pre><h3 id="기본-문법">기본 문법</h3>
@@ -1912,14 +1912,14 @@ sh shell_test.sh
 <li>출력
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#! /bin/bash
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#! /bin/bash
 </span><span class="cp"></span>
-<span class="nb">echo</span> <span class="s2">&#34;hello~ script&#34;</span>
+
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -1939,63 +1939,7 @@ sh shell_test.sh
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
-
-    <span class="c1"># 변수 선언</span>
-    <span class="nv">test</span><span class="o">=</span><span class="s2">&#34;abc&#34;</span>
-    <span class="nv">num</span><span class="o">=</span><span class="m">100</span>
-
-    <span class="c1">#변수 사용하기 및 출력</span>
-    <span class="nb">echo</span> <span class="si">${</span><span class="nv">test</span><span class="si">}</span>
-    <span class="nb">echo</span> <span class="si">${</span><span class="nv">num</span><span class="si">}</span>
-    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test</span><span class="si">}</span><span class="s2">&#34;</span>
-    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">num</span><span class="si">}</span><span class="s2">&#34;</span>
-
-    <span class="c1">#지역변수</span>
-    <span class="nb">local</span> <span class="nv">local_var</span><span class="o">=</span><span class="s2">&#34;local var&#34;</span>
-
-    <span class="c1">#변수가 선언되지 않았을 때 기본값을 지정하며 사용하는 방법</span>
-    <span class="nv">defalut_var</span><span class="o">=</span><span class="si">${</span><span class="nv">default_var</span><span class="p">=</span><span class="s2">&#34;temp&#34;</span><span class="si">}</span>
-
-</code></pre></td></tr></table>
-</div>
-</div></li>
-<li>
-<p>배열</p>
-<ul>
-<li>배열의 인덱스는 0부터 시작함</li>
-<li>배열이름[@]는 배열의 모든 원소를 의미한다.</li>
-<li>배열의 원소 추가 시는 += 연산자를 사용한다.</li>
-<li>배열에서 원소를 삭제시
-<ul>
-<li>/를 사용해 해당 문자열 부분이 있으면 삭제, 삭제하고자 하는 문자나 문자열이 포함되어 있는 부분을 삭제</li>
-<li>unset을 이용해 삭제</li>
-</ul>
-</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2014,25 +1958,81 @@ sh shell_test.sh
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-    <span class="nv">arr_test</span><span class="o">=(</span><span class="s2">&#34;1&#34;</span>,<span class="s2">&#34;2&#34;</span><span class="o">)</span>
+
+    <span class="nv">test</span><span class="o">=</span><span class="s2">&#34;abc&#34;</span>
+    <span class="nv">num</span><span class="o">=</span><span class="m">100</span>
+
+
+    <span class="nb">echo</span> <span class="si">${</span><span class="nv">test</span><span class="si">}</span>
+    <span class="nb">echo</span> <span class="si">${</span><span class="nv">num</span><span class="si">}</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test</span><span class="si">}</span><span class="s2">&#34;</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">num</span><span class="si">}</span><span class="s2">&#34;</span>
+
+
+    <span class="nb">local</span> <span class="nv">local_var</span><span class="o">=</span><span class="s2">&#34;local var&#34;</span>
+
+
+    <span class="nv">defalut_var</span><span class="o">=</span><span class="si">${</span><span class="nv">default_var</span><span class="p">=</span><span class="s2">&#34;temp&#34;</span><span class="si">}</span>
+
+
+
+
+* 배열의 인덱스는 0부터 시작함
+* 배열이름<span class="o">[</span>@<span class="o">]</span>는 배열의 모든 원소를 의미한다.
+* 배열의 원소 추가 <span class="nv">시는</span> <span class="o">+=</span> 연산자를 사용한다.
+* 배열에서 원소를 삭제시
+    * /를 사용해 해당 문자열 부분이 있으면 삭제, 삭제하고자 하는 문자나 문자열이 포함되어 있는 부분을 삭제
+    * unset을 이용해 삭제
+<span class="sb">```</span>shell
+    <span class="c1">#!/bin/bash</span>
+
+
     <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&#34;</span>
 
-    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span>
 
-    <span class="nv">arr_test</span><span class="o">+=(</span><span class="s2">&#34;3&#34;</span>,<span class="s2">&#34;4&#34;</span><span class="o">)</span>
 
-    <span class="nv">remove_element</span><span class="o">=(</span>3<span class="o">)</span>
 
-    <span class="nv">arr_test</span><span class="o">=(</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[@]/</span><span class="nv">$remove_element</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">)</span>
 
-    <span class="k">for</span> i in <span class="si">${</span><span class="p">!arr_test[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
+
+
+
+
+
         <span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">arr_test</span><span class="p">[i]</span><span class="si">}</span> <span class="o">=</span> <span class="si">${</span><span class="nv">remove_element</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="c1"># Use unset</span>
-        <span class="nb">unset</span> arr_test<span class="o">[</span>i<span class="o">]</span>
+	    <span class="c1"># Use unset</span>
+	    <span class="nb">unset</span> arr_test<span class="o">[</span>i<span class="o">]</span>
     <span class="k">fi</span>
     <span class="k">done</span>
 </code></pre></td></tr></table>
@@ -2045,7 +2045,7 @@ sh shell_test.sh
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2077,12 +2077,12 @@ sh shell_test.sh
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-    <span class="c1"># Numeric if statement</span>
+
     <span class="nv">test_num</span><span class="o">=</span><span class="m">5</span>
 
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_num</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="m">2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+
         <span class="nb">echo</span> <span class="s2">&#34;number is 2&#34;</span>
     <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_num</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="m">3</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is 3&#34;</span>
@@ -2090,19 +2090,19 @@ sh shell_test.sh
         <span class="nb">echo</span> <span class="s2">&#34;number is not 2 or 3&#34;</span>
     <span class="k">fi</span>
 
-    <span class="c1"># Numeric if statement</span>
+
     <span class="nv">test_num</span><span class="o">=</span><span class="m">5</span>
 
-    <span class="k">if</span> <span class="o">((</span> <span class="si">${</span><span class="nv">test_num</span><span class="si">}</span> &gt; <span class="m">3</span> <span class="o">))</span><span class="p">;</span> <span class="k">then</span>
+
         <span class="nb">echo</span> <span class="s2">&#34;number is greater than 3&#34;</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is not greater than 3&#34;</span>
     <span class="k">fi</span>
 
-    <span class="c1"># String if statement</span>
+
     <span class="nv">test_str</span><span class="o">=</span><span class="s2">&#34;test&#34;</span>
 
-    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_str</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;test&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+
         <span class="nb">echo</span> <span class="s2">&#34;test_str is test&#34;</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;test_str is not test&#34;</span>
@@ -2117,7 +2117,7 @@ sh shell_test.sh
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2126,9 +2126,9 @@ sh shell_test.sh
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-    <span class="nv">cnt</span><span class="o">=</span><span class="m">0</span>
+
     <span class="k">while</span> <span class="o">((</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span> &lt; <span class="m">5</span> <span class="o">))</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span>
         <span class="o">((</span> <span class="nv">cnt</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span> + <span class="m">1</span> <span class="o">))</span> <span class="c1"># 숫자와 변수의 연산은 (())가 필요합니다.</span>
@@ -2140,7 +2140,7 @@ sh shell_test.sh
 <p>for문의 사용법</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2156,17 +2156,17 @@ sh shell_test.sh
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-    <span class="nv">arr_num</span><span class="o">=(</span><span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> 7<span class="o">)</span>
 
-    <span class="c1"># 배열에 @는 모든 원소를 뜻합니다.</span>
+
+
     <span class="k">for</span> i in <span class="si">${</span><span class="nv">arr_num</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">printf</span> <span class="nv">$i</span>
     <span class="k">done</span>
     <span class="nb">echo</span>
 
-    <span class="k">for</span> <span class="o">((</span> <span class="nv">i</span> <span class="o">=</span> 0<span class="p">;</span> i &lt; 10<span class="p">;</span> i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span>
+
         <span class="nb">printf</span> <span class="nv">$i</span>
     <span class="k">done</span>
     <span class="nb">echo</span>
@@ -2180,7 +2180,7 @@ sh shell_test.sh
 따라서 이러한 작업을 쉘 스크립트를 사용하여 간단히 처리할 수 있다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2219,7 +2219,7 @@ sh shell_test.sh
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="nb">echo</span> -e <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;</span>
 
@@ -2264,7 +2264,7 @@ git push origin master
     </article>
     
     
-<script defer src="/js/clipboard.min.c168d3a04c45a631be76437054619a4a3b30107960cb9730be96012fef5762b0.js"></script>
+<script defer src="/js/clipboard.min.1626706afc88d95ebe1173b553ec732c6dc82a576989315fdf5e7779af738a44.js"></script>
 
 <script defer src="/js/helper/prev.min.js"></script>
 
@@ -2498,7 +2498,7 @@ git push origin master
     </div>
     <div class="whoami__desc">
       
-        Web Developer &amp;&amp; App Developer
+        Backend Developer
       
     </div>
     <div class="whoami__social">
@@ -2669,7 +2669,7 @@ git push origin master
 </div>
 
 
-<script defer src="/js/swipe.min.b4b82839155519d9ca67746615a4c86ccbc1061c196fe6d8aa26e4fe22902718.js"></script>
+<script defer src="/js/swipe.min.989e074dfb92ce7f57a92c1df7027f88b53c50a54fd9ad450a673a64aa91bfa4.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
