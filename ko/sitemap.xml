@@ -5,13 +5,13 @@
     <loc>https://brinst07.github.io/posts/db/</loc>
     <lastmod>2021-01-10T22:39:24+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/kotlinandroid/</loc>
-    <lastmod>2021-01-10T22:39:24+09:00</lastmod>
-  </url><url>
     <loc>https://brinst07.github.io/posts/linuxsever/</loc>
     <lastmod>2021-01-14T22:39:24+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/reactnode/</loc>
+    <loc>https://brinst07.github.io/posts/nodejs/</loc>
+    <lastmod>2021-03-21T09:22:01+09:00</lastmod>
+  </url><url>
+    <loc>https://brinst07.github.io/posts/react/</loc>
     <lastmod>2021-04-29T09:22:01+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/js/</loc>
@@ -21,7 +21,7 @@
     <lastmod>2021-01-10T22:39:24+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/</loc>
-    <lastmod>2021-05-04T22:39:24+09:00</lastmod>
+    <lastmod>2021-11-05T15:54:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,10 +33,16 @@
                 href="https://brinst07.github.io/"
                 />
   </url><url>
-    <loc>https://brinst07.github.io/tags/index/</loc>
-    <lastmod>2021-05-04T22:39:24+09:00</lastmod>
+    <loc>https://brinst07.github.io/posts/etc/devconfig/</loc>
+    <lastmod>2021-11-05T15:54:06+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/</loc>
+    <lastmod>2021-11-05T15:54:06+09:00</lastmod>
+  </url><url>
+    <loc>https://brinst07.github.io/posts/etc/tdd/</loc>
+    <lastmod>2021-11-05T00:08:39+09:00</lastmod>
+  </url><url>
+    <loc>https://brinst07.github.io/tags/index/</loc>
     <lastmod>2021-05-04T22:39:24+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/tags/</loc>
@@ -58,16 +64,16 @@
     <loc>https://brinst07.github.io/posts/db/whereif/</loc>
     <lastmod>2021-04-30T16:29:31+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/reactnode/redux/</loc>
+    <loc>https://brinst07.github.io/posts/react/redux/</loc>
     <lastmod>2021-04-29T09:22:01+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/db/mongodb/</loc>
     <lastmod>2021-04-28T10:05:20+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/reactnode/react/</loc>
+    <loc>https://brinst07.github.io/posts/react/react/</loc>
     <lastmod>2021-04-22T22:39:24+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/reactnode/test1/</loc>
+    <loc>https://brinst07.github.io/posts/nodejs/nodejs/</loc>
     <lastmod>2021-03-21T09:22:01+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/linuxsever/linux_file/</loc>
@@ -97,20 +103,11 @@
     <loc>https://brinst07.github.io/posts/db/n1/</loc>
     <lastmod>2021-01-18T22:39:24+09:00</lastmod>
   </url><url>
-    <loc>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</loc>
-    <lastmod>2021-01-17T23:51:11+09:00</lastmod>
-  </url><url>
-    <loc>https://brinst07.github.io/posts/kotlinandroid/viewpager/</loc>
-    <lastmod>2021-01-17T23:51:11+09:00</lastmod>
-  </url><url>
     <loc>https://brinst07.github.io/posts/linuxsever/cronshellscript/</loc>
     <lastmod>2021-01-14T22:39:24+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/db/jpa/</loc>
     <lastmod>2021-01-12T22:41:24+09:00</lastmod>
-  </url><url>
-    <loc>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</loc>
-    <lastmod>2021-01-11T23:51:11+09:00</lastmod>
   </url><url>
     <loc>https://brinst07.github.io/posts/db/jpa%EC%98%81%EC%86%8D%EC%84%B1%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8/</loc>
     <lastmod>2021-01-11T22:39:24+09:00</lastmod>

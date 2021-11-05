@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>React on brinst Dev Blog</title>
+    <link>https://brinst07.github.io/posts/react/</link>
+    <description>Recent content in React on brinst Dev Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ko</language>
+    <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
+    <webMaster>brinst07@gmail.com (brinst)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 29 Apr 2021 09:22:01 +0900</lastBuildDate>
+    
+        <atom:link href="https://brinst07.github.io/posts/react/index.xml" rel="self" type="application/rss+xml" />
+    
+
+      
+      <item>
+        <title>Redux</title>
+        <link>https://brinst07.github.io/posts/react/redux/</link>
+        <pubDate>Thu, 29 Apr 2021 09:22:01 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Thu, 29 Apr 2021 09:22:01 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/react/redux/</guid>
+        <description>Redux란? 간단하게 말하자면 Redux는 state를 관리하는 Tool이다. 그렇다면 state는 무엇일까?? State 자신이 들고 있는 값을 말한다. 읽기</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>React와 webpack babel</title>
+        <link>https://brinst07.github.io/posts/react/react/</link>
+        <pubDate>Thu, 22 Apr 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Thu, 22 Apr 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/react/react/</guid>
+        <description>React란??? 페이스북에서 만듬&amp;hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 JSX</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

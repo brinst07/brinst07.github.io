@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 04 May 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Nov 2021 15:54:06 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,42 @@
         
       
 
+      
+      <item>
+        <title>DevConfig</title>
+        <link>https://brinst07.github.io/posts/etc/devconfig/</link>
+        <pubDate>Fri, 05 Nov 2021 15:54:06 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 05 Nov 2021 15:54:06 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/etc/devconfig/</guid>
+        <description>개발환경 세팅하기 이번에 M1 Macbook을 개발용으로 구매하게 되어, M1 Mac으로 개발환경을 세팅하는 방법을 정리한다. HomeBrew terminal에서 다음을 입</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>TDD</title>
+        <link>https://brinst07.github.io/posts/etc/tdd/</link>
+        <pubDate>Fri, 05 Nov 2021 00:08:39 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 05 Nov 2021 00:08:39 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/etc/tdd/</guid>
+        <description>TDD TDD란 Test Driven Development의 약자로 &amp;lsquo;테스트 주도 개발&amp;rsquo;이라고 한다. 반복 테스트를 이용한 소프트웨어 방법론으로, 작</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>SpreadOperator</title>
@@ -79,11 +115,11 @@
       
       <item>
         <title>Redux</title>
-        <link>https://brinst07.github.io/posts/reactnode/redux/</link>
+        <link>https://brinst07.github.io/posts/react/redux/</link>
         <pubDate>Thu, 29 Apr 2021 09:22:01 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 29 Apr 2021 09:22:01 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/reactnode/redux/</guid>
+        <guid>https://brinst07.github.io/posts/react/redux/</guid>
         <description>Redux란? 간단하게 말하자면 Redux는 state를 관리하는 Tool이다. 그렇다면 state는 무엇일까?? State 자신이 들고 있는 값을 말한다. 읽기</description>
         
         <dc:creator>brinst</dc:creator>
@@ -115,11 +151,11 @@
       
       <item>
         <title>React와 webpack babel</title>
-        <link>https://brinst07.github.io/posts/reactnode/react/</link>
+        <link>https://brinst07.github.io/posts/react/react/</link>
         <pubDate>Thu, 22 Apr 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Thu, 22 Apr 2021 22:39:24 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/reactnode/react/</guid>
+        <guid>https://brinst07.github.io/posts/react/react/</guid>
         <description>React란??? 페이스북에서 만듬&amp;hellip; virtaul dom을 사용하여 비동기통신을 하는 것처럼 자연스럽게 앞단이 교체될 수 있게 함 리액트 변경 과정 JSX</description>
         
         <dc:creator>brinst</dc:creator>
@@ -133,11 +169,11 @@
       
       <item>
         <title>Node JS 와 Express JS</title>
-        <link>https://brinst07.github.io/posts/reactnode/test1/</link>
+        <link>https://brinst07.github.io/posts/nodejs/nodejs/</link>
         <pubDate>Sun, 21 Mar 2021 09:22:01 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Sun, 21 Mar 2021 09:22:01 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/reactnode/test1/</guid>
+        <guid>https://brinst07.github.io/posts/nodejs/nodejs/</guid>
         <description>Node Js란? Node Js가 나오기 전에는 우리는 항상 앞단에서만 JS를 가지고 작업을 하였다. 하지만 Node JS가 나오고 나서부터는 서버사이드에도 JS를 사용할수 있게 되</description>
         
         <dc:creator>brinst</dc:creator>
@@ -312,42 +348,6 @@
       </item>
       
       <item>
-        <title>tabLayout</title>
-        <link>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</link>
-        <pubDate>Sun, 17 Jan 2021 23:51:11 +0900</pubDate>
-        <author>brinst07@gmail.com (brinst)</author>
-        <atom:modified>Sun, 17 Jan 2021 23:51:11 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/kotlinandroid/viewpager-copy/</guid>
-        <description>TabLyaout tablayout이란 상단에 탭을 클릭하면 화면이 전환되는 것을 말한다. 상단의 탭을 클릭해도 하단의 fragment가 전환되어야하고 fragment</description>
-        
-        <dc:creator>brinst</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>viewpage</title>
-        <link>https://brinst07.github.io/posts/kotlinandroid/viewpager/</link>
-        <pubDate>Sun, 17 Jan 2021 23:51:11 +0900</pubDate>
-        <author>brinst07@gmail.com (brinst)</author>
-        <atom:modified>Sun, 17 Jan 2021 23:51:11 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/kotlinandroid/viewpager/</guid>
-        <description>viewPager란? 배달의 민족이나 어플들을 사용하면 상단의 그림들이 스와이프 하면 넘어가거나 한것을 볼수 있었을 것이다. 그것을 구현하기 위한 것이 바로 v</description>
-        
-        <dc:creator>brinst</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>cron 과 shellscript</title>
         <link>https://brinst07.github.io/posts/linuxsever/cronshellscript/</link>
         <pubDate>Thu, 14 Jan 2021 22:39:24 +0900</pubDate>
@@ -373,24 +373,6 @@
         <atom:modified>Tue, 12 Jan 2021 22:41:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/db/jpa/</guid>
         <description>JPA란?? Java 언어를 통해서 데이터베이스와 같은 영속 계층을 처리하고자 하는 스펙 ORM과 JPA ORM 객체지향과 관련이 있음 &amp;lsquo;객체지향 패러다임을 관계</description>
-        
-        <dc:creator>brinst</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>RecyclerView</title>
-        <link>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</link>
-        <pubDate>Mon, 11 Jan 2021 23:51:11 +0900</pubDate>
-        <author>brinst07@gmail.com (brinst)</author>
-        <atom:modified>Mon, 11 Jan 2021 23:51:11 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/kotlinandroid/recyclerview/</guid>
-        <description>리사이클러뷰 리사이클러뷰는 스피너가 조금 더 확장된 형태이다. 리사이클러뷰도 스피너처럼 목록을 화면에 출력하는데, 레이아웃 매너지를 이용하면 간단한 코드만</description>
         
         <dc:creator>brinst</dc:creator>
         

@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Tue, 04 May 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 05 Nov 2021 15:54:06 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -27,30 +27,6 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Sun, 10 Jan 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/db/</guid>
-        <description></description>
-        
-        <dc:creator>brinst</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>index</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Kotlin &amp; Android</title>
-        <link>https://brinst07.github.io/posts/kotlinandroid/</link>
-        <pubDate>Sun, 10 Jan 2021 22:39:24 +0900</pubDate>
-        <author>brinst07@gmail.com (brinst)</author>
-        <atom:modified>Sun, 10 Jan 2021 22:39:24 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/kotlinandroid/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>
@@ -93,12 +69,36 @@
       </item>
       
       <item>
-        <title>React &amp; Node.js</title>
-        <link>https://brinst07.github.io/posts/reactnode/</link>
+        <title>NodeJS</title>
+        <link>https://brinst07.github.io/posts/nodejs/</link>
+        <pubDate>Sun, 21 Mar 2021 09:22:01 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        
+        <guid>https://brinst07.github.io/posts/nodejs/</guid>
+        <description></description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>index</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>React</title>
+        <link>https://brinst07.github.io/posts/react/</link>
         <pubDate>Thu, 29 Apr 2021 09:22:01 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         
-        <guid>https://brinst07.github.io/posts/reactnode/</guid>
+        <guid>https://brinst07.github.io/posts/react/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>

@@ -21,6 +21,42 @@
 
       
       <item>
+        <title>DevConfig</title>
+        <link>https://brinst07.github.io/posts/etc/devconfig/</link>
+        <pubDate>Fri, 05 Nov 2021 15:54:06 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 05 Nov 2021 15:54:06 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/etc/devconfig/</guid>
+        <description>개발환경 세팅하기 이번에 M1 Macbook을 개발용으로 구매하게 되어, M1 Mac으로 개발환경을 세팅하는 방법을 정리한다. HomeBrew terminal에서 다음을 입</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>TDD</title>
+        <link>https://brinst07.github.io/posts/etc/tdd/</link>
+        <pubDate>Fri, 05 Nov 2021 00:08:39 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Fri, 05 Nov 2021 00:08:39 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/etc/tdd/</guid>
+        <description>TDD TDD란 Test Driven Development의 약자로 &amp;lsquo;테스트 주도 개발&amp;rsquo;이라고 한다. 반복 테스트를 이용한 소프트웨어 방법론으로, 작</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>개발자에게 중요한 팁들</title>
         <link>https://brinst07.github.io/posts/etc/develop_design/</link>
         <pubDate>Fri, 05 Feb 2021 22:39:24 +0900</pubDate>
