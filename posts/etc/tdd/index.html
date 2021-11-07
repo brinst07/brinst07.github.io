@@ -1719,7 +1719,7 @@
 <div class="single__infos">
   <time class="single__info" title="작성일">📅&nbsp;2021년 11월 05일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;5&nbsp;min read </span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 조회수
@@ -1735,13 +1735,14 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h1 id="tdd">TDD</h1>
+      <h2 id="tdd">TDD</h2>
 <p>TDD란 Test Driven Development의 약자로 &lsquo;테스트 주도 개발&rsquo;이라고 한다. 반복 테스트를 이용한 소프트웨어 방법론으로, 작은 단위의 테스트 케이스를 작성하고 이를 통과하는 코드를 추가하는 단계를 반복하여 구현한다.</p>
 <p>출처: <a href="https://wooaoe.tistory.com/33">https://wooaoe.tistory.com/33</a> [개발개발 울었다]</p>
 <p>라고 한다.<br />
 이전부터 TDD에 대한 관심은 꾸준히 있었지만, 실제로 실무에 어떻게 도입해야하는지 전혀 감이 오질 않아 항상 공부를 미뤘던거 같다.<br />
-하지만 이번에 새로 진행하는 프로젝트에 TDD를 도입해보면 어떨까 생각이 들어 공부를 시작했다.</p>
-<h1 id="tdd의-필요성">TDD의 필요성</h1>
+하지만 이번에 새로 진행하는 프로젝트에 TDD를 도입해보면 어떨까 생각이 들어 공부를 시작했다.<br />
+이 포스팅은 JohnAhn 강사님의 따라하면서 배우는 TDD 개발을 듣고 작성한다.</p>
+<h2 id="tdd의-필요성">TDD의 필요성</h2>
 <p>기존에 개발 흐름을 생각해보면 다음처럼 진행했던거 같다.<br />
 개발 -&gt; 에러 -&gt; 디버깅 -&gt; 에러 해결 -&gt; 개발 &hellip; 무한반복<br />
 순수 코드를 개발하는 데는 시간이 적게 들어갈 수도 있지만, 이 에러를 잡기 위해 디버깅하는 시간<br />
@@ -1758,15 +1759,313 @@
 <li>에러에 유연하게 대처가능</li>
 <li>리팩토링시 시간 단축</li>
 </ul>
-<h1 id="jest">Jest</h1>
+<h2 id="jest">Jest</h2>
 <p>현재 NodeJS 환경에서 TDD를 공부하고 있기 때문에, Jest를 활용한다.</p>
-<h1 id="mock-function">Mock function</h1>
+<h2 id="mock-function">Mock function</h2>
 <p>Mock function을 사용하는 이유는 다음과 같다.<br />
 함수들 사이안에 의존성이 있는 함수가 존재하게 된다면, 해당 함수를 테스트하는데 문제가 발생할 것이다.<br />
 이런상황일때는 테스트 어렵게 된다.<br />
 그러므로 의존성 있는 함수를 Mock 함수로 선언하고 정상적으로 돌아간다는 가정하게 테스트를 진행하는 것이다.</p>
-<h1 id="테스트-코드-작성하기">테스트 코드 작성하기</h1>
+<h2 id="테스트-코드-작성하기">테스트 코드 작성하기</h2>
 <p>테스트 코드는 다음과 같이 작성한다.</p>
+<h3 id="단위테스트">단위테스트</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">productController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../../controller/product&#34;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">productModel</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../models/Product&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">httpMocks</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-mocks-http&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="nx">newProduct</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../data/new-product.json&#39;</span><span class="p">)</span>
+<span class="kr">const</span> <span class="p">{</span><span class="nb">Promise</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;mongoose&#34;</span><span class="p">);</span>
+
+<span class="c1">//단위테스트이기 때문에 의존성이 있는 것을 mock function으로 만들어준다.
+</span><span class="c1">//이 함수가 뭘 사용하는지 어떤것을 리턴하는지 추적이 가능해진다.
+</span><span class="c1"></span><span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="nx">productModel</span><span class="p">.</span><span class="nx">find</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="nx">productModel</span><span class="p">.</span><span class="nx">findById</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="nx">productModel</span><span class="p">.</span><span class="nx">findByIdAndUpdate</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+
+<span class="c1">//전역으로 쓰일 변수이기 때문에 다음과 같이 선언해준다.
+</span><span class="c1"></span><span class="kd">let</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">productId</span> <span class="o">=</span> <span class="s1">&#39;618761fd1febbe2fe466a211&#39;</span><span class="p">;</span>
+
+<span class="c1">//각 test마다 공통적으로 쓰이는 부분이기에 beforeEach를 사용하여 처리한다.
+</span><span class="c1"></span><span class="nx">beforeEach</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">req</span> <span class="o">=</span> <span class="nx">httpMocks</span><span class="p">.</span><span class="nx">createRequest</span><span class="p">();</span>
+    <span class="nx">res</span> <span class="o">=</span> <span class="nx">httpMocks</span><span class="p">.</span><span class="nx">createResponse</span><span class="p">();</span>
+    <span class="nx">next</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="p">})</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s2">&#34;Product Controller Create&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+
+    <span class="nx">beforeEach</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">req</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="nx">newProduct</span><span class="p">;</span>
+    <span class="p">})</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have a createProduct function&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s2">&#34;function&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should call ProductModel.create&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">req</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="nx">newProduct</span><span class="p">;</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span><span class="p">).</span><span class="nx">toBeCalledWith</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">);</span>
+    <span class="p">})</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return 201 response code&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">201</span><span class="p">);</span>
+        <span class="c1">//값이 무엇인지 신경 쓰지 않고 Boolean 컨텍스트에서 값이 참인지 확인
+</span><span class="c1"></span>        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_isEndCalled</span><span class="p">()).</span><span class="nx">toBeTruthy</span><span class="p">();</span>
+    <span class="p">})</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return json body in response&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">)</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_getJSONData</span><span class="p">()).</span><span class="nx">toStrictEqual</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">)</span>
+    <span class="p">})</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should handle errors&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="c1">//에러메시지 선언
+</span><span class="c1"></span>        <span class="kr">const</span> <span class="nx">errorMessage</span> <span class="o">=</span> <span class="p">{</span><span class="nx">message</span> <span class="o">:</span> <span class="s1">&#39;description property missing&#39;</span><span class="p">};</span>
+        <span class="c1">//Promise.reject(reason) 메서드는 주어진 이유(reason)로 거부된 Promise 객체를 반환
+</span><span class="c1"></span>        <span class="c1">//따라서 아래의 코드는 errorMessage를 이유로 reject된 상황을 만들기위함이다.
+</span><span class="c1"></span>        <span class="kr">const</span> <span class="nx">rejectedPromise</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+        <span class="c1">//위 상황으로 returnValue를 만들어준다.
+</span><span class="c1"></span>        <span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">rejectedPromise</span><span class="p">);</span>
+        <span class="c1">//아래 메소드를 실행하면 create에서 위의 에러가 발생할 것이다.
+</span><span class="c1"></span>        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="c1">//해당 에러메시지가 발생하였는지 확인한다.
+</span><span class="c1"></span>        <span class="nx">expect</span><span class="p">(</span><span class="nx">next</span><span class="p">).</span><span class="nx">toBeCalledWith</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s2">&#34;Product Controller Get&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have a getProducts function&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProducts</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s2">&#34;function&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should call ProductModel.find({})&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProducts</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">productModel</span><span class="p">.</span><span class="nx">find</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">({})</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return 200 response&#39;</span><span class="p">,</span><span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProducts</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+        <span class="c1">//값이 무엇인지 신경 쓰지 않고 Boolean 컨텍스트에서 값이 참인지 확인
+</span><span class="c1"></span>        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_isEndCalled</span><span class="p">).</span><span class="nx">toBeTruthy</span><span class="p">()</span>
+    <span class="p">});</span>
+
+    <span class="c1">// it(&#39;should return json boyd in response&#39;,async function () {
+</span><span class="c1"></span>    <span class="c1">//     productModel.find.mockReturnValue()
+</span><span class="c1"></span>    <span class="c1">// });
+</span><span class="c1"></span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should handle errors&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">errorMessage</span> <span class="o">=</span> <span class="p">{</span><span class="nx">message</span> <span class="o">:</span> <span class="s2">&#34;Error finding product data&#34;</span><span class="p">};</span>
+        <span class="kr">const</span> <span class="nx">rejectedPromise</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+        <span class="nx">productModel</span><span class="p">.</span><span class="nx">find</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">rejectedPromise</span><span class="p">);</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProducts</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">next</span><span class="p">).</span><span class="nx">toBeCalledWith</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">})</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Product Controller GetById&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have a getProductById&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProductById</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s2">&#34;function&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should call productModel findById&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">productId</span> <span class="o">=</span> <span class="nx">productId</span><span class="p">;</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProductById</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">productModel</span><span class="p">.</span><span class="nx">findById</span><span class="p">).</span><span class="nx">toBeCalledWith</span><span class="p">(</span><span class="nx">productId</span><span class="p">)</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return json body and response code 200&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">productModel</span><span class="p">.</span><span class="nx">findById</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">);</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProductById</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_getJSONData</span><span class="p">()).</span><span class="nx">toStrictEqual</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_isEndCalled</span><span class="p">()).</span><span class="nx">toBeTruthy</span><span class="p">();</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return 404 when item doesnt exist&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">productModel</span><span class="p">.</span><span class="nx">findById</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProductById</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">404</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_isEndCalled</span><span class="p">()).</span><span class="nx">toBeTruthy</span><span class="p">();</span>
+    <span class="p">});</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should handle errors&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="kr">const</span> <span class="nx">errorMessage</span> <span class="o">=</span> <span class="p">{</span><span class="nx">message</span> <span class="o">:</span> <span class="s1">&#39;error&#39;</span><span class="p">};</span>
+        <span class="kr">const</span> <span class="nx">rejectPromise</span> <span class="o">=</span> <span class="nb">Promise</span><span class="p">.</span><span class="nx">reject</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+        <span class="nx">productModel</span><span class="p">.</span><span class="nx">findById</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">rejectPromise</span><span class="p">);</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">getProductById</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">next</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="nx">errorMessage</span><span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">})</span>
+
+<span class="nx">describe</span><span class="p">(</span><span class="s1">&#39;Product Controller Update&#39;</span><span class="p">,()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have an updateProduct function&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">updateProduct</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s2">&#34;function&#34;</span><span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should call productModel findByIdAndUpadte&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+        <span class="c1">//검색할 아이디를 선언한다.
+</span><span class="c1"></span>        <span class="nx">req</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">productId</span> <span class="o">=</span> <span class="nx">productId</span><span class="p">;</span>
+        <span class="c1">//업데이트할 객체와 option을 선언한다.
+</span><span class="c1"></span>        <span class="c1">//option은 리턴하는 객체가 업데이트 되기전 객체인지 새로운 객체인지를 결정하는 것이다. true를 입력하였으므로 업데이트 된 객체를 리턴한다.
+</span><span class="c1"></span>        <span class="nx">req</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&#34;updated name&#34;</span><span class="p">},{</span><span class="k">new</span> <span class="o">:</span> <span class="kc">true</span><span class="p">};</span>
+        <span class="kr">await</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">updateProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
+        <span class="nx">expect</span><span class="p">(</span><span class="nx">productModel</span><span class="p">.</span><span class="nx">findByIdAndUpdate</span><span class="p">).</span><span class="nx">toHaveBeenCalledWith</span><span class="p">(</span><span class="nx">productId</span><span class="p">,{</span><span class="nx">name</span><span class="o">:</span><span class="s2">&#34;updated name&#34;</span><span class="p">},{</span><span class="k">new</span> <span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
+    <span class="p">})</span>
+<span class="p">})</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="통합테스트">통합테스트</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -1817,55 +2116,79 @@
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kr">const</span> <span class="nx">productController</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;../../controller/product&#34;</span><span class="p">);</span>
-<span class="kr">const</span> <span class="nx">productModel</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../models/Product&#39;</span><span class="p">)</span>
-<span class="kr">const</span> <span class="nx">httpMocks</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-mocks-http&#39;</span><span class="p">)</span>
-<span class="kr">const</span> <span class="nx">newProduct</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../data/new-product.json&#39;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="c1">//통합테스트를 위하여 supertest 사용
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">request</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;supertest&#39;</span><span class="p">)</span>
+<span class="c1">//통합테스트를 위한 server.js를 import한다.
+</span><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../../server&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">newProduct</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;../data/new-product.json&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="p">{</span><span class="nx">response</span><span class="p">}</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&#34;express&#34;</span><span class="p">);</span>
 
-<span class="c1">//단위테스트이기 때문에 의존성이 있는 것을 mock function으로 만들어준다.
-</span><span class="c1"></span><span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span> <span class="o">=</span> <span class="nx">jest</span><span class="p">.</span><span class="nx">fn</span><span class="p">();</span>
+<span class="kr">const</span> <span class="nx">productId</span> <span class="o">=</span> <span class="s1">&#39;618761fd1febbe2fe466a211&#39;</span><span class="p">;</span>
 
-<span class="c1">//전역으로 쓰일 변수이기 때문에 다음과 같이 선언해준다.
-</span><span class="c1"></span><span class="kd">let</span> <span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">;</span>
-<span class="c1">//각 test마다 공통적으로 쓰이는 부분이기에 beforeEach를 사용하여 처리한다.
-</span><span class="c1"></span><span class="nx">beforeEach</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-    <span class="nx">req</span> <span class="o">=</span> <span class="nx">httpMocks</span><span class="p">.</span><span class="nx">createRequest</span><span class="p">();</span>
-    <span class="nx">res</span> <span class="o">=</span> <span class="nx">httpMocks</span><span class="p">.</span><span class="nx">createResponse</span><span class="p">();</span>
-    <span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-<span class="p">})</span>
-<span class="c1">//describe으로 테스트코드 그룹을 만들어준다.
-</span><span class="c1"></span><span class="nx">describe</span><span class="p">(</span><span class="s2">&#34;Product Controller Create&#34;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
 
-    <span class="nx">beforeEach</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">req</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="nx">newProduct</span><span class="p">;</span>
-    <span class="p">})</span>
-    <span class="c1">//테스트 코드를 생성한다.
-</span><span class="c1"></span>    <span class="c1">//it이나 test로 생성이 가능하다.
-</span><span class="c1"></span>    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should have a createProduct function&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="s2">&#34;function&#34;</span><span class="p">);</span>
-    <span class="p">});</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;POST /api/products&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="c1">//superttest에 server.js를 넣어줌
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/products&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">201</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">name</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">.</span><span class="nx">name</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">description</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">.</span><span class="nx">description</span><span class="p">)</span>
+<span class="p">});</span>
 
-    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should call ProductModel.create&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">req</span><span class="p">.</span><span class="nx">body</span> <span class="o">=</span> <span class="nx">newProduct</span><span class="p">;</span>
-        <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">,</span> <span class="nx">next</span><span class="p">);</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span><span class="p">).</span><span class="nx">toBeCalledWith</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">);</span>
-    <span class="p">})</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should error&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">errorProduct</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&#34;name&#34;</span> <span class="o">:</span> <span class="s2">&#34;oh&#34;</span><span class="p">,</span>
+        <span class="s2">&#34;price&#34;</span> <span class="o">:</span> <span class="mi">15</span>
+    <span class="p">};</span>
 
-    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return 201 response code&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">201</span><span class="p">);</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_isEndCalled</span><span class="p">()).</span><span class="nx">toBeTruthy</span><span class="p">();</span>
-    <span class="p">})</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/products&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="nx">errorProduct</span><span class="p">);</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+<span class="p">});</span>
 
-    <span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return json body in response&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="c1">//Mock function의 returnValue를 선언해준다.
-</span><span class="c1"></span>        <span class="c1">//이렇게하면 함수가 정상적으로 실행된다고 가정하에 정상적으로 리턴값을 받은 것처럼 테스트를 진행할 수 있다.
-</span><span class="c1"></span>        <span class="nx">productModel</span><span class="p">.</span><span class="nx">create</span><span class="p">.</span><span class="nx">mockReturnValue</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">)</span>
-        <span class="nx">productController</span><span class="p">.</span><span class="nx">createProduct</span><span class="p">(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">,</span><span class="nx">next</span><span class="p">);</span>
-        <span class="nx">expect</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">_getJSONData</span><span class="p">()).</span><span class="nx">toStrictEqual</span><span class="p">(</span><span class="nx">newProduct</span><span class="p">)</span>
-    <span class="p">})</span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;should return 500 on POST /api/products&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/api/products&#39;</span><span class="p">)</span>
+        <span class="p">.</span><span class="nx">send</span><span class="p">({</span><span class="nx">name</span> <span class="o">:</span> <span class="s2">&#34;name&#34;</span><span class="p">})</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">500</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">body</span><span class="p">).</span><span class="nx">toStrictEqual</span><span class="p">({</span><span class="nx">message</span> <span class="o">:</span> <span class="s1">&#39;Product validation failed: description: Path `description` is required.&#39;</span><span class="p">})</span>
+
+<span class="p">});</span>
+
+<span class="c1">// it(&#39;GET /api/products&#39;, async () =&gt;{
+</span><span class="c1">//     const response = await request(app).get(&#39;/api/products&#39;);
+</span><span class="c1">//     expect(response.statusCode).toBe(200)
+</span><span class="c1">//     expect(Array.isArray(response.body)).toBeTruthy()
+</span><span class="c1">//     expect(response.body[0].name).toBeDefined();
+</span><span class="c1">//     expect(response.body[0].description).toBeDefined();
+</span><span class="c1">// });
+</span><span class="c1"></span>
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;GET /api/product/:productId&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="sb">`/api/products/</span><span class="si">${</span><span class="nx">productId</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">200</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">response</span><span class="p">)</span>
+<span class="p">});</span>
+
+<span class="nx">it</span><span class="p">(</span><span class="s1">&#39;GET id doesnt exist /api/products/:productId&#39;</span><span class="p">,</span> <span class="kr">async</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="c1">//id값을 많이 바꾸면 mongodb자체에서 없는 id값이라고 404를 주기때문에 살짝만 바꿔줘야함
+</span><span class="c1"></span>    <span class="kr">const</span> <span class="nx">response</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">request</span><span class="p">(</span><span class="nx">app</span><span class="p">).</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/api/products/618761fd1f12be2fe466a211&#39;</span><span class="p">)</span>
+    <span class="nx">expect</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="mi">404</span><span class="p">)</span>
 <span class="p">});</span>
 </code></pre></td></tr></table>
 </div>
@@ -3365,7 +3688,20 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tdd">TDD</a></li>
+    <li><a href="#tdd의-필요성">TDD의 필요성</a></li>
+    <li><a href="#jest">Jest</a></li>
+    <li><a href="#mock-function">Mock function</a></li>
+    <li><a href="#테스트-코드-작성하기">테스트 코드 작성하기</a>
+      <ul>
+        <li><a href="#단위테스트">단위테스트</a></li>
+        <li><a href="#통합테스트">통합테스트</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
         </div>
       
     
