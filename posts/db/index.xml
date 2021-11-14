@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>HierarchicalQuery</title>
+        <link>https://brinst07.github.io/posts/db/hierarchicalquery/</link>
+        <pubDate>Sun, 14 Nov 2021 22:00:29 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Sun, 14 Nov 2021 22:00:29 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/db/hierarchicalquery/</guid>
+        <description>MariaDB 계층형 쿼리짜기 mariadb에는 oralce과 다르게 계층형 쿼리를 작성할 수 있는 connect by 가 존재하지 않는다. 기존에는 지원하지 않았지만, mariadb 10버전부터</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>Whereif</title>
         <link>https://brinst07.github.io/posts/db/whereif/</link>
         <pubDate>Fri, 30 Apr 2021 16:29:31 +0900</pubDate>
