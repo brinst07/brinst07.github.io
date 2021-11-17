@@ -21,6 +21,24 @@
 
       
       <item>
+        <title>docker log</title>
+        <link>https://brinst07.github.io/posts/linuxsever/docker/</link>
+        <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/linuxsever/docker/</guid>
+        <description>docker log 찍기 docker container의 로그를 보려면 다음 명령어를 입력한다. 1 docker logs --tail 10 &amp;lt;containerID&amp;gt; 위와 같이 입력하면 —tail 10 이 옵션 때문에 해당하는 컨테이너의 로그에</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>리눅스 파일시스템과 권한</title>
         <link>https://brinst07.github.io/posts/linuxsever/linux_file/</link>
         <pubDate>Mon, 08 Feb 2021 22:39:24 +0900</pubDate>

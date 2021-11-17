@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sun, 14 Nov 2021 22:00:29 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 17 Nov 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -40,6 +40,60 @@
         
       
 
+      
+      <item>
+        <title>Deep Learning의 기초</title>
+        <link>https://brinst07.github.io/posts/deeplearning/deeplearning/</link>
+        <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/deeplearning/deeplearning/</guid>
+        <description>Deep Learning Limitations of explicit programming 이런 상황에서는 이렇게 해라 지시하는 프로그램 하지만 스팸 필터나, 자율 주행 같은 프로그램에서는 많은 상황이 발생할 수 있기 때문에 제약 상황이 발생 따</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>docker log</title>
+        <link>https://brinst07.github.io/posts/linuxsever/docker/</link>
+        <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/linuxsever/docker/</guid>
+        <description>docker log 찍기 docker container의 로그를 보려면 다음 명령어를 입력한다. 1 docker logs --tail 10 &amp;lt;containerID&amp;gt; 위와 같이 입력하면 —tail 10 이 옵션 때문에 해당하는 컨테이너의 로그에</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Tensorflow</title>
+        <link>https://brinst07.github.io/posts/deeplearning/tensorflow/</link>
+        <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
+        <author>brinst07@gmail.com (brinst)</author>
+        <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
+        <guid>https://brinst07.github.io/posts/deeplearning/tensorflow/</guid>
+        <description>배워야 하는 이유 contributors가 제일 많고 사용하는 사람들도 제일 많음 Tensorflow란? Tesorflow is an open source software library for numerical computation using data flow graphs. 텐서블로는 data flow 그</description>
+        
+        <dc:creator>brinst</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>HierarchicalQuery</title>
