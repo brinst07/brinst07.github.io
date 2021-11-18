@@ -1379,7 +1379,7 @@
     "datePublished": "2021-11-17T22:39:24+09:00",
     "dateModified": "2021-11-17T22:39:24+09:00",
     "url" : "https://brinst07.github.io/posts/linuxsever/docker/",
-    "description": "docker log 찍기 docker container의 로그를 보려면 다음 명령어를 입력한다. 1 docker logs --tail 10 \u0026lt;containerID\u0026gt; 위와 같이 입력하면 —tail 10 이 옵션 때문에 해당하는 컨테이너의 로그에",
+    "description": "docker 이미지 파일로 저장하기 1 docker save -o \u0026lt;image\u0026gt; \u0026lt;filename\u0026gt; docker 이미지 파일 로드하기 1 docker load \u0026lt; \u0026lt;filename\u0026gt; 그 후 해당 이미지를 run 명령어로 실행하면 된다. docker log …",
     "author": {
       "@type": "Person",
       "name": "brinst"
@@ -1742,7 +1742,26 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h1 id="docker-log-찍기">docker log 찍기</h1>
+      <h2 id="docker-이미지-파일로-저장하기">docker 이미지 파일로 저장하기</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">docker save -o &lt;image&gt; &lt;filename&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="docker-이미지-파일-로드하기">docker 이미지 파일 로드하기</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">docker load &lt; &lt;filename&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>그 후 해당 이미지를 run 명령어로 실행하면 된다.</p>
+<h2 id="docker-log-찍기">docker log 찍기</h2>
 <p>docker container의 로그를 보려면 다음 명령어를 입력한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1764,6 +1783,17 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>-f 옵션 때문에 실시간으로 조회가 가능하다.</p>
+<h2 id="docker-마운트하기">docker 마운트하기</h2>
+<p>업무를 보다가 도커폴더와 서버폴더를 마운트 할일이 생겨서 알게된 명령어를 정리한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">docker run -v &lt;서버경로&gt;:&lt;도커경로&gt; ~~
+</code></pre></td></tr></table>
+</div>
+</div><p>위와 같이 입력하면 된다.</p>
 
     </article>
     
@@ -3253,7 +3283,14 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#docker-이미지-파일로-저장하기">docker 이미지 파일로 저장하기</a></li>
+    <li><a href="#docker-이미지-파일-로드하기">docker 이미지 파일 로드하기</a></li>
+    <li><a href="#docker-log-찍기">docker log 찍기</a></li>
+    <li><a href="#docker-마운트하기">docker 마운트하기</a></li>
+  </ul>
+</nav>
         </div>
       
     

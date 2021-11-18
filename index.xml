@@ -66,7 +66,7 @@
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/linuxsever/docker/</guid>
-        <description>docker log 찍기 docker container의 로그를 보려면 다음 명령어를 입력한다. 1 docker logs --tail 10 &amp;lt;containerID&amp;gt; 위와 같이 입력하면 —tail 10 이 옵션 때문에 해당하는 컨테이너의 로그에</description>
+        <description>docker 이미지 파일로 저장하기 1 docker save -o &amp;lt;image&amp;gt; &amp;lt;filename&amp;gt; docker 이미지 파일 로드하기 1 docker load &amp;lt; &amp;lt;filename&amp;gt; 그 후 해당 이미지를 run 명령어로 실행하면 된다. docker log 찍기 docker container의 로그를</description>
         
         <dc:creator>brinst</dc:creator>
         
