@@ -1339,7 +1339,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.89.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -2039,7 +2039,7 @@ reducer 파일을 import해서 넣어주면 된다.</p>
 </div><p>참고자료 : <a href="https://react-redux.js.org/api/hooks">https://react-redux.js.org/api/hooks</a></p>
 <h3 id="redux-활용예제">Redux 활용예제</h3>
 
-<div id="ac6a3e2cb65dec69" class="tab">
+<div id="e39ef5cc987119da" class="tab">
   <div class="tab__links">
     
       <button class="tab__link" aria-label="Tab link">Dispatch</button>
@@ -2099,15 +2099,15 @@ reducer 파일을 import해서 넣어주면 된다.</p>
 <span class="kr">import</span> <span class="p">{</span><span class="nx">useDispatch</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;react-redux&#34;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="p">{</span><span class="nx">addToCart</span><span class="p">}</span> <span class="nx">from</span> <span class="s2">&#34;../../../../_actions/user_actions&#34;</span><span class="p">;</span>
 
-
+<span class="kd">function</span> <span class="nx">ProductInfo</span><span class="p">(</span><span class="nx">props</span><span class="p">)</span> <span class="p">{</span>
 <span class="kr">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nx">useDispatch</span><span class="p">();</span>
 
-
+<span class="kr">const</span> <span class="nx">clickHandler</span> <span class="o">=</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="c1">//필요한 정보를 Cart 필드에다가 넣어준다.
 </span><span class="c1"></span>  <span class="nx">dispatch</span><span class="p">(</span><span class="nx">addToCart</span><span class="p">(</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">_id</span><span class="p">))</span>
 <span class="p">}</span>
 
-
+<span class="k">return</span> <span class="p">(</span>
         <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
           <span class="o">&lt;</span><span class="nx">Descriptions</span> <span class="nx">title</span><span class="o">=</span><span class="s2">&#34;Product Info&#34;</span><span class="o">&gt;</span>
             <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;Price&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">price</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
@@ -2116,10 +2116,10 @@ reducer 파일을 import해서 넣어주면 된다.</p>
             <span class="o">&lt;</span><span class="nx">Descriptions</span><span class="p">.</span><span class="nx">Item</span> <span class="nx">label</span><span class="o">=</span><span class="s2">&#34;Description&#34;</span><span class="o">&gt;</span><span class="p">{</span><span class="nx">props</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">description</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/Descriptions.Item&gt;</span>
           <span class="o">&lt;</span><span class="err">/Descriptions&gt;</span>
 
-
+          <span class="o">&lt;</span><span class="nx">br</span><span class="o">/&gt;</span>
           <span class="o">&lt;</span><span class="nx">br</span><span class="o">/&gt;</span>
 
-
+          <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">style</span><span class="o">=</span><span class="p">{{</span><span class="nx">display</span><span class="o">:</span> <span class="s1">&#39;flex&#39;</span><span class="p">,</span> <span class="nx">justifyContent</span><span class="o">:</span> <span class="s2">&#34;center&#34;</span><span class="p">}}</span><span class="o">&gt;</span>
             <span class="o">&lt;</span><span class="nx">Button</span> <span class="nx">size</span><span class="o">=</span><span class="s2">&#34;large&#34;</span> <span class="nx">shape</span><span class="o">=</span><span class="s1">&#39;round&#39;</span> <span class="nx">type</span><span class="o">=</span><span class="s1">&#39;danger&#39;</span> <span class="nx">onClick</span><span class="o">=</span><span class="p">{</span><span class="nx">clickHandler</span><span class="p">}</span><span class="o">&gt;</span>
               <span class="nx">Add</span> <span class="nx">to</span> <span class="nx">Cart</span>
             <span class="o">&lt;</span><span class="err">/Button&gt;</span>
@@ -2128,7 +2128,7 @@ reducer 파일을 import해서 넣어주면 된다.</p>
 <span class="p">);</span>
 <span class="p">}</span>
 
-
+<span class="kr">export</span> <span class="k">default</span> <span class="nx">ProductInfo</span><span class="p">;</span>
 </code></pre></td></tr></table>
 </div>
 </div>
@@ -2354,7 +2354,7 @@ reducer 파일을 import해서 넣어주면 된다.</p>
 <script>
   'use strict';
 
-  var containerId = JSON.parse("\"ac6a3e2cb65dec69\"");
+  var containerId = JSON.parse("\"e39ef5cc987119da\"");
   var containerElem = document.getElementById(containerId);
   var tabLinks = null;
   var tabContents = null;

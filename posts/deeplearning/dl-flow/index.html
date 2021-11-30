@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SpreadOperator – brinst Dev Blog</title>
+    <title>DeepLearning의 흐름 – brinst Dev Blog</title>
     
 
 
@@ -653,7 +653,7 @@
     
     var baseurl = JSON.parse("\"https://brinst07.github.io/\"");
     
-    var permalink = JSON.parse("\"https://brinst07.github.io/posts/js/spreadoperator/\"");
+    var permalink = JSON.parse("\"https://brinst07.github.io/posts/deeplearning/dl-flow/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1326,16 +1326,17 @@
 <meta name="description" content="brinst Dev Blog" />
 
 
-<meta name="created" content="2021-05-04T09:06:17&#43;0900">
-<meta name="modified" content="2021-05-04T09:06:17&#43;0900">
-<meta property="article:published_time" content="2021-05-04T09:06:17&#43;0900">
+<meta name="created" content="2021-11-17T22:39:24&#43;0900">
+<meta name="modified" content="2021-11-17T22:39:24&#43;0900">
+<meta property="article:published_time" content="2021-11-17T22:39:24&#43;0900">
 
 <meta name="author" content="brinst">
+<meta property="article:author" content="https://brinst07.github.io/posts/deeplearning/dl-flow/@brinst">
 
 
 <meta property="og:site_name" content="brinst Dev Blog">
-<meta property="og:title" content="SpreadOperator">
-<meta property="og:url" content="https://brinst07.github.io/posts/js/spreadoperator/">
+<meta property="og:title" content="DeepLearning의 흐름">
+<meta property="og:url" content="https://brinst07.github.io/posts/deeplearning/dl-flow/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
@@ -1348,7 +1349,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://brinst07.github.io/posts/js/spreadoperator/">
+<link rel="canonical" href="https://brinst07.github.io/posts/deeplearning/dl-flow/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1374,11 +1375,15 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "SpreadOperator",
-    "datePublished": "2021-05-04T09:06:17+09:00",
-    "dateModified": "2021-05-04T09:06:17+09:00",
-    "url" : "https://brinst07.github.io/posts/js/spreadoperator/",
-    "description": "전개연산자란? 전개 연산자는 나열되는 자료를 추출하거나, 연결할 때 사용한다. ES6 이전에는 배열의 일부 요소나 객체의 일부분을 연결하려면 각 내장 함수를 이용해야",
+    "headline": "DeepLearning의 흐름",
+    "datePublished": "2021-11-17T22:39:24+09:00",
+    "dateModified": "2021-11-17T22:39:24+09:00",
+    "url" : "https://brinst07.github.io/posts/deeplearning/dl-flow/",
+    "description": "데이터 전처리 1. 모델에 대한 이미지 입력을 단순화하기 위해 이미지 데이터를 평평하게 만든다. (28x28) ⇒ (784)로 1차원으로 내림 2. 모델에 대해 이미지 입력 값을 더 쉽",
+    "author": {
+      "@type": "Person",
+      "name": "brinst"
+    },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://brinst07.github.io/"
@@ -1693,14 +1698,14 @@
   
   <li >
     
-      <a href="https://brinst07.github.io/posts/js/" class="capitalize">JavaScript</a>
+      <a href="https://brinst07.github.io/posts/deeplearning/" class="capitalize">DeepLearning</a>
     
   </li>
   
   
   <li  class="is-active" >
     
-      <span>SpreadOperator</span>
+      <span>DeepLearning의 흐름</span>
     
   </li>
   
@@ -1712,14 +1717,16 @@
   <div class="single ">
     <div class="single__nojs">자바스크립트를 활성화 해주세요</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">SpreadOperator</h2>
+    <h2 class="single__title" data-ani="true">DeepLearning의 흐름</h2>
     <h3 class="single__subtitle"></h3>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="작성일">📅&nbsp;2021년 05월 04일 </time>
+  <time class="single__info" title="작성일">📅&nbsp;2021년 11월 17일 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="읽는 시간"> ☕&nbsp;3&nbsp;min read </span>
+  
+  &nbsp;&middot;&nbsp; <span class="single__info" title="글쓴이">✍️&nbsp;brinst</span>
   
   <span class="single__info">
      &middot; 👀<span id="busuanzi_value_page_pv">...</span> 조회수
@@ -1735,108 +1742,16 @@
     </div>
     <article class="single__contents" data-dir="ltr" data-ani="true">
       
-      <h2 id="전개연산자란">전개연산자란?</h2>
-<p>전개 연산자는 나열되는 자료를 추출하거나, 연결할 때 사용한다.</p>
-<p>ES6 이전에는 배열의 일부 요소나 객체의 일부분을 연결하려면 각 내장 함수를 이용해야 했다.</p>
-<p>ES6에서 전개 연산자의 도입으로 간단하게 자료를 추출하거나 연결할 수 있게 되었다.</p>
-<p>사용은 배열이나 객체의 이름 앞에 마침표 3개 &hellip;를 붙여주면 된다.</p>
-<p>쉽게 생각하면 그냥 객체나 배열 안의 값을 빼서 새로운 객체나 배열에 넣어준다고 생각하면 된다.</p>
-<h2 id="전개연산자-없을때-vs-전개연산자-있을때">전개연산자 없을때 VS 전개연산자 있을때</h2>
-<h3 id="배열에서의-전개연산자">배열에서의 전개연산자</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">전개연산자가</span> <span class="nx">없을때</span>
-
-<span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span>
-<span class="c1">// 또는
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[</span><span class="nx">arr1</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">arr1</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nx">arr2</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="nx">arr2</span><span class="p">[</span><span class="mi">1</span><span class="p">]];</span>
-<span class="c1">// 또는
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">arr1</span><span class="p">,</span> <span class="nx">arr2</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">전개연산자가</span> <span class="nx">있을</span> <span class="nx">때</span>
-
-<span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;three&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">];</span>
-<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr2</span><span class="p">];</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>위 두개의 코드는 오른쪽의 같은 결과를 출력한다.</p>
-<p>기존의 배열을 합치려면 concat이나 slice등 배열 리터럴 함수를 사용해야 했다. 하지만 전개연산자를 사용한다면 위와같이 간단하게 해결할 수 있다.</p>
-<h3 id="객체에서의-전개연산자">객체에서의 전개연산자</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">one</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">two</span><span class="o">:</span> <span class="mi">2</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">three</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">four</span><span class="o">:</span> <span class="mi">4</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">one</span><span class="o">:</span> <span class="nx">obj1</span><span class="p">.</span><span class="nx">one</span><span class="p">,</span>
-  <span class="nx">two</span><span class="o">:</span> <span class="nx">obj1</span><span class="p">.</span><span class="nx">two</span><span class="p">,</span>
-  <span class="nx">three</span><span class="o">:</span> <span class="nx">obj2</span><span class="p">.</span><span class="nx">three</span><span class="p">,</span>
-  <span class="nx">four</span><span class="o">:</span> <span class="nx">obj2</span><span class="p">.</span><span class="nx">four</span><span class="p">,</span>
-<span class="p">};</span>
-<span class="c1">// 또는
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">({},</span> <span class="nx">obj1</span><span class="p">,</span> <span class="nx">obj2</span><span class="p">);</span>
-<span class="c1">// 또는
-</span><span class="c1"></span><span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="nb">Object</span><span class="p">.</span><span class="nx">assign</span><span class="p">(</span><span class="nx">obj1</span><span class="p">,</span> <span class="nx">obj2</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">var</span> <span class="nx">obj1</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">one</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">two</span><span class="o">:</span> <span class="mi">2</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">obj2</span> <span class="o">=</span> <span class="p">{</span> <span class="nx">three</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">four</span><span class="o">:</span> <span class="mi">4</span> <span class="p">};</span>
-<span class="kd">var</span> <span class="nx">result</span> <span class="o">=</span> <span class="p">{</span> <span class="p">...</span><span class="nx">obj1</span><span class="p">,</span> <span class="p">...</span><span class="nx">obj2</span> <span class="p">};</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="함수에서의-전개연산자">함수에서의 전개연산자</h3>
+      <h2 id="데이터-전처리">데이터 전처리</h2>
+<h3 id="1-모델에-대한-이미지-입력을-단순화하기-위해-이미지-데이터를-평평하게-만든다">1. 모델에 대한 이미지 입력을 단순화하기 위해 이미지 데이터를 평평하게 만든다.</h3>
+<pre><code>(28x28) ⇒ (784)로 1차원으로 내림
+</code></pre>
+<h3 id="2-모델에-대해-이미지-입력-값을-더-쉽게-사용할-수-있도록-이미지-데이터를-정규화한다">2. 모델에 대해 이미지 입력 값을 더 쉽게 사용할 수 있도록 이미지 데이터를 정규화한다.</h3>
+<p>정수 값을 0과 1사이의 부동 소수점  값으로 변환하는 것을 정규화라고 한다.<br />
+가장 쉬운 방법은 모든 픽셀 값을 가장 큰 값으로 나누는 것이다. ⇒ x_train = x_train / x_train.max()</p>
+<h3 id="3-모델에-대해-레이블-값을-더-쉽게-사용할-수-있도록-레이블-값을-분류한다">3. 모델에 대해 레이블 값을 더 쉽게 사용할 수 있도록 레이블 값을 분류한다.</h3>
+<p><img src="/images/content/label.png" alt="label" /></p>
+<p>y 값에 대하여 여러개 값중 답이 존재할 때 이것을 마찬가지로 0과 1로 변경해줘야한다.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1850,81 +1765,143 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">func</span><span class="p">()</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="nb">Array</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">arguments</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
-<span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">num_categories</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y_train</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">num_categories</span><span class="p">)</span>
 
-<span class="nx">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
-<span class="c1">// (4) [1, 2, 3, 4]
-</span><span class="c1">// 1
-</span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="kd">function</span> <span class="nx">func</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">args</span><span class="p">];</span>
-  <span class="kd">var</span> <span class="p">[</span><span class="nx">one</span><span class="p">,</span> <span class="p">...</span><span class="nx">others</span><span class="p">]</span> <span class="o">=</span> <span class="nx">args</span><span class="p">;</span> <span class="c1">// 구조 분해 할당
-</span><span class="c1"></span>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">one</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
-<span class="c1">// (4) [1, 2, 3, 4]
-</span><span class="c1">// 1
-</span></code></pre></td></tr></table>
-</div>
-</div><p>함수에서 인자로 넘겨줄때 인자들은 arguments라는 함수 내부의 배열로 저장된다.</p>
-<p>넘어온 인자의 수를 제한하지 않거나 얼마나 받을지 예상할 수 없는 상황에는 arguments를 사용하게 되는데 이 또한 전개 연산자로 변환이 가능하다.</p>
-<h2 id="전개연산자-사용예제">전개연산자 사용예제</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js">  <span class="kr">const</span> <span class="nx">fetchMovies</span> <span class="o">=</span> <span class="p">(</span><span class="nx">endpoint</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
-        <span class="nx">fetch</span><span class="p">(</span><span class="nx">endpoint</span><span class="p">)</span>
-            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
-            <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="p">=&gt;</span> <span class="p">{</span>
-                <span class="c1">//받은 movies array를 state안에 넣는 부분이다.
-</span><span class="c1"></span>                <span class="c1">// setMovies([...response.results])면 기존 영화들이 날아가고 새로운 영화가 그자리를 채우게 된다.
-</span><span class="c1"></span>                <span class="c1">//이렇게 해주면 배열에안에 기존것과 새로운 것이 같이 존재하게 된다.
-</span><span class="c1"></span>                <span class="c1">//deepcopy를 하기위해 전개연산자를 사용해서 배열에 넣어줬다.
-</span><span class="c1"></span>                <span class="nx">setMovies</span><span class="p">([...</span><span class="nx">Movies</span><span class="p">,</span> <span class="p">...</span><span class="nx">response</span><span class="p">.</span><span class="nx">results</span><span class="p">])</span>
-                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(...</span><span class="nx">Movies</span><span class="p">)</span>
-                <span class="nx">setMainMovieImage</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">results</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-                <span class="nx">setCurrentPage</span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">page</span><span class="p">)</span>
-            <span class="p">})</span>
-    <span class="p">}</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+<span class="p">]</span>
 </code></pre></td></tr></table>
 </div>
+</div><h2 id="모델-생성-및-학습">모델 생성 및 학습</h2>
+<p><a href="https://han-py.tistory.com/207">tensorflow_tf.keras.layers.Dense</a></p>
+<h3 id="1-모델-인스턴스화">1. 모델 인스턴스화</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+</code></pre></td></tr></table>
 </div>
+</div><h3 id="2-input-layer-생성">2. Input Layer 생성</h3>
+<p>model에 layer를 쌓는 과정이다.</p>
+<p>units은 레이어의 뉴런 수를 지정한다.  → 출력 값의 크기</p>
+<p>activation : 활성화 함수</p>
+<p>relu는 아래 그래프 처럼 0보다 작은 값은 0으로 나타내고 0보다 크게 되면 직선형태의 값을 가지게 된다.</p>
+<p><img src="/images/content/relu.png" alt="relu" /></p>
+<p>input_shape : input shape을 지정한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="p">(</span><span class="mi">784</span><span class="p">,)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="3-hidden-layer-생성">3. Hidden Layer 생성</h3>
+<p>Hidden Layer를 추가하면 더 많은 매개 변수를 제공함으로써 정확한 학습 기대할 수 있다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span><span class="o">=</span><span class="mi">512</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="4-output-layer-생성">4. Output Layer 생성</h3>
+<p>y 값을 살펴보면 총 10개의 값이 출력된다. 따라서 출력 layer에서는 units 값을 10개로 지정해준다.</p>
+<p>또한 기존과 다르게 활성화 함수를 relu가 아닌 softmax를 사용하였다.</p>
+<p>softmax는 입력받은 값을 출력으로 0~1사이의 값으로 모두 정규화하며 출력 값들의 총합은 항상 1이 되는 특성을 가진 함수이다.</p>
+<p>relu와 차이점이 있다면, 0보다 작은 값은 0인 대신 그 이상의 값을 직선형태로 증가하는 형태를 보이는 반면, softmax는 0.1,0.5,0.4 이런 형태로 값이 존재하게 된다.</p>
+<p>즉 값 중에서 제일 큰 값을 결과로 특정할 수 있게 되는 것이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="n">units</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="n">activation</span> <span class="o">=</span> <span class="s1">&#39;softmax&#39;</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="5-model-요약">5. model 요약</h3>
+<p>위에서 모델에 layer를 쌓았는데, 그것을 확인할 수 있는 방법이다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="6-모델-컴파일하기">6. 모델 컴파일하기</h3>
+<p>데이터로 모델을 training하기 전 마지막 단계로, 모델을 컴파일 하는 단계이다.</p>
+<p>여기서는 모델이 훈련 중 얼마나 잘 수행되는지 확인하기 위해서 모델에 사용할 loss function을 지정한다.</p>
+<p><a href="https://brunch.co.kr/@mnc/9">[ML101] #3. Loss Function</a></p>
+<p>loss function이란 간단하게 얘기하면, 데이터를 토대로 산출한 모델의 예측 값과 실제 값과의 차이를 표현하는 지표이다.</p>
+<p>loss function의 함수값이 최소화 되도록 하는 weight와 bias를 찾는 것이 목표이다. ⇒ 학습</p>
+<p>또한 모델이 훈련하는 동안 정확성을 추적하고자 한다고 명시한다.</p>
+<pre><code>```python
+model.compile(loss='categorical_crossentrophy', metrics=['accuracy'])
+```
+</code></pre>
+<h3 id="7-모델-훈련하기">7. 모델 훈련하기</h3>
+<p>이제 훈련 및 검증 데이터와 모델을 준비했으니, 훈련 데이터로 모델을 훈려하고 검증데이터로 데이터를 검증하면 된다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">x_valid</span><span class="p">,</span> <span class="n">y_valid</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">tf</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">get_weights</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>epochs ⇒ 전체 데이터를 사용하여 학습을 거치는 횟수를 의미한다. epochs 값이 너무 작다면 underfitting, 너무 크다면 overfitting이 발생할 확률이 높다.</p>
+</li>
+<li>
+<p>verbose ⇒ 학습시에 진행상황을 알려주는 argument이다.</p>
+<p>( 0 = slient, 1 = progress bar, 2 = on line per epoch)</p>
+</li>
+<li>
+<p>validation_data ⇒ 검증 데이터</p>
+</li>
+<li>
+<p>tf.model.get_weights()로 해당 모델의 W(기울기) 와 bias(절편) 값을 구할 수 있다.</p>
+</li>
+</ul>
+<p>verbose를 사용했기에 다음과 같은 로그가 출력되는 것을 확인 할 수 있다.</p>
+<pre tabindex="0"><code>Epoch 1/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.1933 - accuracy: 0.9426 - val_loss: 0.1238 - val_accuracy: 0.9661
+Epoch 2/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.1017 - accuracy: 0.9736 - val_loss: 0.1087 - val_accuracy: 0.9745
+Epoch 3/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.0803 - accuracy: 0.9801 - val_loss: 0.1226 - val_accuracy: 0.9764
+Epoch 4/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.0692 - accuracy: 0.9830 - val_loss: 0.1370 - val_accuracy: 0.9776
+Epoch 5/5
+1875/1875 [==============================] - 4s 2ms/step - loss: 0.0640 - accuracy: 0.9866 - val_loss: 0.1534 - val_accuracy: 0.9753
+</code></pre><p>compile 시에 merics=[&lsquo;accuracy&rsquo;] 추적 옵션을 넣었기에 다음과 같이 accuracy가 출력되는 것을 확인 할 수 있다.</p>
+<p>val_는 검증데이터에 대한 출력 값이다.</p>
+
     </article>
     
     
@@ -2123,13 +2100,13 @@
     
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2fjs%2fspreadoperator%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fbrinst07.github.io%2fposts%2fdeeplearning%2fdl-flow%2f" title="Facebook" aria-label="Facebook Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="facebook" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z"/></svg>
         </a>
       
     
       
-        <a href="https://twitter.com/intent/tweet?text=SpreadOperator&url=https%3a%2f%2fbrinst07.github.io%2fposts%2fjs%2fspreadoperator%2f&via=" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
+        <a href="https://twitter.com/intent/tweet?text=DeepLearning%ec%9d%98%20%ed%9d%90%eb%a6%84&url=https%3a%2f%2fbrinst07.github.io%2fposts%2fdeeplearning%2fdl-flow%2f&via=brinst" title="Twitter" aria-label="Twitter Share Button" class="donation__item" target="_blank" rel="noreferrer" data-type="share">
           <svg data-name="twitter" enable-background="new 0 0 24 24" viewBox="0 0 24 24" width="35" height="35" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z"/></svg>
         </a>
       
@@ -2272,7 +2249,21 @@
 <nav class="pagination-single">
   
     
+      <a href="https://brinst07.github.io/posts/deeplearning/tensorflow/" class="pagination-single__left">
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+        </div>
+        <div class="pagination-single__left-title">Tensorflow</div>      
+      </a>
+    
     <div class="grow"></div>
+    
+      <a href="https://brinst07.github.io/posts/deeplearning/deeplearning/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Deep Learning의 기초</div>
+        <div class="pagination-single__icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
+        </div>
+      </a>
     
   
 </nav>
@@ -3209,7 +3200,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
           
             
-              <a href="https://brinst07.github.io/posts/js/spreadoperator/" data-lang="ko" class="dropdown-item is-active">한국어</a>
+              <a href="https://brinst07.github.io/posts/deeplearning/dl-flow/" data-lang="ko" class="dropdown-item is-active">한국어</a>
             
           
         
@@ -3408,15 +3399,24 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#전개연산자란">전개연산자란?</a></li>
-    <li><a href="#전개연산자-없을때-vs-전개연산자-있을때">전개연산자 없을때 VS 전개연산자 있을때</a>
+    <li><a href="#데이터-전처리">데이터 전처리</a>
       <ul>
-        <li><a href="#배열에서의-전개연산자">배열에서의 전개연산자</a></li>
-        <li><a href="#객체에서의-전개연산자">객체에서의 전개연산자</a></li>
-        <li><a href="#함수에서의-전개연산자">함수에서의 전개연산자</a></li>
+        <li><a href="#1-모델에-대한-이미지-입력을-단순화하기-위해-이미지-데이터를-평평하게-만든다">1. 모델에 대한 이미지 입력을 단순화하기 위해 이미지 데이터를 평평하게 만든다.</a></li>
+        <li><a href="#2-모델에-대해-이미지-입력-값을-더-쉽게-사용할-수-있도록-이미지-데이터를-정규화한다">2. 모델에 대해 이미지 입력 값을 더 쉽게 사용할 수 있도록 이미지 데이터를 정규화한다.</a></li>
+        <li><a href="#3-모델에-대해-레이블-값을-더-쉽게-사용할-수-있도록-레이블-값을-분류한다">3. 모델에 대해 레이블 값을 더 쉽게 사용할 수 있도록 레이블 값을 분류한다.</a></li>
       </ul>
     </li>
-    <li><a href="#전개연산자-사용예제">전개연산자 사용예제</a></li>
+    <li><a href="#모델-생성-및-학습">모델 생성 및 학습</a>
+      <ul>
+        <li><a href="#1-모델-인스턴스화">1. 모델 인스턴스화</a></li>
+        <li><a href="#2-input-layer-생성">2. Input Layer 생성</a></li>
+        <li><a href="#3-hidden-layer-생성">3. Hidden Layer 생성</a></li>
+        <li><a href="#4-output-layer-생성">4. Output Layer 생성</a></li>
+        <li><a href="#5-model-요약">5. model 요약</a></li>
+        <li><a href="#6-모델-컴파일하기">6. 모델 컴파일하기</a></li>
+        <li><a href="#7-모델-훈련하기">7. 모델 훈련하기</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>

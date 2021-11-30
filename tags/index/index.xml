@@ -14,7 +14,7 @@
     <managingEditor>brinst07@gmail.com (brinst)</managingEditor>
     <webMaster>brinst07@gmail.com (brinst)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Wed, 17 Nov 2021 22:39:24 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 04 May 2021 22:39:24 +0900</lastBuildDate>
     
         <atom:link href="https://brinst07.github.io/tags/index/index.xml" rel="self" type="application/rss+xml" />
     
@@ -75,30 +75,6 @@
         <author>brinst07@gmail.com (brinst)</author>
         
         <guid>https://brinst07.github.io/posts/nodejs/</guid>
-        <description></description>
-        
-        <dc:creator>brinst</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>index</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>DeepLearning</title>
-        <link>https://brinst07.github.io/posts/deeplearning/</link>
-        <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
-        <author>brinst07@gmail.com (brinst)</author>
-        <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
-        <guid>https://brinst07.github.io/posts/deeplearning/</guid>
         <description></description>
         
         <dc:creator>brinst</dc:creator>

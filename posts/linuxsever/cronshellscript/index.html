@@ -1340,7 +1340,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="brinst Dev Blog">
 
-<meta name="generator" content="Hugo 0.89.0" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1919,7 +1919,7 @@ sh shell_test.sh
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#! /bin/bash
 </span><span class="cp"></span>
-
+<span class="nb">echo</span> <span class="s2">&#34;hello~ script&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -1957,79 +1957,79 @@ sh shell_test.sh
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-
+    <span class="c1"># 변수 선언</span>
     <span class="nv">test</span><span class="o">=</span><span class="s2">&#34;abc&#34;</span>
     <span class="nv">num</span><span class="o">=</span><span class="m">100</span>
 
-
+    <span class="c1">#변수 사용하기 및 출력</span>
     <span class="nb">echo</span> <span class="si">${</span><span class="nv">test</span><span class="si">}</span>
     <span class="nb">echo</span> <span class="si">${</span><span class="nv">num</span><span class="si">}</span>
     <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test</span><span class="si">}</span><span class="s2">&#34;</span>
     <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">num</span><span class="si">}</span><span class="s2">&#34;</span>
 
-
+    <span class="c1">#지역변수</span>
     <span class="nb">local</span> <span class="nv">local_var</span><span class="o">=</span><span class="s2">&#34;local var&#34;</span>
 
-
+    <span class="c1">#변수가 선언되지 않았을 때 기본값을 지정하며 사용하는 방법</span>
     <span class="nv">defalut_var</span><span class="o">=</span><span class="si">${</span><span class="nv">default_var</span><span class="p">=</span><span class="s2">&#34;temp&#34;</span><span class="si">}</span>
 
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>배열</p>
+<ul>
+<li>배열의 인덱스는 0부터 시작함</li>
+<li>배열이름[@]는 배열의 모든 원소를 의미한다.</li>
+<li>배열의 원소 추가 시는 += 연산자를 사용한다.</li>
+<li>배열에서 원소를 삭제시
+<ul>
+<li>/를 사용해 해당 문자열 부분이 있으면 삭제, 삭제하고자 하는 문자나 문자열이 포함되어 있는 부분을 삭제</li>
+<li>unset을 이용해 삭제</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-
-
-* 배열의 인덱스는 0부터 시작함
-* 배열이름<span class="o">[</span>@<span class="o">]</span>는 배열의 모든 원소를 의미한다.
-* 배열의 원소 추가 <span class="nv">시는</span> <span class="o">+=</span> 연산자를 사용한다.
-* 배열에서 원소를 삭제시
-    * /를 사용해 해당 문자열 부분이 있으면 삭제, 삭제하고자 하는 문자나 문자열이 포함되어 있는 부분을 삭제
-    * unset을 이용해 삭제
-<span class="sb">```</span>shell
-    <span class="c1">#!/bin/bash</span>
-
-
+    <span class="nv">arr_test</span><span class="o">=(</span><span class="s2">&#34;1&#34;</span>,<span class="s2">&#34;2&#34;</span><span class="o">)</span>
     <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[1]</span><span class="si">}</span><span class="s2">&#34;</span>
 
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[@]</span><span class="si">}</span><span class="s2">&#34;</span>
 
+    <span class="nv">arr_test</span><span class="o">+=(</span><span class="s2">&#34;3&#34;</span>,<span class="s2">&#34;4&#34;</span><span class="o">)</span>
 
+    <span class="nv">remove_element</span><span class="o">=(</span>3<span class="o">)</span>
 
+    <span class="nv">arr_test</span><span class="o">=(</span><span class="s2">&#34;</span><span class="si">${</span><span class="nv">arr_test</span><span class="p">[@]/</span><span class="nv">$remove_element</span><span class="si">}</span><span class="s2">&#34;</span><span class="o">)</span>
 
-
-
-
-
-
+    <span class="k">for</span> i in <span class="si">${</span><span class="p">!arr_test[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
         <span class="k">if</span> <span class="o">[</span> <span class="si">${</span><span class="nv">arr_test</span><span class="p">[i]</span><span class="si">}</span> <span class="o">=</span> <span class="si">${</span><span class="nv">remove_element</span><span class="si">}</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
 	    <span class="c1"># Use unset</span>
 	    <span class="nb">unset</span> arr_test<span class="o">[</span>i<span class="o">]</span>
@@ -2079,10 +2079,10 @@ sh shell_test.sh
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-
+    <span class="c1"># Numeric if statement</span>
     <span class="nv">test_num</span><span class="o">=</span><span class="m">5</span>
 
-
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_num</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="m">2</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is 2&#34;</span>
     <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_num</span><span class="si">}</span><span class="s2">&#34;</span> -eq <span class="m">3</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is 3&#34;</span>
@@ -2090,19 +2090,19 @@ sh shell_test.sh
         <span class="nb">echo</span> <span class="s2">&#34;number is not 2 or 3&#34;</span>
     <span class="k">fi</span>
 
-
+    <span class="c1"># Numeric if statement</span>
     <span class="nv">test_num</span><span class="o">=</span><span class="m">5</span>
 
-
+    <span class="k">if</span> <span class="o">((</span> <span class="si">${</span><span class="nv">test_num</span><span class="si">}</span> &gt; <span class="m">3</span> <span class="o">))</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is greater than 3&#34;</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;number is not greater than 3&#34;</span>
     <span class="k">fi</span>
 
-
+    <span class="c1"># String if statement</span>
     <span class="nv">test_str</span><span class="o">=</span><span class="s2">&#34;test&#34;</span>
 
-
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">test_str</span><span class="si">}</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;test&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
         <span class="nb">echo</span> <span class="s2">&#34;test_str is test&#34;</span>
     <span class="k">else</span>
         <span class="nb">echo</span> <span class="s2">&#34;test_str is not test&#34;</span>
@@ -2128,7 +2128,7 @@ sh shell_test.sh
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
-
+    <span class="nv">cnt</span><span class="o">=</span><span class="m">0</span>
     <span class="k">while</span> <span class="o">((</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span> &lt; <span class="m">5</span> <span class="o">))</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">echo</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span>
         <span class="o">((</span> <span class="nv">cnt</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">cnt</span><span class="si">}</span><span class="s2">&#34;</span> + <span class="m">1</span> <span class="o">))</span> <span class="c1"># 숫자와 변수의 연산은 (())가 필요합니다.</span>
@@ -2158,15 +2158,15 @@ sh shell_test.sh
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">    <span class="c1">#!/bin/bash</span>
 
+    <span class="nv">arr_num</span><span class="o">=(</span><span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span> <span class="m">6</span> 7<span class="o">)</span>
 
-
-
+    <span class="c1"># 배열에 @는 모든 원소를 뜻합니다.</span>
     <span class="k">for</span> i in <span class="si">${</span><span class="nv">arr_num</span><span class="p">[@]</span><span class="si">}</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">printf</span> <span class="nv">$i</span>
     <span class="k">done</span>
     <span class="nb">echo</span>
 
-
+    <span class="k">for</span> <span class="o">((</span> <span class="nv">i</span> <span class="o">=</span> 0<span class="p">;</span> i &lt; 10<span class="p">;</span> i++<span class="o">))</span><span class="p">;</span> <span class="k">do</span>
         <span class="nb">printf</span> <span class="nv">$i</span>
     <span class="k">done</span>
     <span class="nb">echo</span>
