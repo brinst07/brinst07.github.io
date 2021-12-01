@@ -1807,7 +1807,75 @@ tf.__version__
 </code></pre></td></tr></table>
 </div>
 </div><p><a href="https://eclipse360.tistory.com/40">[파이썬] Tensorflow 2.0 session / placeholder 오류 해결 방법</a></p>
-
+<h1 id="install-tensorflow-gpu">Install Tensorflow-GPU</h1>
+<p>기존 맥북 같은 경우는 tensorflow-gpu를 활성해주지 않았다.(gpu가 amd기 때문에&hellip;)<br />
+하지만 애플이 M1를 직접 제작하게 되면서, gpu를 지원해주려는 노력을 하고있다&hellip;.<br />
+다음 과정을 따라하면 m1에서도 gpu를 활성화하여 tensorflow를 돌릴수 있다.</p>
+<h3 id="conda-install">conda install</h3>
+<p><a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh">https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh</a><br />
+위의 링크에서 파일을 받고 다음과정으로 설치를 진행한다.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">chmod +x ~/Downloads/Miniforge3-MacOSX-arm64.sh
+sh ~/Downloads/Miniforge3-MacOSX-arm64.sh
+<span class="nb">source</span> ~/miniforge3/bin/activate
+</code></pre></td></tr></table>
+</div>
+</div><p>이 후 원하는 환경을 만들어 activation 해준후 다음과정을 진행한다.</p>
+<h3 id="install-the-tensorflow-dependencies">install the tensorflow dependencies</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">conda install -c apple tensorflow-deps
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="tensorflow-version-upgrade">tensorflow version upgrade</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># uninstall existing tensorflow-macos and tensorflow-metal</span>
+python -m pip uninstall tensorflow-macos
+python -m pip uninstall tensorflow-metal
+<span class="c1"># Upgrade tensorflow-deps</span>
+conda install -c apple tensorflow-deps --force-reinstall
+<span class="c1"># or point to specific conda environment</span>
+conda install -c apple tensorflow-deps --force-reinstall -n my_env
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="install-base-tensorflow">install base Tensorflow</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">python -m pip install tensorflow-macos
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="install-tensorflow-metal-plugin">install tensorflow-metal plugin</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">python -m pip install tensorflow-metal
+</code></pre></td></tr></table>
+</div>
+</div>
     </article>
     
     
@@ -2158,7 +2226,7 @@ tf.__version__
     <div class="grow"></div>
     
       <a href="https://brinst07.github.io/posts/deeplearning/dl-flow/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">DeepLearning의 흐름</div>
+        <div class="pagination-single__right-title">DLI-01,02</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -3296,7 +3364,19 @@ document.addEventListener('DOMContentLoaded', function () {
           
         </div>
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
-          <nav id="TableOfContents"></nav>
+          <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#conda-install">conda install</a></li>
+        <li><a href="#install-the-tensorflow-dependencies">install the tensorflow dependencies</a></li>
+        <li><a href="#tensorflow-version-upgrade">tensorflow version upgrade</a></li>
+        <li><a href="#install-base-tensorflow">install base Tensorflow</a></li>
+        <li><a href="#install-tensorflow-metal-plugin">install tensorflow-metal plugin</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
         </div>
       
     

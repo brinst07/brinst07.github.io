@@ -39,13 +39,13 @@
       </item>
       
       <item>
-        <title>DeepLearning의 흐름</title>
+        <title>DLI-01,02</title>
         <link>https://brinst07.github.io/posts/deeplearning/dl-flow/</link>
         <pubDate>Wed, 17 Nov 2021 22:39:24 +0900</pubDate>
         <author>brinst07@gmail.com (brinst)</author>
         <atom:modified>Wed, 17 Nov 2021 22:39:24 +0900</atom:modified>
         <guid>https://brinst07.github.io/posts/deeplearning/dl-flow/</guid>
-        <description>데이터 전처리 1. 모델에 대한 이미지 입력을 단순화하기 위해 이미지 데이터를 평평하게 만든다. (28x28) ⇒ (784)로 1차원으로 내림 2. 모델에 대해 이미지 입력 값을 더 쉽</description>
+        <description>DLI 회사에서 nvidia DLI를 수료할수 있는 기회를 줘서 관련 교육을 받게 되었다. 해당 교육을 받고 내용을 정리하는 글이다. 데이터 전처리 1. 모델에 대한 이미지 입력을 단순</description>
         
         <dc:creator>brinst</dc:creator>
         
